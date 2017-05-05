@@ -12,6 +12,11 @@ const config = {
   module: {
     loaders: [
       {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: 'babel?presets[]=es2015&presets[]=stage-1&plugins[]=transform-decorators-legacy'
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css!sass!postcss')
       },
