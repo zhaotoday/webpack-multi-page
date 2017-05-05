@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.liruan.cn$ [NC]
+RewriteRule ^(.*)$ http://www.liruan.cn/$1 [L,R=301]

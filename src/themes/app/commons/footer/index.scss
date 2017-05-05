@@ -1,0 +1,17 @@
+@import "../../../utils/vars";
+@import "../../../utils/functions";
+@import "../../../utils/classes/fonts";
+
+footer {
+  @extend .font-12;
+  background-color: #0b0b0b;
+  padding-top: px2rem(20px);
+  padding-bottom: px2rem(20px);
+  color: white;
+  line-height: 150%;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+}

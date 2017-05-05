@@ -1,0 +1,62 @@
+@import "../../../utils/mixins";
+@import "../../../utils/functions";
+@import "../../../utils/classes/fonts";
+
+.commodity {
+  .commodity-images {
+    padding-top: px2rem(35px);
+    padding-bottom: px2rem(35px);
+    background-color: #e7e7e7;
+
+    .nav {
+      display: none;
+    }
+
+    .slider-wrap {
+      position: relative;
+      width: px2rem(672px);
+      height: px2rem(377px);
+      @include block-center();
+      overflow: hidden;
+
+      .slider-images {
+        li {
+          width: px2rem(672px);
+          float: left;
+
+          img {
+            @include block-img(px2rem(672px), px2rem(377px));
+          }
+        }
+      }
+
+      .slider-dir {
+        li {
+          position: absolute;
+          width: px2rem(40px);
+          height: px2rem(75px);
+          background-size: 100% 100%;
+          top: px2rem(150px);
+
+          &.slider-left {
+            background-image: url("../../commons/global/images/slider/left.png");
+            left: px2rem(24px);
+
+            &.disabled {
+              background-image: url("../../commons/global/images/slider/left-disabled.png");
+            }
+          }
+
+          &.slider-right {
+            background-image: url("../../commons/global/images/slider/right.png");
+            right: px2rem(24px);
+
+            &.disabled {
+              background-image: url("../../commons/global/images/slider/right-disabled.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}

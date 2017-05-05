@@ -1,0 +1,98 @@
+@import "../../../utils/mixins";
+@import "../../../utils/functions";
+@import "../../../utils/classes/fonts";
+
+.commodity {
+  .more {
+    text-align: center;
+
+    dt {
+      display: inline-block;
+      background-color: #64a8f3;
+      color: white;
+      @extend .font-18;
+      padding: px2rem(25px) px2rem(23px);
+    }
+
+    dd {
+      .game {
+        position: relative;
+        text-align: left;
+        width: px2rem(672px);
+        @include block-center();
+        margin-top: px2rem(60px);
+        margin-bottom: px2rem(85px);
+
+        li {
+          &.game-icon {
+            float: left;
+
+            img {
+              @include block-img(px2rem(120px), px2rem(120px));
+              margin-right: px2rem(20px);
+            }
+          }
+
+          h2 {
+            @extend .font-16;
+            padding-top: px2rem(5px);
+            width: px2rem(350px);
+            height: px2rem(35px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          p {
+            @extend .font-12;
+            padding-top: px2rem(18px);
+            padding-bottom: px2rem(15px);
+            color: #666666;
+            line-height: 180%;
+          }
+
+          a {
+            position: absolute;
+            right: 0;
+            top: px2rem(-3px);
+            @extend .font-10;
+            display: inline-block;
+            width: px2rem(140px);
+            @include middle(px2rem(44px));
+            text-align: center;
+            color: #2a8fff;
+            border: 1px solid #2a8fff;
+            border-radius: px2rem(44px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ar {
+  .commodity {
+    .more {
+      .game {
+        text-align: right;
+
+        li {
+          &.game-icon {
+            float: right;
+
+            img {
+              @include block-img(px2rem(120px), px2rem(120px));
+              margin-right: auto;
+              margin-left: px2rem(20px);
+            }
+          }
+
+          a {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
