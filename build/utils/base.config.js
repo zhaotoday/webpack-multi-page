@@ -7,7 +7,7 @@ const config = {
   output: {
     path: 'dist',
     publicPath: consts.CDN,
-    filename: `${consts.SCRIPTS}[name].js`,
+    filename: `${consts.SCRIPTS}[name].js`
   },
   module: {
     loaders: [
