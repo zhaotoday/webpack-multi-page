@@ -1,0 +1,9 @@
+@import "../../../themes/global/reset";
+@import "../../../themes/global/classes/index";
+@import "../../../themes/utils/vars";
+@import "../../../themes/utils/functions";
+
+.container {
+  max-width: px2rem($max-width);
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+@import "~compass-mixins/lib/compass/reset";
+@import "~compass-mixins/lib/compass/css3";
+@import "../utils/vars";
+@import "../utils/functions";
+
+body {
+  font-family: $font-family-mobile;
+  background-color: $bg-color;
+}

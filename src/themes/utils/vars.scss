@@ -2,25 +2,19 @@
 $font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 
 // 移动端字体
-$font-family-m: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+$font-family-mobile: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 
 // 英文字体
 $font-family-en: Arial, Helvetica, sans-senif, "Microsoft YaHei";
-
-// 阿拉伯字体
-$font-family-ar: Arial, Helvetica, freesans, sans-serif;
 
 // 字体大小
 $font-size: 14px;
 
 // 字体颜色
-$font-color: black;
+$color: black;
 
 // 网页最大宽度
-$page-max-width: 1920px;
+$max-width: 750px;
 
 // 网页背景色
-$body-bg-color: #f8fafc;
-
-// 主色调
-$primary-color: #2aadee;
+$bg-color: #f8fafc;

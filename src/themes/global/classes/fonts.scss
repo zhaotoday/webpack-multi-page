@@ -1,4 +1,4 @@
-@import "../vars";
+@import "../../utils/vars";
 
 @for $i from 8 through 25 {
   .font-#{$i} {
