@@ -55,7 +55,9 @@ const config = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'themes/images/[hash].[ext]'
+              publicPath: '/',
+              outputPath: 'themes/images/',
+              name: '[hash].[ext]'
             }
           }
         ]

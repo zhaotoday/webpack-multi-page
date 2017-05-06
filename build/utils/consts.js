@@ -1,4 +1,4 @@
-const SRC = 'src/'
+const SRC = '/src/'
 const DIST = '/dist/'
 const SCRIPTS = 'scripts/app/'
 const STYLES = 'themes/app/'
