@@ -1,0 +1,73 @@
+@import "../../../utils/mixins";
+@import "../../../utils/functions";
+@import "../../../utils/classes/fonts";
+
+.commodity {
+  .icon {
+    @include block-img(px2rem(184px), px2rem(184px));
+    @include block-center();
+    margin-top: px2rem(80px);
+  }
+
+  .title {
+    @extend .font-20;
+    padding-top: px2rem(28px);
+    padding-bottom: px2rem(60px);
+    text-align: center;
+  }
+
+  .actions {
+    text-align: center;
+
+    a {
+      display: inline-table;
+      margin-left: px2rem(8px);
+      margin-right: px2rem(8px);
+      width: px2rem(200px);
+      height: px2rem(64px);
+      line-height: px2rem(64px);
+      font-size: px2rem(20px);
+      overflow: hidden;
+      background-size: 100% 100%;
+
+      &.app-store {
+        background-image: url("./images/buttons/app-store-cn.png");
+
+        &-ar {
+          background-image: url("./images/buttons/app-store-ar.png");
+        }
+
+        &-en {
+          background-image: url("./images/buttons/app-store-en.png");
+        }
+      }
+
+      &.google-play {
+        background-image: url("./images/buttons/google-play-cn.png");
+
+        &-ar {
+          background-image: url("./images/buttons/google-play-ar.png");
+        }
+
+        &-en {
+          background-image: url("./images/buttons/google-play-en.png");
+        }
+      }
+
+      &.home-page {
+        direction: ltr;
+        color: white;
+        background-image: url("./images/buttons/home-page.png");
+        text-indent: px2rem(36px);
+      }
+    }
+  }
+
+  .content {
+    @include block-center();
+    line-height: 180%;
+    padding: px2rem(36px);
+    color: #666666;
+    @extend .font-12;
+  }
+}

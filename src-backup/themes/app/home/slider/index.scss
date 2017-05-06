@@ -1,0 +1,59 @@
+@import "../../../utils/mixins";
+@import "../../../utils/functions";
+
+%height {
+  height: px2rem(300px);
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+.home-slider {
+  @extend %height;
+  overflow: hidden;
+  text-align: center;
+
+  .slider-images {
+    position: relative;
+    @extend %height;
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      img {
+        display: block;
+        width: px2rem(720px);
+        @extend %height;
+      }
+    }
+  }
+
+  .slider-indexes {
+    @extend %inline-block;
+    position: relative;
+    padding: px2rem(5px) px2rem(20px);
+    line-height: 0;
+    overflow: hidden;
+    border-radius: px2rem(10px);
+    background-color: rgba(0, 0, 0, .6);
+    top: px2rem(-40px);
+
+    li {
+      background-color: #9c9391;
+      width: px2rem(12px);
+      height: px2rem(12px);
+      border-radius: px2rem(12px);
+      cursor: pointer;
+      @extend %inline-block;
+      margin-left: px2rem(2px);
+      margin-right: px2rem(2px);
+
+      &.active {
+        background-color: #2a8fff;
+        width: px2rem(30px);
+      }
+    }
+  }
+}

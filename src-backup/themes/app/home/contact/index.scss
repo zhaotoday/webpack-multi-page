@@ -1,0 +1,101 @@
+@import "../../../utils/functions";
+@import "../../../utils/mixins";
+@import "../../../utils/classes/fonts";
+
+.home-contact {
+  background-image: url("./images/bg.jpg");
+  background-size: 100% 100%;
+  height: px2rem(920px);
+  text-align: center;
+
+  dl {
+    dt {
+      display: inline-block;
+      background-color: white;
+      color: #2a8fff;
+      @extend .font-25;
+      padding: px2rem(26px);
+      line-height: 110%;
+    }
+
+    dd {
+      text-align: left;
+      padding-top: px2rem(50px);
+
+      .methods {
+        margin-left: px2rem(60px);
+
+        li {
+          color: white;
+          box-sizing: border-box;
+          height: px2rem(138px);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: px2rem(138px) px2rem(138px);
+          @extend .font-14;
+          line-height: 180%;
+          margin-bottom: px2rem(35px);
+          padding-left: px2rem(138px);
+          padding-top: px2rem(20px);
+
+          &.address {
+            background-image: url("./images/address.png");
+          }
+
+          &.email {
+            background-image: url("./images/email.png");
+            padding-top: px2rem(38px);
+          }
+
+          &.tel {
+            background-image: url("./images/tel.png");
+            padding-top: px2rem(38px);
+          }
+        }
+      }
+
+      .btn-join {
+        @include block-link(px2rem(286px), px2rem(84px));
+        line-height: px2rem(84px);
+        @extend .font-14;
+        color: #2a8fff;
+        text-align: center;
+        border-radius: px2rem(42px);
+        @include block-center();
+        border: 1px solid #2a8fff;
+
+        span {
+          display: inline-block;
+          width: px2rem(22px);
+          height: px2rem(22px);
+          overflow: hidden;
+          position: relative;
+          top: px2rem(3px);
+          background-image: url("./images/join.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.ar {
+  .home-contact {
+    dl {
+      dd {
+        .methods {
+          margin-left: auto;
+          margin-right: px2rem(60px);
+
+          li {
+            padding-left: 0;
+            padding-right: px2rem(138px);
+            background-position: right 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

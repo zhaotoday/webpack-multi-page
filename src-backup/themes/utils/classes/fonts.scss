@@ -1,0 +1,23 @@
+@import "../vars";
+
+@for $i from 8 through 25 {
+  .font-#{$i} {
+    font-size: $i * 1px;
+  }
+}
+
+[data-dpr="2"] {
+  @for $i from 12 through 25 {
+    .font-#{$i} {
+      font-size: $i * 2px;
+    }
+  }
+}
+
+[data-dpr="3"] {
+  @for $i from 12 through 25 {
+    .font-#{$i} {
+      font-size: $i * 3px;
+    }
+  }
+}

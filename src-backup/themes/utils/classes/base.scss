@@ -1,0 +1,67 @@
+@import "./../vars";
+@import "./../functions";
+
+// 定宽居中
+.fix-center {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute-r {
+  right: 0;
+}
+
+.text-r {
+  text-align: right;
+}
+
+.block {
+  display: block;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.nav-hash {
+  display: block;
+  height: 0px;
+  position: relative;
+  top: px2rem(-102px);
+}
+
+.body-padding {
+  padding-top: 80px;
+}
+
+.break-word {
+  word-wrap: break-word;
+}

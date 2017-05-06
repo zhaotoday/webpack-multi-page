@@ -1,0 +1,102 @@
+@import "../../../utils/functions";
+@import "../../../utils/mixins";
+@import "../../../utils/classes/fonts";
+
+.home-commodities {
+  background-color: #60a9f5;
+  height: px2rem(830px);
+  text-align: center;
+
+  .nav {
+    display: none;
+  }
+
+  dl {
+    dt {
+      display: inline-block;
+      background-color: white;
+      color: #2a8fff;
+      @extend .font-25;
+      padding: px2rem(26px);
+      line-height: 110%;
+    }
+
+    dd {
+      .slider-images-wrap {
+        width: 100%;
+        overflow: hidden;
+        padding-top: px2rem(60px);
+
+        .slider-images {
+          li {
+            overflow: hidden;
+            width: px2rem(720px);
+            float: left;
+            color: white;
+            text-align: center;
+
+            img {
+              @include block-img(px2rem(218px), px2rem(218px));
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            h2 {
+              @extend .font-20;
+              padding-top: px2rem(30px);
+              padding-bottom: px2rem(45px);
+            }
+
+            p {
+              @extend .font-12;
+              width: px2rem(584px);
+              @include block-center();
+              height: px2rem(125px);
+              line-height: 160%;
+            }
+
+            .btn-view {
+              @include block-link(px2rem(220px), px2rem(64px));
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+              line-height: px2rem(65px);
+              @extend .font-12;
+              color: white;
+              border-radius: px2rem(32px);
+              border: 1px solid white;
+            }
+          }
+        }
+      }
+
+      .slider-dir {
+        li {
+          position: absolute;
+          width: px2rem(40px);
+          height: px2rem(75px);
+          background-size: 100% 100%;
+          top: px2rem(140px);
+
+          &.slider-left {
+            background-image: url("../../commons/global/images/slider/left.png");
+            left: px2rem(24px);
+
+            &.disabled {
+              background-image: url("../../commons/global/images/slider/left-disabled.png");
+            }
+          }
+
+          &.slider-right {
+            background-image: url("../../commons/global/images/slider/right.png");
+            right: px2rem(24px);
+
+            &.disabled {
+              background-image: url("../../commons/global/images/slider/right-disabled.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
