@@ -7,7 +7,7 @@ const webpack = require('webpack')
 const config = {
   entry: helpers.getEntry(consts.PAGES),
   output: {
-    path: '/dist',
+    path: path.resolve('dist'),
     publicPath: consts.CDN,
     filename: `${consts.SCRIPTS}[name].js`
   },

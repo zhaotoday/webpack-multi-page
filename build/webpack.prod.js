@@ -10,13 +10,12 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new UglifyJsPlugin({
       compress: {
         warnings: false
       }
     }),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     ...config.plugins
   ],
   resolve: config.resolve
