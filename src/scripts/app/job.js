@@ -1,1 +1,0 @@
-require('themes/app/job/index.scss')
