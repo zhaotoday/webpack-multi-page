@@ -1,59 +1,95 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const helpers = require('./helpers')
 const consts = require('./consts')
+const path = require('path')
+const webpack = require('webpack')
 
 const config = {
   entry: helpers.getEntry(consts.PAGES),
   output: {
-    path: 'dist',
+    path: '/dist',
     publicPath: consts.CDN,
     filename: `${consts.SCRIPTS}[name].js`
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel?presets[]=es2015&presets[]=stage-1&plugins[]=transform-decorators-legacy'
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass!postcss')
+        include: [
+          path.resolve('src/themes')
+        ],
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          loader: 'css-loader!sass-loader!postcss-loader',
+          publicPath: '../'
+        })
       },
       {
         test: /\.html$/,
-        loader: 'html?interpolate&minimize=false'
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              interpolate: true,
+              minimize: false
+            }
+          }
+        ]
       },
       {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url?limit=8192&name=themes/images/[hash].[ext]'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'themes/images/[hash].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
-  postcss: [
-    require('postcss-font-magician')(),
-    require('cssnano')({
-      filterPlugins: false,
-      sourcemap: true,
-      autoprefixer: {
-        add: true,
-        remove: true,
-        browsers: ['last 2 versions']
-      },
-      safe: true,
-      discardComments: {
-        removeAll: true
-      }
-    })
-  ],
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: __dirname,
+        postcss: [
+          require('postcss-font-magician')(),
+          require('cssnano')({
+            filterPlugins: false,
+            sourcemap: true,
+            autoprefixer: {
+              add: true,
+              remove: true,
+              browserslist: ['last 2 versions']
+            },
+            safe: true,
+            discardComments: {
+              removeAll: true
+            }
+          })
+        ]
+      }
+    }),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
     ...helpers.getPlugins(consts.PAGES)
   ],
   resolve: {
-    root: __dirname,
-    modulesDirectories: ['src', 'node_modules'],
-    extensions: ['', '.js', '.html', '.scss']
+    modules: ['src', 'node_modules'],
+    extensions: ['.js', '.html', '.scss']
   }
 }
 

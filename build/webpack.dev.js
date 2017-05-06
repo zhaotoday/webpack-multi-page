@@ -5,10 +5,7 @@ module.exports = {
   entry: config.entry,
   output: config.output,
   module: {
-    loaders: config.module.loaders
-  },
-  postcss: function () {
-    return config.postcss
+    rules: config.module.rules
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
