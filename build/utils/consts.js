@@ -2,7 +2,7 @@ const SRC = 'src/'
 const DIST = 'dist'
 const SCRIPTS = 'scripts/app/'
 const STYLES = 'themes/app/'
-const PAGES = ['home', 'commodity', 'jobs', 'job']
+const PAGES = ['home']
 const CDN = '/'
 
 module.exports = {

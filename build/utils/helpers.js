@@ -6,7 +6,7 @@ const getEntry = (pages) => {
   const allPages = ['commons', ...pages]
 
   allPages.map((page) => {
-    entry[page] = `./${consts.SRC}${consts.SCRIPTS}${page}.js`
+    entry[page] = `./src/app/${page}/scripts.js`
   })
 
   return entry
@@ -19,7 +19,7 @@ const getPlugins = (pages) => {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${page}.html`,
-        template: `./src/templates/${page}/index.html`,
+        template: `./src/app/${page}/index.html`,
         inject: false
       })
     )

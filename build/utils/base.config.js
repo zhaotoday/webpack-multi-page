@@ -28,7 +28,7 @@ const config = {
       {
         test: /\.scss$/,
         include: [
-          path.resolve('src/themes')
+          path.resolve('src')
         ],
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
