@@ -3,6 +3,7 @@
 @import "../../../themes/utils/vars";
 @import "../../../themes/utils/functions";
 @import "../../../themes/utils/mixins";
+@import "~compass-mixins/lib/compass/utilities";
 
 .container {
   max-width: px2rem($max-width);
@@ -104,12 +105,41 @@
     margin-bottom: px2rem(20px);
   }
 
-  &__body {
-    @extend .f3;
+  %body {
     color: nth($colors, 9);
     padding-left: px2rem(30px);
     margin-bottom: px2rem(38px);
     line-height: 150%;
+  }
+
+  &__body {
+    @extend %body;
+    @extend .f3;
+  }
+
+  &__body--sm {
+    @extend %body;
+    @extend .f2;
+  }
+
+  &__dl {
+    @extend .f5;
+    @include clearfix;
+    line-height: 180%;
+
+    dt {
+      text-align: right;
+      width: px2rem(155px);
+      float: left;
+      padding-left: px2rem(30px);
+    }
+
+    dd {
+      width: px2rem(500px);
+      float: left;
+      color: nth($colors, 5);
+      padding-bottom: px2rem(10px);
+    }
   }
 }
 
