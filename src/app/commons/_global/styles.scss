@@ -92,23 +92,46 @@
   border-radius: px2rem(5px);
 }
 
-.title {
-  background-image: url("./images/title/dot.png");
-  background-size: px2rem(12px) px2rem(12px);
-  background-position: 0 px2rem(9px);
-  background-repeat: no-repeat;
-  @include middle(px2rem(30px));
-  @extend .f3;
-  text-indent: px2rem(30px);
-  margin-bottom: px2rem(20px);
+.panel {
+  &__title {
+    background-image: url("./images/title/dot.png");
+    background-size: px2rem(12px) px2rem(12px);
+    background-position: 0 px2rem(9px);
+    background-repeat: no-repeat;
+    @include middle(px2rem(30px));
+    @extend .f3;
+    text-indent: px2rem(30px);
+    margin-bottom: px2rem(20px);
+  }
+
+  &__body {
+    @extend .f3;
+    color: nth($colors, 9);
+    padding-left: px2rem(30px);
+    margin-bottom: px2rem(38px);
+    line-height: 150%;
+  }
 }
 
 .content {
-  @extend .f3;
-  color: nth($colors, 9);
-  padding-left: px2rem(30px);
-  margin-bottom: px2rem(38px);
-  line-height: 150%;
+  &__title {
+    @include middle(px2rem(30px));
+    @extend .f2;
+    margin-bottom: px2rem(20px);
+  }
+
+  &__sub-title {
+    @include middle(px2rem(20px));
+    @extend .f5;
+    margin-bottom: px2rem(15px);
+  }
+
+  &__body {
+    @extend .f5;
+    color: nth($colors, 9);
+    margin-bottom: px2rem(38px);
+    line-height: 150%;
+  }
 }
 
 .table {
@@ -155,4 +178,11 @@
 .tip {
   color: nth($colors, 9);
   @extend .f7;
+}
+
+.title {
+  color: nth($colors, 1);
+  @extend .f6;
+  text-align: center;
+  margin-bottom: px2rem(40px);
 }
