@@ -1,0 +1,27 @@
+@import "./vars";
+@import "./mixins";
+
+// dpr=1 的字体
+@for $i from 1 through length($fonts) {
+  %f#{$i} {
+    @include font($i, 1);
+  }
+}
+
+// dpr=2 的字体
+[data-dpr="2"] {
+  @for $i from 1 through length($fonts) {
+    %f#{$i} {
+      @include font($i, 2);
+    }
+  }
+}
+
+// dpr=3 的字体
+[data-dpr="3"] {
+  @for $i from 1 through length($fonts) {
+    %f#{$i} {
+      @include font($i, 3);
+    }
+  }
+}

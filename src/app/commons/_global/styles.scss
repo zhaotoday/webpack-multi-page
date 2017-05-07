@@ -1,8 +1,8 @@
 @import "../../../themes/global/reset";
-@import "../../../themes/global/classes/index";
 @import "../../../themes/utils/vars";
 @import "../../../themes/utils/functions";
 @import "../../../themes/utils/mixins";
+@import "../../../themes/utils/placeholders";
 @import "~compass-mixins/lib/compass/utilities";
 
 .container {
@@ -10,17 +10,24 @@
   margin: 0 auto;
 }
 
+.padding {
+  padding: px2rem(40px) px2rem(30px);
+}
+
 .list {
+  background-color: white;
+
   li {
-    background-color: white;
     height: px2rem(90px);
     border-bottom: 1px solid nth($colors, 3);
-    @extend .f3;
+    @extend %f3;
     @include middle(px2rem(90px));
-    background-image: url("./images/list/arrow.png");
-    background-position: 96% px2rem(35px);
-    background-size: px2rem(12px) px2rem(20px);
-    background-repeat: no-repeat;
+    background: {
+      image: url("./images/list/arrow.png");
+      repeat: no-repeat;
+      position: 96% px2rem(35px);
+      size: px2rem(12px) px2rem(20px);
+    }
 
     h3 {
       float: left;
@@ -46,8 +53,10 @@
 }
 
 .card {
-  background-image: url("./images/card/bg.png");
-  background-size: 100% 100%;
+  background: {
+    image: url("./images/card/bg.png");
+    size: 100% 100%;
+  }
   width: px2rem(460px);
   height: px2rem(160px);
   overflow: hidden;
@@ -58,7 +67,7 @@
     @include middle(px2rem(160px));
     text-align: center;
     overflow: hidden;
-    @extend .f4;
+    @extend %f4;
     color: nth($colors, 6);
   }
 
@@ -70,14 +79,14 @@
 
     h3 {
       color: nth($colors, 4);
-      @extend .f4;
+      @extend %f4;
       padding-top: px2rem(25px);
       padding-bottom: px2rem(15px);
     }
 
     p {
       color: nth($colors, 5);
-      @extend .f5;
+      @extend %f5;
       line-height: 150%;
     }
   }
@@ -89,18 +98,20 @@
   text-align: center;
   background-color: nth($colors, 1);
   color: nth($colors, 6);
-  @extend .f6;
+  @extend %f6;
   border-radius: px2rem(5px);
 }
 
 .panel {
   &__title {
-    background-image: url("./images/title/dot.png");
-    background-size: px2rem(12px) px2rem(12px);
-    background-position: 0 px2rem(9px);
-    background-repeat: no-repeat;
+    background: {
+      image: url("./images/title/dot.png");
+      size: px2rem(12px) px2rem(12px);
+      position: 0 px2rem(9px);
+      repeat: no-repeat;
+    }
     @include middle(px2rem(30px));
-    @extend .f3;
+    @extend %f3;
     text-indent: px2rem(30px);
     margin-bottom: px2rem(20px);
   }
@@ -114,21 +125,20 @@
 
   &__body {
     @extend %body;
-    @extend .f3;
+    @extend %f3;
   }
 
   &__body--sm {
     @extend %body;
-    @extend .f2;
+    @extend %f2;
   }
 
   &__dl {
-    @extend .f5;
+    @extend %f5;
     @include clearfix;
     line-height: 180%;
 
     dt {
-      text-align: right;
       width: px2rem(155px);
       float: left;
       padding-left: px2rem(30px);
@@ -146,18 +156,18 @@
 .content {
   &__title {
     @include middle(px2rem(30px));
-    @extend .f2;
+    @extend %f2;
     margin-bottom: px2rem(20px);
   }
 
   &__sub-title {
     @include middle(px2rem(20px));
-    @extend .f5;
+    @extend %f5;
     margin-bottom: px2rem(15px);
   }
 
   &__body {
-    @extend .f5;
+    @extend %f5;
     color: nth($colors, 9);
     margin-bottom: px2rem(38px);
     line-height: 150%;
@@ -178,7 +188,7 @@
   }
 
   th, td {
-    @extend .f5;
+    @extend %f5;
     padding: px2rem(22px);
     border: 1px solid nth($colors, 10);
     text-align: center;
@@ -207,12 +217,12 @@
 
 .tip {
   color: nth($colors, 9);
-  @extend .f7;
+  @extend %f7;
 }
 
 .title {
   color: nth($colors, 1);
-  @extend .f6;
+  @extend %f6;
   text-align: center;
   margin-bottom: px2rem(40px);
 }
