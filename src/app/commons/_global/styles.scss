@@ -120,7 +120,7 @@
     color: nth($colors, 9);
     padding-left: px2rem(30px);
     margin-bottom: px2rem(38px);
-    line-height: 150%;
+    line-height: 180%;
   }
 
   &__body {
@@ -170,7 +170,7 @@
     @extend %f5;
     color: nth($colors, 9);
     margin-bottom: px2rem(38px);
-    line-height: 150%;
+    line-height: 180%;
   }
 }
 
@@ -217,7 +217,7 @@
 
 .tip {
   color: nth($colors, 9);
-  @extend %f7;
+  @extend %f5;
 }
 
 .title {

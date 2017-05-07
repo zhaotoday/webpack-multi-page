@@ -1,6 +1,8 @@
 import './styles.scss'
-
 import IScroll from 'iscroll/build/iscroll-lite'
+import helpers from '../../utils/helpers'
+
+$('#scroller').width(helpers.px2rem($('#scroller li').length * 490 + 30) + 'rem')
 
 new IScroll('#wrapper', {
   scrollX: true,
