@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const consts = require('./consts')
 
 const getEntry = (pages) => {
   const entry = {}
