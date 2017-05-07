@@ -1,0 +1,71 @@
+@import "../../themes/global/classes/fonts";
+@import "../../themes/utils/vars";
+@import "../../themes/utils/functions";
+
+.pay-confirm {
+  &__header {
+    background-color: $block-bg-color;
+    text-align: center;
+    margin-bottom: px2rem(20px);
+
+    h2 {
+      padding-top: px2rem(70px);
+      padding-bottom: px2rem(70px);
+      color: nth($colors, 1);
+      @extend .f1;
+    }
+
+    p {
+      @extend .f2;
+      padding-bottom: px2rem(70px);
+      color: nth($colors, 2);
+
+      span {
+        color: nth($colors, 1);
+      }
+    }
+  }
+
+  &__giveaway {
+    background-color: nth($colors, 7);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    padding-top: px2rem(40px);
+    padding-bottom: px2rem(40px);
+
+    &__scroll {
+      position: absolute;
+      width: px2rem(1010px);
+      height: px2rem(160px);
+
+      li {
+        float: left;
+        padding-left: px2rem(30px);
+        width: px2rem(460px);
+        height: px2rem(160px);
+      }
+    }
+  }
+
+  &__protocol__label {
+    @include middle(px2rem(29px));
+    background-image: url("./images/checkbox.png");
+    background-size: px2rem(29px) px2rem(29px);
+    background-position: px2rem(35px) top;
+    background-repeat: no-repeat;
+    text-indent: px2rem(75px);
+    margin-top: px2rem(145px);
+    margin-bottom: px2rem(40px);
+    height: px2rem(29px);
+    @extend .f5;
+
+    a {
+      color: nth($colors, 8);
+    }
+
+    &--on {
+      background-image: url("./images/checkbox-on.png");
+    }
+  }
+}

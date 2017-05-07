@@ -63,5 +63,9 @@
     a {
       color: nth($colors, 8);
     }
+
+    &--on {
+      background-image: url("./images/checkbox-on.png");
+    }
   }
 }
