@@ -1,6 +1,6 @@
 import './styles.scss'
 import IScroll from 'iscroll/build/iscroll-lite'
-import helpers from '../../utils/helpers'
+import helpers from '../../scripts/utils/helpers'
 
 $('#scroller').width(helpers.px2rem($('#scroller li').length * 490 + 30) + 'rem')
 
