@@ -1,3 +1,10 @@
+@import "./vars";
+
+/**
+ * 像素转 rem
+ * @param {string} $px 像素值
+ * @return {string}
+ */
 @function px2rem($px) {
-  @return ($px / 72px) * 1rem;
+  @return ($px / 75px) * 1rem;
 }

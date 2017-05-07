@@ -1,15 +1,19 @@
+@import "./vars";
+@import "./functions";
+
 /**
  * 垂直居中
- * @param $height {string} 高度
+ * @param {string} $height 高度
  */
 @mixin middle($height) {
   height: $height;
-  line-height: $height;
+  line-height: $height + px2rem(1px);
+  overflow: hidden;
 }
 
 /**
  * 块级元素水平居中
- * @param $width {string} 宽度
+ * @param {string} $width 宽度
  */
 @mixin block-center() {
   margin-left: auto;
@@ -18,7 +22,7 @@
 
 /**
  * 绝对定位居中
- * @param $width {string} 宽度
+ * @param {string} $width 宽度
  */
 @mixin absolute-center($parent-width, $self-width) {
   position: absolute;
@@ -28,8 +32,8 @@
 
 /**
  * 块化链接
- * @param $width {string} 宽度
- * @param $height {string} 高度
+ * @param {string} $width 宽度
+ * @param {string} $height 高度
  */
 @mixin block-link($width, $height) {
   display: block;
@@ -40,11 +44,24 @@
 
 /**
  * 块化图片
- * @param $width {string} 宽度
- * @param $height {string} 高度
+ * @param {string} $width 宽度
+ * @param {string} $height 高度
  */
 @mixin block-img($width, $height) {
   display: block;
   width: $width;
   height: $height;
+}
+
+/**
+ * 获取字体
+ * @param {number} $index 字体列表索引
+ * @param {string} $dpr dpr
+ */
+@mixin font($index, $dpr) {
+  font-size: nth(nth($fonts, $index), 1) * $dpr;
+
+  @if (length(nth($fonts, $index)) == 2) {
+    font-weight: bold;
+  }
 }

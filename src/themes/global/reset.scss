@@ -3,7 +3,10 @@
 @import "../utils/vars";
 @import "../utils/functions";
 
+html {
+  background-color: $bg-color;
+}
+
 body {
   font-family: $font-family-mobile;
-  background-color: $bg-color;
 }

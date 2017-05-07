@@ -2,8 +2,92 @@
 @import "../../../themes/global/classes/index";
 @import "../../../themes/utils/vars";
 @import "../../../themes/utils/functions";
+@import "../../../themes/utils/mixins";
 
 .container {
   max-width: px2rem($max-width);
   margin: 0 auto;
+}
+
+.list {
+  li {
+    background-color: white;
+    height: px2rem(90px);
+    border-bottom: 1px solid nth($colors, 3);
+    @extend .f3;
+    @include middle(px2rem(90px));
+    background-image: url("./images/list/arrow.png");
+    background-position: 96% px2rem(35px);
+    background-size: px2rem(12px) px2rem(20px);
+    background-repeat: no-repeat;
+
+    h3 {
+      float: left;
+      padding-left: px2rem(30px);
+      color: nth($colors, 4);
+    }
+
+    p {
+      float: right;
+      padding-right: px2rem(60px);
+      color: nth($colors, 5);
+      text-align: right;
+
+      span {
+        color: nth($colors, 1);
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.card {
+  background-image: url("./images/card/bg.png");
+  background-size: 100% 100%;
+  width: px2rem(460px);
+  height: px2rem(160px);
+  overflow: hidden;
+
+  dt {
+    float: left;
+    width: px2rem(150px);
+    @include middle(px2rem(160px));
+    text-align: center;
+    overflow: hidden;
+    @extend .f4;
+    color: nth($colors, 6);
+  }
+
+  dd {
+    float: left;
+    padding-left: px2rem(25px);
+    width: px2rem(280px);
+    overflow: hidden;
+
+    h3 {
+      color: nth($colors, 4);
+      @extend .f4;
+      padding-top: px2rem(25px);
+      padding-bottom: px2rem(15px);
+    }
+
+    p {
+      color: nth($colors, 5);
+      @extend .f5;
+      line-height: 150%;
+    }
+  }
+}
+
+.button {
+  margin: auto px2rem(20px) px2rem(50px) px2rem(20px);
+  @include middle(px2rem(85px));
+  text-align: center;
+  background-color: nth($colors, 1);
+  color: nth($colors, 6);
+  @extend .f6;
+  border-radius: px2rem(5px);
 }
