@@ -3,14 +3,17 @@ import './styles.scss'
 import IScroll from 'iscroll/build/iscroll-lite'
 
 new IScroll('#wrapper', {
+  mouseWheel: true,
+  scrollbars: true,
   scrollX: true,
-  scrollY: false
+  scrollY: false,
+  freeScroll: true
 })
 
-$('#protocol').tap(function (e) {
+$('#protocol').on('tap', function (e) {
   $(this).toggleClass('pay-confirm__protocol__label--on')
 })
 
-$('#pay').tap(function () {
+$('#pay').on('tap', function () {
   alert('pay')
 })

@@ -91,3 +91,67 @@
   @extend .f6;
   border-radius: px2rem(5px);
 }
+
+.title {
+  background-image: url("./images/title/dot.png");
+  background-size: px2rem(12px) px2rem(12px);
+  background-position: 0 px2rem(9px);
+  background-repeat: no-repeat;
+  @include middle(px2rem(30px));
+  @extend .f3;
+  text-indent: px2rem(30px);
+  margin-bottom: px2rem(20px);
+}
+
+.content {
+  @extend .f3;
+  color: nth($colors, 9);
+  padding-left: px2rem(30px);
+  margin-bottom: px2rem(38px);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: nth($colors, 6);
+
+  th {
+    color: nth($colors, 9);
+  }
+
+  td {
+    color: nth($colors, 11);
+  }
+
+  th, td {
+    @extend .f5;
+    padding: px2rem(22px);
+    border: 1px solid nth($colors, 10);
+    text-align: center;
+    line-height: 120%;
+  }
+}
+
+.dots {
+  li {
+    display: inline-block;
+    width: px2rem(16px);
+    height: px2rem(16px);
+    background-size: 100% 100%;
+  }
+
+  &__item {
+    &--red {
+      background-image: url("images/dots/dot-red.png");
+    }
+
+    &--blue {
+      background-image: url("images/dots/dot-blue.png");
+    }
+  }
+}
+
+.tip {
+  color: nth($colors, 9);
+  @extend .f7;
+}
