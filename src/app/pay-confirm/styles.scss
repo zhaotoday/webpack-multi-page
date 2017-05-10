@@ -1,6 +1,6 @@
 @import "../../styles/utils/vars";
 @import "../../styles/utils/functions";
-@import "../../styles/utils/placeholders";
+@import "../../styles/utils/mixins";
 
 .pay-confirm {
   &__header {
@@ -12,11 +12,11 @@
       padding-top: px2rem(70px);
       padding-bottom: px2rem(70px);
       color: nth($colors, 1);
-      @extend %f1;
+      @include font(1);
     }
 
     p {
-      @extend %f2;
+      @include font(2);
       padding-bottom: px2rem(70px);
       color: nth($colors, 2);
 
@@ -57,7 +57,7 @@
     margin-top: px2rem(145px);
     margin-bottom: px2rem(40px);
     height: px2rem(29px);
-    @extend %f5;
+    @include font(5);
 
     a {
       color: nth($colors, 8);

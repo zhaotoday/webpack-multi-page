@@ -56,12 +56,22 @@
 /**
  * 获取字体
  * @param {number} $index 字体列表索引
- * @param {string} $dpr dpr
  */
-@mixin font($index, $dpr) {
-  font-size: nth(nth($fonts, $index), 1) * $dpr;
+@mixin font($index) {
+  $font: nth($fonts, $index);
+  $font-size: nth($font, 1);
 
-  @if (length(nth($fonts, $index)) == 2) {
-    font-weight: bold;
+  font-size: $font-size;
+
+  @if (length($font) == 2) {
+    font-weight: nth($font, 2);
+  }
+
+  [data-dpr="2"] & {
+    font-size: $font-size* 2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
   }
 }

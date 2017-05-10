@@ -2,7 +2,6 @@
 @import "../../../styles/utils/vars";
 @import "../../../styles/utils/functions";
 @import "../../../styles/utils/mixins";
-@import "../../../styles/utils/placeholders";
 @import "~compass-mixins/lib/compass/utilities";
 
 .container {
@@ -20,7 +19,7 @@
   li {
     height: px2rem(90px);
     border-bottom: 1px solid nth($colors, 3);
-    @extend %f3;
+    @include font(3);
     @include middle(px2rem(90px));
     background: {
       image: url("./images/list/arrow.png");
@@ -67,7 +66,7 @@
     @include middle(px2rem(160px));
     text-align: center;
     overflow: hidden;
-    @extend %f4;
+    @include font(4);
     color: nth($colors, 6);
   }
 
@@ -79,14 +78,14 @@
 
     h3 {
       color: nth($colors, 4);
-      @extend %f4;
+      @include font(4);
       padding-top: px2rem(25px);
       padding-bottom: px2rem(15px);
     }
 
     p {
       color: nth($colors, 5);
-      @extend %f5;
+      @include font(5);
       line-height: 150%;
     }
   }
@@ -98,7 +97,7 @@
   text-align: center;
   background-color: nth($colors, 1);
   color: nth($colors, 6);
-  @extend %f6;
+  @include font(6);
   border-radius: px2rem(5px);
 }
 
@@ -111,7 +110,7 @@
       repeat: no-repeat;
     }
     @include middle(px2rem(30px));
-    @extend %f3;
+    @include font(3);
     text-indent: px2rem(30px);
     margin-bottom: px2rem(20px);
   }
@@ -125,16 +124,16 @@
 
   &__body {
     @extend %body;
-    @extend %f3;
+    @include font(3);
   }
 
   &__body--sm {
     @extend %body;
-    @extend %f2;
+    @include font(2);
   }
 
   &__dl {
-    @extend %f5;
+    @include font(5);
     @include clearfix;
     line-height: 180%;
 
@@ -156,18 +155,18 @@
 .content {
   &__title {
     @include middle(px2rem(30px));
-    @extend %f2;
+    @include font(2);
     margin-bottom: px2rem(20px);
   }
 
   &__sub-title {
     @include middle(px2rem(20px));
-    @extend %f5;
+    @include font(5);
     margin-bottom: px2rem(15px);
   }
 
   &__body {
-    @extend %f5;
+    @include font(5);
     color: nth($colors, 9);
     margin-bottom: px2rem(38px);
     line-height: 180%;
@@ -188,7 +187,7 @@
   }
 
   th, td {
-    @extend %f5;
+    @include font(5);
     padding: px2rem(22px);
     border: 1px solid nth($colors, 10);
     text-align: center;
@@ -217,12 +216,12 @@
 
 .tip {
   color: nth($colors, 9);
-  @extend %f5;
+  @include font(5);
 }
 
 .title {
   color: nth($colors, 1);
-  @extend %f6;
+  @include font(6);
   text-align: center;
   margin-bottom: px2rem(40px);
 }

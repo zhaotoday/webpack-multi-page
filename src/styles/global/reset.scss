@@ -2,7 +2,7 @@
 @import "~compass-mixins/lib/compass/css3";
 @import "../utils/vars";
 @import "../utils/functions";
-@import "../utils/placeholders";
+@import "../utils/mixins";
 
 html {
   background-color: $bg-color;
@@ -10,5 +10,5 @@ html {
 
 body {
   font-family: $font-family-mobile;
-  @extend %f5;
+  @include font(5);
 }
