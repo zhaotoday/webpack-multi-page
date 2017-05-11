@@ -1,4 +1,4 @@
-import './_global/styles.scss'
-import './header/styles.scss'
-import './footer/styles.scss'
-import '../../scripts/utils/zepto'
+import '../components/styles.scss'
+import './requires/header/styles.scss'
+import './requires/footer/styles.scss'
+import '../../scripts/libs/zepto/zepto'
