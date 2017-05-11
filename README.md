@@ -67,4 +67,13 @@ $ npm run build
 |       |-- libs                     // JS 库
 |       |-- utils                    // 一些 JS 工具集合
 |   |-- styles                       // 样式
+|       |-- global                   // 全局样式
+|           |-- reset.scss           // 样式重置
+|           |-- classes              // 样式类
+|       |-- utils                    // 样式工具集合
+|           |-- functions.scss       // 函数
+|           |-- mixins.scss          // 混合
+|           |-- placeholders.scss    // 占位符
+|           |-- variables.scss       // 变量
+
 ```
