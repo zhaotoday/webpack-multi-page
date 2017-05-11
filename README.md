@@ -39,7 +39,7 @@ $ npm run build
 ```
 
 ## 组件化
-建议将通用的一些模块（如：面板、列表、tab 菜单等）抽象成组件，提高代码复用率。组件放置在 `/src/commons/components` 下。
+将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在 `/src/commons/components` 下。
 
 ## 目录结构
 ```
