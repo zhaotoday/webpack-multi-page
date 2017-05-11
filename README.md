@@ -20,6 +20,7 @@ $ npm run build
 参照 BEM 规范，详情见：https://github.com/zhaotoday/bem 。
 
 ## 目录结构
+```
 |-- build                            // Webpack 项目构建
 |-- src                              // 源码目录
 |   |-- pages                        // 网站页面
@@ -44,3 +45,4 @@ $ npm run build
 |       |-- libs                     // JS 库
 |       |-- utils                    // 一些 JS 工具集合
 |   |-- styles                       // 样式
+```
