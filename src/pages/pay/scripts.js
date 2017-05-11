@@ -10,7 +10,7 @@ new IScroll('#wrapper', {
 })
 
 $('#protocol').tap(function (e) {
-  $(this).toggleClass('pay-confirm__protocol__label--on')
+  $(this).toggleClass('pay__protocol__label--on')
 })
 
 $('#pay').tap(function () {

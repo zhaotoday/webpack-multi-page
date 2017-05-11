@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 ${require('../commons/requires/head/template.html')}
-<link href="/themes/app/pay-confirm.css" rel="stylesheet">
+<link href="/themes/app/pay.css" rel="stylesheet">
 <link href="./styles.scss" rel="stylesheet">
 <body>
 <div class="container">
   <!-- 头部 -->
-  <div class="pay-confirm__header">
+  <div class="pay__header">
     <h2>¥672</h2>
     <p>
       订单截止时间：
@@ -15,7 +15,7 @@ ${require('../commons/requires/head/template.html')}
   </div>
   <!-- /头部 -->
   <!-- 牛券 -->
-  <ul class="pay-confirm__coupons list">
+  <ul class="pay__coupons list">
     <li>
       <h3>牛券减免</h3>
       <p>-10元</p>
@@ -23,8 +23,8 @@ ${require('../commons/requires/head/template.html')}
   </ul>
   <!-- /牛券 -->
   <!-- 赠送 -->
-  <div class="pay-confirm__giveaway" id="wrapper">
-    <div class="pay-confirm__giveaway__scroll" id="scroller">
+  <div class="pay__giveaway" id="wrapper">
+    <div class="pay__giveaway__scroll" id="scroller">
       <ul>
         <li>
           <dl class="card">
@@ -55,7 +55,7 @@ ${require('../commons/requires/head/template.html')}
   </div>
   <!-- /赠送 -->
   <!-- 牛券 -->
-  <ul class="pay-confirm__coupons list">
+  <ul class="pay__coupons list">
     <li>
       <h3>账户余额</h3>
       <p>6000元</p>
@@ -69,17 +69,17 @@ ${require('../commons/requires/head/template.html')}
   </ul>
   <!-- /牛券 -->
   <!-- 协议 -->
-  <div class="pay-confirm__protocol">
-    <div class="pay-confirm__protocol__label" id="protocol">
+  <div class="pay__protocol">
+    <div class="pay__protocol__label" id="protocol">
       我已阅读并同意<a href="protocol.html">《服务协议》</a>
     </div>
   </div>
   <!-- /协议 -->
   <!-- 立即支付 -->
-  <div class="pay-confirm__pay button" id="pay">立即支付</div>
+  <div class="pay__pay button" id="pay">立即支付</div>
   <!-- /立即支付 -->
 </div>
 </body>
 ${require('../commons/requires/foot/template.html')}
-<script src="/scripts/app/pay-confirm.js"></script>
+<script src="/scripts/app/pay.js"></script>
 </html>
