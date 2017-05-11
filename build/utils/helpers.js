@@ -18,7 +18,7 @@ const getPlugins = (pages) => {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${page}.html`,
-        template: `./src/app/${page}/template.html`,
+        template: `./src/pages/${page}/template.html`,
         inject: false
       })
     )
