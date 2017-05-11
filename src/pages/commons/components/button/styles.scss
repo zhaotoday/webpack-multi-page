@@ -1,0 +1,13 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.button {
+  margin: auto px2rem(20px) px2rem(50px) px2rem(20px);
+  @include middle(px2rem(85px));
+  text-align: center;
+  background-color: nth($colors, 1);
+  color: nth($colors, 6);
+  @include font(6);
+  border-radius: px2rem(5px);
+}

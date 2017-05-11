@@ -1,0 +1,24 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.content {
+  &__title {
+    @include middle(px2rem(30px));
+    @include font(2);
+    margin-bottom: px2rem(20px);
+  }
+
+  &__sub-title {
+    @include middle(px2rem(20px));
+    @include font(5);
+    margin-bottom: px2rem(15px);
+  }
+
+  &__body {
+    @include font(5);
+    color: nth($colors, 9);
+    margin-bottom: px2rem(38px);
+    line-height: 180%;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: nth($colors, 6);
+
+  th {
+    color: nth($colors, 9);
+  }
+
+  td {
+    color: nth($colors, 11);
+  }
+
+  th, td {
+    @include font(5);
+    padding: px2rem(22px);
+    border: 1px solid nth($colors, 10);
+    text-align: center;
+    line-height: 120%;
+  }
+}

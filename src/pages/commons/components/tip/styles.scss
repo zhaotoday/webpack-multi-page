@@ -1,0 +1,7 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/mixins";
+
+.tip {
+  color: nth($colors, 9);
+  @include font(5);
+}

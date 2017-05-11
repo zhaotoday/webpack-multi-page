@@ -1,0 +1,41 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.list {
+  background-color: white;
+
+  li {
+    height: px2rem(90px);
+    border-bottom: 1px solid nth($colors, 3);
+    @include font(3);
+    @include middle(px2rem(90px));
+    background: {
+      image: url("./images/arrow.png");
+      repeat: no-repeat;
+      position: 96% px2rem(35px);
+      size: px2rem(12px) px2rem(20px);
+    }
+
+    h3 {
+      float: left;
+      padding-left: px2rem(30px);
+      color: nth($colors, 4);
+    }
+
+    p {
+      float: right;
+      padding-right: px2rem(60px);
+      color: nth($colors, 5);
+      text-align: right;
+
+      span {
+        color: nth($colors, 1);
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
