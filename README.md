@@ -17,7 +17,29 @@ $ npm run build
 ```
 
 ## 样式编写规范
-参照 BEM 规范，详情见：https://github.com/zhaotoday/bem 。
+请参照 BEM 规范，详情见：https://github.com/zhaotoday/bem 。
+```html
+<nav class="nav">
+  <a href="#" class="nav__item nav__item--active">当前状态</a>
+  <a href="#" class="nav__item nav__item--hover">鼠标移上时的状态</a>
+  <a href="#" class="nav__item nav__item--normal">正常状态</a>
+</nav>
+```
+```scss
+.nav {
+  &__item {
+    &--active {
+    }
+    &--hover {
+    }
+    &--normal {
+    }
+  }
+}
+```
+
+## 组件化
+建议将通用的一些模块（如：面板、列表、tab 菜单等）抽象成组件，提高代码复用率。组件放置在 `/src/commons/components` 下。
 
 ## 目录结构
 ```
