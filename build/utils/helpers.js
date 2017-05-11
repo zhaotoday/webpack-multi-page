@@ -5,7 +5,7 @@ const getEntry = (pages) => {
   const allPages = ['commons', ...pages]
 
   allPages.map((page) => {
-    entry[page] = `./src/app/${page}/scripts.js`
+    entry[page] = `./src/pages/${page}/scripts.js`
   })
 
   return entry
