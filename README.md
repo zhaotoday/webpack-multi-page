@@ -5,6 +5,7 @@
 https://github.com/zhaotoday/mobile-website
 
 ## 使用
+#### 1. 命令
 ```bash
 # 下载代码
 $ git clone https://github.com/zhaotoday/mobile-website.git
@@ -15,6 +16,12 @@ $ npm start
 # 构建
 $ npm run build
 ```
+
+#### 2. 修改 Webpack 配置
+修改文件 `/build/utils/consts.js` 的 `pages` 变量，将其配置成自己开发的页面。
+
+#### 3. 开发网站页面
+在文件夹 `/src/pages` 下开发网站页面，页面文件夹命名与第 2 步的配置相对应。
 
 ## 样式编写规范
 请参照 BEM 规范，详情见：https://github.com/zhaotoday/bem 。
@@ -39,7 +46,7 @@ $ npm run build
 ```
 
 ## 组件化
-将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在 `/src/commons/components` 下。
+将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在文件夹 `/src/commons/components` 下。
 
 ## 目录结构
 ```
