@@ -23,8 +23,12 @@ $ npm run build
 #### 3. 开发网站页面
 在文件夹 `/src/pages` 下开发网站页面，页面文件夹命名与第 2 步的配置相对应。
 
+## 兼容性
+- PC 端：IE8+（含 IE8）；
+- 移动端：所有移动端主流浏览器及原生系统默认浏览器；
+
 ## 样式编写规范
-请参照 BEM 规范，详情见：https://github.com/zhaotoday/bem 。
+请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：
 ```html
 <nav class="nav">
   <a href="#" class="nav__item nav__item--active">当前状态</a>
