@@ -15,11 +15,13 @@
     color: nth($colors, 11);
   }
 
-  th, td {
-    @include font(5);
+  th,
+  td {
     padding: px2rem(22px);
     border: 1px solid nth($colors, 10);
     text-align: center;
     line-height: 120%;
+
+    @include font(5);
   }
 }

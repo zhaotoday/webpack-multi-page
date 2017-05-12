@@ -3,5 +3,6 @@
 
 .tip {
   color: nth($colors, 9);
+
   @include font(5);
 }

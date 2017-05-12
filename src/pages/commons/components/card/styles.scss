@@ -7,6 +7,7 @@
     image: url("./images/bg.png");
     size: 100% 100%;
   }
+
   width: px2rem(460px);
   height: px2rem(160px);
   overflow: hidden;
@@ -14,11 +15,12 @@
   dt {
     float: left;
     width: px2rem(150px);
-    @include middle(px2rem(160px));
     text-align: center;
     overflow: hidden;
-    @include font(4);
     color: nth($colors, 6);
+
+    @include middle(px2rem(160px));
+    @include font(4);
   }
 
   dd {
@@ -29,15 +31,17 @@
 
     h3 {
       color: nth($colors, 4);
-      @include font(4);
       padding-top: px2rem(25px);
       padding-bottom: px2rem(15px);
+
+      @include font(4);
     }
 
     p {
       color: nth($colors, 5);
-      @include font(5);
       line-height: 150%;
+
+      @include font(5);
     }
   }
 }

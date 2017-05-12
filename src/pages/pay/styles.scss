@@ -12,13 +12,15 @@
       padding-top: px2rem(70px);
       padding-bottom: px2rem(70px);
       color: nth($colors, 1);
+
       @include font(1);
     }
 
     p {
-      @include font(2);
       padding-bottom: px2rem(70px);
       color: nth($colors, 2);
+
+      @include font(2);
 
       span {
         color: nth($colors, 1);
@@ -48,7 +50,6 @@
   }
 
   &__protocol__label {
-    @include middle(px2rem(29px));
     background-image: url("./images/checkbox.png");
     background-size: px2rem(29px) px2rem(29px);
     background-position: px2rem(35px) top;
@@ -57,6 +58,8 @@
     margin-top: px2rem(145px);
     margin-bottom: px2rem(40px);
     height: px2rem(29px);
+
+    @include middle(px2rem(29px));
     @include font(5);
 
     a {

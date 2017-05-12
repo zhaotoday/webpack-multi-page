@@ -11,10 +11,12 @@
       position: 0 px2rem(9px);
       repeat: no-repeat;
     }
-    @include middle(px2rem(30px));
-    @include font(3);
+
     text-indent: px2rem(30px);
     margin-bottom: px2rem(20px);
+
+    @include middle(px2rem(30px));
+    @include font(3);
   }
 
   %body {
@@ -26,18 +28,21 @@
 
   &__body {
     @extend %body;
+
     @include font(3);
   }
 
   &__body--sm {
     @extend %body;
+
     @include font(2);
   }
 
   &__dl {
+    line-height: 180%;
+
     @include font(5);
     @include clearfix;
-    line-height: 180%;
 
     dt {
       width: px2rem(155px);

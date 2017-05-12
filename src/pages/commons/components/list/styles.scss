@@ -8,14 +8,15 @@
   li {
     height: px2rem(90px);
     border-bottom: 1px solid nth($colors, 3);
-    @include font(3);
-    @include middle(px2rem(90px));
     background: {
       image: url("./images/arrow.png");
       repeat: no-repeat;
       position: 96% px2rem(35px);
       size: px2rem(12px) px2rem(20px);
     }
+
+    @include font(3);
+    @include middle(px2rem(90px));
 
     h3 {
       float: left;
