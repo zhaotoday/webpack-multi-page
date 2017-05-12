@@ -15,6 +15,12 @@ $ npm install
 $ npm start
 # 构建
 $ npm run build
+# 按 Standard 规范校验 JS 代码
+$ npm run eslint
+# 按 Standard 规范代码格式化 JS 代码
+$ npm run eslintfix
+# CSS 代码校验
+$ npm run stylelint
 ```
 
 #### 2. 修改 Webpack 配置
@@ -25,7 +31,18 @@ $ npm run build
 
 ## 兼容性
 - PC 端：IE8+（含 IE8）；
-- 移动端：所有移动端主流浏览器及原生系统默认浏览器；
+- 移动端：主流浏览器；
+
+## 添加 polyfill
+用 ES6 开发移动端网站时，可按需引入 polyfill，提高浏览器兼容性。
+```bash
+# 安装 core-js
+$ npm install --save core-js
+```
+polyfill 在 `/src/scripts/utils/polyfill.js` 文件中引入：
+```js
+import 'core-js/es6/promise'
+```
 
 ## 样式编写规范
 请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：

@@ -1,11 +1,11 @@
 {
-  "name": "my-site",
+  "name": "website",
   "version": "1.0.0",
-  "description": "my site",
+  "description": "website",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "eslintfix": "eslint src/scripts --fix",
+    "eslintfix": "eslint src/**/*.js --fix",
     "eslint": "eslint src/**/*.js",
     "stylelint": "stylelint src/**/*.scss",
     "clean": "rimraf dist",
