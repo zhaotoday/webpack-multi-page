@@ -4,7 +4,7 @@ import helpers from '../../scripts/utils/helpers'
 
 $('#scroller').width(helpers.px2rem($('#scroller li').length * 490 + 30) + 'rem')
 
-new IScroll('#wrapper', {
+new IScroll('#wrapper', {    // eslint-disable-line no-new
   scrollX: true,
   scrollY: false
 })
