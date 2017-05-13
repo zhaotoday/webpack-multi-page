@@ -1,5 +1,13 @@
 ## 简介
-基于 Webpack 2 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案。
+基于 Webpack 2 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端（兼容 IE8+）和移动端。
+
+## 功能
+- 前端工程化
+- 模块化
+- 开发、调试和构建
+- JS 代码规范性校验
+- CSS 代码规范性校验
+- 集成 PostCSS、SASS
 
 ## 项目地址
 https://github.com/zhaotoday/mobile-website
@@ -19,7 +27,7 @@ $ npm run build
 $ npm run eslint
 # 按 Standard 规范代码格式化 JS 代码
 $ npm run eslintfix
-# CSS 代码校验
+# 校验 CSS 代码
 $ npm run stylelint
 ```
 
