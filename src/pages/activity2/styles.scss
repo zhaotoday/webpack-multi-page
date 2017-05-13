@@ -1,0 +1,20 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+
+html,
+body {
+  background-color: nth($colors, 14);
+}
+
+.activity2 {
+  &__header {
+    background: {
+      image: url("./images/header.png");
+      size: 100% 100%;
+    }
+
+    width: 100%;
+    height: px2rem(588px);
+  }
+}

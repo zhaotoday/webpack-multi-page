@@ -14,5 +14,5 @@ $('#protocol').tap(function (e) {
 })
 
 $('#pay').tap(function () {
-  alert('pay')
+  alert('pay!')
 })

@@ -1,0 +1,35 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.notice {
+  margin: {
+    left: px2rem(25px);
+    right: px2rem(25px);
+  }
+
+  dt {
+    border-bottom: 1px solid red;
+    margin-bottom: px2rem(40px);
+
+    span {
+      margin-bottom: px2rem(-25px);
+      display: block;
+      text-align: center;
+      width: px2rem(175px);
+      background-color: nth($colors, 14);
+      color: nth($colors, 15);
+
+      @include middle(px2rem(50px));
+      @include block-center;
+      @include font(3);
+    }
+  }
+
+  dd {
+    color: nth($colors, 16);
+
+    @include font(5);
+    @include middle(px2rem(46px));
+  }
+}
