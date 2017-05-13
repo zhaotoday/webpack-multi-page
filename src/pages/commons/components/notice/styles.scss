@@ -23,6 +23,10 @@
       @include middle(px2rem(50px));
       @include block-center;
       @include font(3);
+
+      &.ghost {
+        background-color: nth($colors, 6);
+      }
     }
   }
 

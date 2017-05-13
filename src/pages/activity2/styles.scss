@@ -4,7 +4,7 @@
 
 html,
 body {
-  background-color: nth($colors, 14);
+  background-color: nth($colors, 6);
 }
 
 .activity2 {
@@ -16,5 +16,9 @@ body {
 
     width: 100%;
     height: px2rem(588px);
+  }
+
+  &__button {
+    margin-bottom: px2rem(75px);
   }
 }
