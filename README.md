@@ -7,12 +7,12 @@
 - 模块化
 - 组件化
 - 开发、调试和构建
+- 集成 PostCSS、SASS
 - JS 代码规范性校验
 - CSS 代码规范性校验
-- 集成 PostCSS、SASS
 
 ## 项目地址
-https://github.com/zhaotoday/mobile-website
+https://github.com/zhaotoday/webpack-website
 
 ## 使用
 #### 1. 命令
