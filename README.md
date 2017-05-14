@@ -34,10 +34,11 @@ $ npm run stylelint
 ```
 
 #### 2. 修改 Webpack 配置
-修改文件 `/build/utils/consts.js` 的 `pages` 变量，将其配置成自己开发的页面。
+- 新增 `/build/utils/consts/projects/your-project.js`；
+- 参考 `play.js` 配置 PROJECT、PAGES、CDN 常量，注意 PAGES，将其配置成自己开发的页面。
 
 #### 3. 开发网站页面
-在文件夹 `/src/pages` 下开发网站页面，页面文件夹命名与第 2 步的配置相对应。
+在文件夹 `/src/projects/{your-project}/pages` 下开发网站页面，页面文件夹命名与第 2 步的配置相对应。
 
 ## 兼容性
 - PC 端：IE8+（含 IE8）；
@@ -83,24 +84,26 @@ import 'core-js/es6/promise'
 ```
 |-- build                            // Webpack 配置
 |-- src                              // 源码目录
-|   |-- pages                        // 网站页面
-|       |-- home                     // 首页（举例）
-|           |-- images               // 首页图片
-|           |-- scripts.js           // 首页脚本
-|           |-- styles.scss          // 首页样式
-|           |-- template.html        // 首页 html 模板
-|       |-- news                     // 新闻页面（举例）
-|   |-- commons                      // 公用代码
-|       |-- components               // 公共组件
-|           |-- panel                // 面板组件（举例）
-|               |-- images           // 面板组件相关图片
-|               |-- styles.scss      // 面板组件相关样式
-|           |-- list                 // 列表组件（举例）
-|       |-- requires                 // 公用代码块，在各页面的 html 模板中引入
-|           |-- head                 // 头部代码块，也就是 <head> 标签
-|           |-- foot                 // 底部代码块，如：在页面底部引入的公用 JS、统计代码等
-|           |-- header               // 页面头部展示内容，如：导航菜单等
-|           |-- footer               // 页面底部展示内容，如：页脚导航链接、版权信息等
+|   |-- projects                     // 项目集合
+|       |-- play                     // play 项目（举例）
+|           |-- pages                        // 网站页面
+|               |-- home                     // 首页（举例）
+|                   |-- images               // 首页图片
+|                   |-- scripts.js           // 首页脚本
+|                   |-- styles.scss          // 首页样式
+|                   |-- template.html        // 首页 html 模板
+|               |-- news                     // 新闻页面（举例）
+|           |-- commons                      // 公用代码
+|               |-- components               // 公共组件
+|                   |-- panel                // 面板组件（举例）
+|                       |-- images           // 面板组件相关图片
+|                       |-- styles.scss      // 面板组件相关样式
+|                   |-- list                 // 列表组件（举例）
+|               |-- requires                 // 公用代码块，在各页面的 html 模板中引入
+|                   |-- head                 // 头部代码块，也就是 <head> 标签
+|                   |-- foot                 // 底部代码块，如：在页面底部引入的公用 JS、统计代码等
+|                   |-- header               // 页面头部展示内容，如：导航菜单等
+|                   |-- footer               // 页面底部展示内容，如：页脚导航链接、版权信息等
 |   |-- scripts                      // 脚本
 |       |-- libs                     // JS 库
 |       |-- utils                    // 一些 JS 工具集合

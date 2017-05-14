@@ -1,4 +1,4 @@
-import './components/styles.scss'
+import './styles.scss'
 import './components/button/styles.scss'
 import './components/card/styles.scss'
 import './components/container/styles.scss'
