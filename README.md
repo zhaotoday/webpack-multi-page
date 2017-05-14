@@ -14,11 +14,17 @@
 ## 项目地址
 https://github.com/zhaotoday/webpack-website
 
+## 相关参考
+- [JavaScript 代码规范](https://github.com/feross/standard/blob/master/docs/README-zhcn.md)
+- [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
+- [compass](http://compass-style.org/)
+- [postcss-utilities](https://github.com/ismamz/postcss-utilities)
+
 ## 使用
 #### 1. 命令
 ```bash
 # 下载代码
-$ git clone https://github.com/zhaotoday/mobile-website.git
+$ git clone https://github.com/zhaotoday/webpack-website.git
 # 安装依赖
 $ npm install
 # 开发、调试
@@ -34,7 +40,7 @@ $ npm run stylelint
 ```
 
 #### 2. 修改 Webpack 配置
-- 新增 `/build/utils/consts/projects/your-project.js`；
+- 新增 `/build/utils/consts/projects/{your-project}.js`；
 - 参考 `play.js` 配置 PROJECT、PAGES、CDN 常量，注意 PAGES，将其配置成自己开发的页面。
 
 #### 3. 开发网站页面
@@ -118,11 +124,11 @@ import 'core-js/es6/promise'
 |                   |-- functions.scss       // SASS 函数
 |                   |-- mixins.scss          // SASS 混合
 |                   |-- variables.scss       // SASS 变量
-|   |-- scripts                              // 脚本
+|   |-- scripts                              // 脚本（全局）
 |       |-- libs                             // JS 库
 |       |-- utils                            // 一些 JS 工具集合
 |           |-- helpers.js                   // 帮助函数集合
-|   |-- styles                               // 样式
+|   |-- styles                               // 样式（全局）
 |       |-- utils                            // 样式工具集合
 |           |-- functions.scss               // SASS 函数
 |           |-- mixins.scss                  // SASS 混合
