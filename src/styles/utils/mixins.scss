@@ -45,9 +45,10 @@
 
 /**
  * 字体
+ * @param {array} $fonts 字体列表
  * @param {number} $index 字体列表索引
  */
-@mixin font($index) {
+@mixin _font($fonts, $index) {
   $font: nth($fonts, $index);
   $font-size: nth($font, 1);
 
