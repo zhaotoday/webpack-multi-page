@@ -7,7 +7,7 @@ const webpack = require('webpack')
 const config = {
   entry: helpers.getEntry(consts.PAGES),
   output: {
-    path: path.resolve('dist'),
+    path: consts.DIST,
     publicPath: consts.CDN,
     filename: `${consts.SCRIPTS}[name].js`
   },
@@ -56,7 +56,7 @@ const config = {
             options: {
               limit: 8192,
               publicPath: '/',
-              outputPath: 'static/images/',
+              outputPath: consts.IMAGES,
               name: '[hash].[ext]'
             }
           }
