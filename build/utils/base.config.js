@@ -1,7 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const helpers = require('./helpers')
 const consts = require('./consts')
-const path = require('path')
 const webpack = require('webpack')
 
 const config = {
@@ -28,7 +27,7 @@ const config = {
       {
         test: /\.scss$/,
         include: [
-          path.resolve('src')
+          consts.SRC
         ],
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
