@@ -2,10 +2,10 @@
 @import "./functions";
 
 /**
- * 垂直居中
+ * 文字垂直居中
  * @param {string} $height 高度
  */
-@mixin middle($height) {
+@mixin text--middle($height) {
   height: $height;
   line-height: $height + px2rem(1px);
   overflow: hidden;
@@ -15,27 +15,17 @@
  * 块级元素水平居中
  * @param {string} $width 宽度
  */
-@mixin block-center() {
+@mixin block--center() {
   margin-left: auto;
   margin-right: auto;
 }
 
 /**
- * 绝对定位居中
- * @param {string} $width 宽度
- */
-@mixin absolute-center($parent-width, $self-width) {
-  position: absolute;
-  left: $parent-width / 2;
-  margin-left: -$self-width / 2;
-}
-
-/**
- * 块化链接
+ * 链接块化
  * @param {string} $width 宽度
  * @param {string} $height 高度
  */
-@mixin block-link($width, $height) {
+@mixin link--block($width, $height) {
   display: block;
   text-decoration: none;
   width: $width;
@@ -43,18 +33,18 @@
 }
 
 /**
- * 块化图片
+ * 图片块化
  * @param {string} $width 宽度
  * @param {string} $height 高度
  */
-@mixin block-img($width, $height) {
+@mixin img--block($width, $height) {
   display: block;
   width: $width;
   height: $height;
 }
 
 /**
- * 获取字体
+ * 字体
  * @param {number} $index 字体列表索引
  */
 @mixin font($index) {

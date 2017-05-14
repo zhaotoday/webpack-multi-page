@@ -20,8 +20,8 @@
       background-color: color(14);
       color: color(15);
 
-      @include middle(px2rem(50px));
-      @include block-center;
+      @include text--middle(px2rem(50px));
+      @include block--center;
       @include font(3);
 
       &.ghost {
@@ -34,6 +34,6 @@
     color: color(16);
 
     @include font(5);
-    @include middle(px2rem(46px));
+    @include text--middle(px2rem(46px));
   }
 }

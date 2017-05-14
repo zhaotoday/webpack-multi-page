@@ -24,7 +24,7 @@ body {
       color: color(6);
       text-align: center;
 
-      @include middle(px2rem(135px));
+      @include text--middle(px2rem(135px));
       @include font(8);
     }
 
@@ -34,7 +34,7 @@ body {
       color: color(12);
 
       @include font(5);
-      @include middle(px2rem(56px));
+      @include text--middle(px2rem(56px));
     }
 
     &__button {
@@ -47,7 +47,7 @@ body {
       overflow: hidden;
 
       @include font(4);
-      @include block-center;
+      @include block--center;
     }
   }
 }

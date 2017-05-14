@@ -9,6 +9,6 @@
   color: color(6);
   border-radius: px2rem(5px);
 
-  @include middle(px2rem(85px));
+  @include text--middle(px2rem(85px));
   @include font(6);
 }
