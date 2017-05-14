@@ -82,10 +82,10 @@ import 'core-js/es6/promise'
 
 ## 目录结构
 ```
-|-- build                            // Webpack 配置
-|-- src                              // 源码目录
-|   |-- projects                     // 项目集合
-|       |-- play                     // play 项目（举例）
+|-- build                                    // Webpack 配置
+|-- src                                      // 源码目录
+|   |-- projects                             // 项目集合
+|       |-- play                             // play 项目（举例）
 |           |-- pages                        // 网站页面
 |               |-- home                     // 首页（举例）
 |                   |-- images               // 首页图片
@@ -118,13 +118,13 @@ import 'core-js/es6/promise'
 |                   |-- functions.scss       // SASS 函数
 |                   |-- mixins.scss          // SASS 混合
 |                   |-- variables.scss       // SASS 变量
-|   |-- scripts                      // 脚本
-|       |-- libs                     // JS 库
-|       |-- utils                    // 一些 JS 工具集合
-|           |-- helpers.js           // 帮助函数集合
-|   |-- styles                       // 样式
-|       |-- utils                    // 样式工具集合
-|           |-- functions.scss       // SASS 函数
-|           |-- mixins.scss          // SASS 混合
-|           |-- variables.scss       // SASS 变量
+|   |-- scripts                              // 脚本
+|       |-- libs                             // JS 库
+|       |-- utils                            // 一些 JS 工具集合
+|           |-- helpers.js                   // 帮助函数集合
+|   |-- styles                               // 样式
+|       |-- utils                            // 样式工具集合
+|           |-- functions.scss               // SASS 函数
+|           |-- mixins.scss                  // SASS 混合
+|           |-- variables.scss               // SASS 变量
 ```
