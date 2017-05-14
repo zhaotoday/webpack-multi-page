@@ -1,4 +1,4 @@
-const customConsts = require('./custom')
+const projectConsts = require('./projects/play')
 
 const path = require('path')
 // 源码目录
@@ -12,11 +12,11 @@ const STYLES = 'static/styles/'
 // 图片路径
 const IMAGES = 'static/images/'
 // CDN
-const CDN = customConsts.CDN
+const CDN = projectConsts.CDN
 // 项目
-const PROJECT = customConsts.PROJECT
+const PROJECT = projectConsts.PROJECT
 // 页面配置
-const PAGES = customConsts.PAGES
+const PAGES = projectConsts.PAGES
 
 module.exports = {
   SRC,

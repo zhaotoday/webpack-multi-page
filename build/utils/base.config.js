@@ -81,6 +81,9 @@ const config = {
             discardComments: {
               removeAll: true
             }
+          }),
+          require('postcss-utilities')({
+            ie8: true
           })
         ]
       }
