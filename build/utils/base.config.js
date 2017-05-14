@@ -31,7 +31,18 @@ const config = {
         ],
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          loader: 'css-loader!sass-loader!postcss-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [
+                  `${consts.SRC}/styles`
+                ]
+              }
+            },
+            'postcss-loader'
+          ],
           publicPath: '../'
         })
       },

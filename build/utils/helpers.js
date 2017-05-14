@@ -1,11 +1,13 @@
+const consts = require('./consts')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const projectPath = `${consts.SRC}/projects/${consts.PROJECT}/pages`
 
 const getEntry = (pages) => {
   const entry = {}
   const allPages = ['commons', ...pages]
 
   allPages.map((page) => {
-    entry[page] = `./src/pages/${page}/scripts.js`
+    entry[page] = `${projectPath}/${page}/scripts.js`
   })
 
   return entry
@@ -18,7 +20,7 @@ const getPlugins = (pages) => {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${page}.html`,
-        template: `./src/pages/${page}/template.html`,
+        template: `${projectPath}/${page}/template.html`,
         inject: false
       })
     )
