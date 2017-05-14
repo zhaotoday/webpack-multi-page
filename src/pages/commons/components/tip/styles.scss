@@ -2,7 +2,7 @@
 @import "../../../../styles/utils/mixins";
 
 .tip {
-  color: nth($colors, 9);
+  color: color(9);
 
   @include font(5);
 }

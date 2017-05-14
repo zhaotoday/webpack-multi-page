@@ -3,7 +3,7 @@
 @import "../../../../styles/utils/mixins";
 
 .title {
-  color: nth($colors, 1);
+  color: color(1);
   text-align: center;
   margin-bottom: px2rem(40px);
 

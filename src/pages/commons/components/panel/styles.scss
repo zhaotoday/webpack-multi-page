@@ -20,7 +20,7 @@
   }
 
   %body {
-    color: nth($colors, 9);
+    color: color(9);
     padding-left: px2rem(30px);
     margin-bottom: px2rem(38px);
     line-height: 180%;
@@ -53,7 +53,7 @@
     dd {
       width: px2rem(500px);
       float: left;
-      color: nth($colors, 5);
+      color: color(5);
       padding-bottom: px2rem(10px);
     }
   }

@@ -8,3 +8,12 @@
 @function px2rem($px) {
   @return ($px / 75px) * 1rem;
 }
+
+/**
+ * 获取颜色
+ * @param {number} 颜色列表索引
+ * @return {string}
+ */
+@function color($index) {
+  @return nth($colors, $index);
+}

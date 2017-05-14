@@ -4,7 +4,7 @@
 
 html,
 body {
-  background-color: nth($colors, 14);
+  background-color: color(14);
 }
 
 .activity1 {
@@ -21,7 +21,7 @@ body {
     &__ticket {
       padding-top: px2rem(284px);
       width: 100%;
-      color: nth($colors, 6);
+      color: color(6);
       text-align: center;
 
       @include middle(px2rem(135px));
@@ -31,7 +31,7 @@ body {
     &__tip {
       width: 100%;
       text-align: center;
-      color: nth($colors, 12);
+      color: color(12);
 
       @include font(5);
       @include middle(px2rem(56px));
@@ -41,7 +41,7 @@ body {
       width: px2rem(400px);
       margin-top: px2rem(160px);
       text-align: center;
-      color: nth($colors, 13);
+      color: color(13);
       height: px2rem(90px);
       line-height: px2rem(80px);
       overflow: hidden;

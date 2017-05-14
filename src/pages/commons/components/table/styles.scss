@@ -5,20 +5,20 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  background-color: nth($colors, 6);
+  background-color: color(6);
 
   th {
-    color: nth($colors, 9);
+    color: color(9);
   }
 
   td {
-    color: nth($colors, 11);
+    color: color(11);
   }
 
   th,
   td {
     padding: px2rem(22px);
-    border: 1px solid nth($colors, 10);
+    border: 1px solid color(10);
     text-align: center;
     line-height: 120%;
 

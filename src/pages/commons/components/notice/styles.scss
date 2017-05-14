@@ -17,21 +17,21 @@
       display: block;
       text-align: center;
       width: px2rem(175px);
-      background-color: nth($colors, 14);
-      color: nth($colors, 15);
+      background-color: color(14);
+      color: color(15);
 
       @include middle(px2rem(50px));
       @include block-center;
       @include font(3);
 
       &.ghost {
-        background-color: nth($colors, 6);
+        background-color: color(6);
       }
     }
   }
 
   dd {
-    color: nth($colors, 16);
+    color: color(16);
 
     @include font(5);
     @include middle(px2rem(46px));

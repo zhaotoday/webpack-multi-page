@@ -11,25 +11,25 @@
     h2 {
       padding-top: px2rem(70px);
       padding-bottom: px2rem(70px);
-      color: nth($colors, 1);
+      color: color(1);
 
       @include font(1);
     }
 
     p {
       padding-bottom: px2rem(70px);
-      color: nth($colors, 2);
+      color: color(2);
 
       @include font(2);
 
       span {
-        color: nth($colors, 1);
+        color: color(1);
       }
     }
   }
 
   &__giveaway {
-    background-color: nth($colors, 7);
+    background-color: color(7);
     position: absolute;
     width: 100%;
     overflow: hidden;
@@ -64,7 +64,7 @@
     @include font(5);
 
     a {
-      color: nth($colors, 8);
+      color: color(8);
     }
 
     &--on {

@@ -17,7 +17,7 @@
     width: px2rem(150px);
     text-align: center;
     overflow: hidden;
-    color: nth($colors, 6);
+    color: color(6);
 
     @include middle(px2rem(160px));
     @include font(4);
@@ -30,7 +30,7 @@
     overflow: hidden;
 
     h3 {
-      color: nth($colors, 4);
+      color: color(4);
       padding-top: px2rem(25px);
       padding-bottom: px2rem(15px);
 
@@ -38,7 +38,7 @@
     }
 
     p {
-      color: nth($colors, 5);
+      color: color(5);
       line-height: 150%;
 
       @include font(5);
