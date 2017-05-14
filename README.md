@@ -50,7 +50,7 @@ $ npm run stylelint
 # 安装 core-js
 $ npm install --save core-js
 ```
-polyfill 在 `/src/scripts/utils/polyfill.js` 文件中引入：
+polyfill 在 `/src/projects/{your-project}/scripts/utils/polyfill.js` 文件中引入：
 ```js
 import 'core-js/es6/promise'
 ```
@@ -104,19 +104,27 @@ import 'core-js/es6/promise'
 |                   |-- foot                 // 底部代码块，如：在页面底部引入的公用 JS、统计代码等
 |                   |-- header               // 页面头部展示内容，如：导航菜单等
 |                   |-- footer               // 页面底部展示内容，如：页脚导航链接、版权信息等
+|           |-- scripts                      // 脚本
+|               |-- libs                     // JS 库
+|               |-- utils                    // 一些 JS 工具集合
+|                   |-- helpers.js           // 帮助函数集合
+|                   |-- consts .js           // 常量配置
+|                   |-- polyfill.js          // polyfill
+|           |-- styles                       // 样式
+|               |-- global                   // 全局样式
+|                   |-- reset.scss           // 样式重置
+|                   |-- classes              // 样式类
+|               |-- utils                    // 样式工具集合
+|                   |-- functions.scss       // SASS 函数
+|                   |-- mixins.scss          // SASS 混合
+|                   |-- variables.scss       // SASS 变量
 |   |-- scripts                      // 脚本
 |       |-- libs                     // JS 库
 |       |-- utils                    // 一些 JS 工具集合
 |           |-- helpers.js           // 帮助函数集合
-|           |-- consts .js           // 常量配置
 |   |-- styles                       // 样式
-|       |-- global                   // 全局样式
-|           |-- reset.scss           // 样式重置
-|           |-- classes              // 样式类
 |       |-- utils                    // 样式工具集合
 |           |-- functions.scss       // SASS 函数
 |           |-- mixins.scss          // SASS 混合
-|           |-- placeholders.scss    // SASS 占位符
 |           |-- variables.scss       // SASS 变量
-
 ```
