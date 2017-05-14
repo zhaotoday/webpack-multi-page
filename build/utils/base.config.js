@@ -56,7 +56,7 @@ const config = {
             options: {
               limit: 8192,
               publicPath: '/',
-              outputPath: 'themes/images/',
+              outputPath: 'static/images/',
               name: '[hash].[ext]'
             }
           }
