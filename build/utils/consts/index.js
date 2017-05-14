@@ -1,3 +1,5 @@
+const customConsts = require('./custom')
+
 const path = require('path')
 // 源码目录
 const SRC = path.resolve('src')
@@ -10,9 +12,11 @@ const STYLES = 'static/styles/'
 // 图片路径
 const IMAGES = 'static/images/'
 // CDN
-const CDN = '/'
+const CDN = customConsts.CDN
+// 项目
+const PROJECT = customConsts.PROJECT
 // 页面配置
-const PAGES = ['pay', 'guide', 'qa', 'protocol', 'how', 'activity1', 'activity2']
+const PAGES = customConsts.PAGES
 
 module.exports = {
   SRC,
@@ -20,6 +24,7 @@ module.exports = {
   SCRIPTS,
   STYLES,
   IMAGES,
-  PAGES,
-  CDN
+  CDN,
+  PROJECT,
+  PAGES
 }
