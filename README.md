@@ -1,5 +1,5 @@
 ## 简介
-基于 Webpack 2 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
+基于 Webpack 2 开发、构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
 > 开发 PC 端网站时，如果需要兼容 IE8，请尽量少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 功能
@@ -14,6 +14,15 @@
 
 ## 项目地址
 https://github.com/zhaotoday/webpack-website
+
+## 线上例子
+- http://www.rjwb.cn/pay.html
+- http://www.rjwb.cn/activity1.html
+- http://www.rjwb.cn/activity2.html
+- http://www.rjwb.cn/guide.html
+- http://www.rjwb.cn/how.html
+- http://www.rjwb.cn/qa.html
+- http://www.rjwb.cn/protocol.html
 
 ## 相关参考
 - [JavaScript 代码规范](https://github.com/feross/standard/blob/master/docs/README-zhcn.md)
