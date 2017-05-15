@@ -16,9 +16,8 @@
 https://github.com/zhaotoday/webpack-website
 
 ## 线上例子
+建议在手机或 Chrome 的设备模拟器上打开。
 - http://www.rjwb.cn/pay.html
-- http://www.rjwb.cn/activity1.html
-- http://www.rjwb.cn/activity2.html
 - http://www.rjwb.cn/guide.html
 - http://www.rjwb.cn/how.html
 - http://www.rjwb.cn/qa.html
