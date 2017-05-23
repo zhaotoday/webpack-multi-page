@@ -71,38 +71,37 @@ import 'core-js/es6/promise'
 ```
 
 ## 样式编写规范
-请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：
+请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：  
+HTML 代码：
 ```html
 <nav class="nav">
+  <a href="#" class="nav__item nav__item--normal">正常状态</a>
   <a href="#" class="nav__item nav__item--active">当前状态</a>
   <a href="#" class="nav__item nav__item--hover">鼠标移上时的状态</a>
-  <a href="#" class="nav__item nav__item--normal">正常状态</a>
 </nav>
 ```
+Sass 代码：
 ```scss
 .nav {
   &__item {
+    &--normal {
+    }
     &--active {
     }
     &--hover {
     }
-    &--normal {
-    }
   }
 }
 ```
-
-基于 BEM mixin 编写：
+基于 BEM mixin 的 Sass 代码：
 ```scss
 @include b(nav) {
-  background-color: red;
-
   @include e(item) {
-    width: 100px;
-    height: 100px;
-
+    @include m(normal) {
+    }
     @include m(active) {
-      background-color: yellow;
+    }
+    @include m(hover) {
     }
   }
 }
