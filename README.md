@@ -8,7 +8,7 @@
 - 模块化
 - 组件化
 - 开发、调试和构建
-- 集成 PostCSS、SASS
+- 集成 PostCSS、Sass
 - JS 代码规范性校验
 - CSS 代码规范性校验
 
