@@ -92,6 +92,22 @@ import 'core-js/es6/promise'
 }
 ```
 
+基于 BEM mixin 编写：
+```scss
+@include b(nav) {
+  background-color: red;
+
+  @include e(item) {
+    width: 100px;
+    height: 100px;
+
+    @include m(active) {
+      background-color: yellow;
+    }
+  }
+}
+```
+
 ## 组件化
 将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在文件夹 `/src/commons/components` 下。
 

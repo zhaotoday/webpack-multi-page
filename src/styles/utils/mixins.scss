@@ -66,3 +66,33 @@
     font-size: $font-size * 3;
   }
 }
+
+/**
+ * BEM block
+ * @param {string} $block block 选择器
+ */
+@mixin b($block) {
+  .#{$block} {
+    @content;
+  }
+}
+
+/**
+ * BEM element
+ * @param {string} $element element 选择器
+ */
+@mixin e($element) {
+  &#{$element-separator + $element} {
+    @content;
+  }
+}
+
+/**
+ * BEM modifier
+ * @param {string} $modifier modifier 选择器
+ */
+@mixin m($modifier) {
+  &#{$modifier-separator + $modifier} {
+    @content;
+  }
+}

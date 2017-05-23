@@ -6,3 +6,9 @@ $font-family-mobile: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 
 // 英文字体
 $font-family-en: Arial, Helvetica, sans-senif, "Microsoft YaHei";
+
+// BEM element 分隔符
+$element-separator: '__';
+
+// BEM modifier 分隔符
+$modifier-separator: '--';
