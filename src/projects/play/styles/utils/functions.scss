@@ -7,5 +7,5 @@
  * @return {string}
  */
 @function color($index) {
-  @return nth($colors, $index);
+  @return _color($colors, $index);
 }

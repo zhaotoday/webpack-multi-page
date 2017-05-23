@@ -6,21 +6,6 @@
  * @param {number} $index 字体列表索引
  */
 @mixin font($index) {
-  $font: nth($fonts, $index);
-  $font-size: nth($font, 1);
-
-  font-size: $font-size;
-
-  @if (length($font) == 2) {
-    font-weight: nth($font, 2);
-  }
-
-  [data-dpr="2"] & {
-    font-size: $font-size * 2;
-  }
-
-  [data-dpr="3"] & {
-    font-size: $font-size * 3;
-  }
+  @include _font($fonts, $index);
 }
 
