@@ -1,9 +1,0 @@
-@import "../../../../styles/utils/variables";
-@import "../../../../styles/utils/mixins";
-@import "../../../../styles/utils/functions";
-
-.tip {
-  color: color(9);
-
-  @include font(5);
-}
