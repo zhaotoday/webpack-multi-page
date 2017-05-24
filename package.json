@@ -69,6 +69,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "compass-mixins": "^0.12.10",
+    "include-media": "^1.4.9",
     "iscroll": "^5.2.0",
     "zepto": "^1.2.0"
   }

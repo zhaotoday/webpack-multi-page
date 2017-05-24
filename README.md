@@ -5,6 +5,7 @@
 ## 功能
 - 前端工程化
 - 多项目共存
+- 支持响应式
 - 模块化
 - 组件化
 - 开发、调试和构建
@@ -103,6 +104,27 @@ Sass 代码：
     }
     @include m(hover) {
     }
+  }
+}
+```
+
+## 响应式
+```scss
+@import "~include-media/dist/_include-media.scss";
+
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
+
+.selector {
+  @include media("<=tablet") {
+    background-color: red;
+  }
+
+  @include media(">tablet", "<desktop") {
+    background-color: yellow;
+  }
+
+  @include media(">=desktop") {
+    background-color: green;
   }
 }
 ```

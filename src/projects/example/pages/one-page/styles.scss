@@ -1,0 +1,20 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+@import "~include-media/dist/_include-media.scss";
+
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
+
+body {
+  @include media("<=tablet") {
+    background-color: red;
+  }
+
+  @include media(">tablet", "<desktop") {
+    background-color: yellow;
+  }
+
+  @include media(">=desktop") {
+    background-color: green;
+  }
+}
