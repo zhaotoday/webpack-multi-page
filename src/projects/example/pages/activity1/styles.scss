@@ -1,0 +1,53 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+
+html,
+body {
+  background-color: color(14);
+}
+
+.activity1 {
+  &__header {
+    background: {
+      image: url("./images/header.png");
+      size: 100% 100%;
+    }
+
+    width: 100%;
+    height: px2rem(806px);
+    margin-bottom: px2rem(30px);
+
+    &__ticket {
+      padding-top: px2rem(284px);
+      width: 100%;
+      color: color(6);
+      text-align: center;
+
+      @include text--middle(px2rem(135px));
+      @include font(8);
+    }
+
+    &__tip {
+      width: 100%;
+      text-align: center;
+      color: color(12);
+
+      @include font(5);
+      @include text--middle(px2rem(56px));
+    }
+
+    &__button {
+      width: px2rem(400px);
+      margin-top: px2rem(160px);
+      text-align: center;
+      color: color(13);
+      height: px2rem(90px);
+      line-height: px2rem(80px);
+      overflow: hidden;
+
+      @include font(4);
+      @include block--center;
+    }
+  }
+}

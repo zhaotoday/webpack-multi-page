@@ -1,4 +1,4 @@
-const projectConsts = require('./projects/play')
+const projectConsts = require('./projects/example')
 
 const path = require('path')
 // 源码目录

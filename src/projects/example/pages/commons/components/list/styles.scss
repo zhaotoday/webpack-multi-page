@@ -1,0 +1,42 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.list {
+  background-color: white;
+
+  li {
+    height: px2rem(90px);
+    border-bottom: 1px solid color(3);
+    background: {
+      image: url("./images/arrow.png");
+      repeat: no-repeat;
+      position: 96% px2rem(35px);
+      size: px2rem(12px) px2rem(20px);
+    }
+
+    @include font(3);
+    @include text--middle(px2rem(90px));
+
+    h3 {
+      float: left;
+      padding-left: px2rem(30px);
+      color: color(4);
+    }
+
+    p {
+      float: right;
+      padding-right: px2rem(60px);
+      color: color(5);
+      text-align: right;
+
+      span {
+        color: color(1);
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

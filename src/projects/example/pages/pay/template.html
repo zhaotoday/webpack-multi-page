@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+${require('../commons/requires/head/template.html')}
+<link href="/static/styles/pay.css" rel="stylesheet">
+<body>
+<div class="container">
+  <!-- 头部 -->
+  <div class="pay__header">
+    <h2>¥672</h2>
+    <p>
+      订单截止时间：
+      <span>04-18  12:36:56</span>
+    </p>
+  </div>
+  <!-- /头部 -->
+  <!-- 牛券 -->
+  <ul class="pay__coupons list">
+    <li>
+      <h3>牛券减免</h3>
+      <p>-10元</p>
+    </li>
+  </ul>
+  <!-- /牛券 -->
+  <!-- 赠送 -->
+  <div class="pay__giveaway" id="wrapper">
+    <div class="pay__giveaway__scroll" id="scroller">
+      <ul>
+        <li>
+          <dl class="card">
+            <dt>¥10.00</dt>
+            <dd>
+              <h3>新手赠送</h3>
+              <p>
+                · 满100元可用<br>
+                · 有效期04-19 22:32:56
+              </p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="card">
+            <dt>¥4.00</dt>
+            <dd>
+              <h3>新手赠送</h3>
+              <p>
+                · 满100元可用<br>
+                · 有效期04-19 22:32:56
+              </p>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /赠送 -->
+  <!-- 牛券 -->
+  <ul class="pay__coupons list">
+    <li>
+      <h3>账户余额</h3>
+      <p>6000元</p>
+    </li>
+    <li>
+      <h3>还需充值</h3>
+      <p>
+        <span>490元</span>
+      </p>
+    </li>
+  </ul>
+  <!-- /牛券 -->
+  <!-- 协议 -->
+  <div class="pay__protocol">
+    <div class="pay__protocol__label" id="protocol">
+      我已阅读并同意<a href="protocol.html">《服务协议》</a>
+    </div>
+  </div>
+  <!-- /协议 -->
+  <!-- 立即支付 -->
+  <div class="pay__pay button" id="pay">立即支付</div>
+  <!-- /立即支付 -->
+</div>
+</body>
+${require('../commons/requires/foot/template.html')}
+<script src="/static/scripts/pay.js"></script>
+</html>

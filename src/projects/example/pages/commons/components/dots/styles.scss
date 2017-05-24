@@ -1,0 +1,21 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+
+.dots {
+  li {
+    display: inline-block;
+    width: px2rem(16px);
+    height: px2rem(16px);
+    background-size: 100% 100%;
+  }
+
+  &__item {
+    &--red {
+      background-image: url("images/dot-red.png");
+    }
+
+    &--blue {
+      background-image: url("images/dot-blue.png");
+    }
+  }
+}

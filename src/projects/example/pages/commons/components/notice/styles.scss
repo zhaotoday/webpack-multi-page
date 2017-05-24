@@ -1,0 +1,39 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.notice {
+  margin: {
+    left: px2rem(25px);
+    right: px2rem(25px);
+  }
+
+  dt {
+    border-bottom: 1px solid red;
+    margin-bottom: px2rem(40px);
+
+    span {
+      margin-bottom: px2rem(-25px);
+      display: block;
+      text-align: center;
+      width: px2rem(175px);
+      background-color: color(14);
+      color: color(15);
+
+      @include text--middle(px2rem(50px));
+      @include block--center;
+      @include font(3);
+
+      &.ghost {
+        background-color: color(6);
+      }
+    }
+  }
+
+  dd {
+    color: color(16);
+
+    @include font(5);
+    @include text--middle(px2rem(46px));
+  }
+}

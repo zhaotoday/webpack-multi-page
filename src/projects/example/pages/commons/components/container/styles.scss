@@ -1,0 +1,7 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+
+.container {
+  max-width: px2rem($max-width);
+  margin: 0 auto;
+}

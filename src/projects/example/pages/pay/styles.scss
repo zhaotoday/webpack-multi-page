@@ -1,0 +1,74 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+
+.pay {
+  &__header {
+    background-color: $block-bg-color;
+    text-align: center;
+    margin-bottom: px2rem(20px);
+
+    h2 {
+      padding-top: px2rem(70px);
+      padding-bottom: px2rem(70px);
+      color: color(1);
+
+      @include font(1);
+    }
+
+    p {
+      padding-bottom: px2rem(70px);
+      color: color(2);
+
+      @include font(2);
+
+      span {
+        color: color(1);
+      }
+    }
+  }
+
+  &__giveaway {
+    background-color: color(7);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    padding-top: px2rem(40px);
+    padding-bottom: px2rem(40px);
+
+    &__scroll {
+      position: absolute;
+      width: px2rem(7500px);
+      height: px2rem(160px);
+
+      li {
+        float: left;
+        padding-left: px2rem(30px);
+        width: px2rem(460px);
+        height: px2rem(160px);
+      }
+    }
+  }
+
+  &__protocol__label {
+    background-image: url("./images/checkbox.png");
+    background-size: px2rem(29px) px2rem(29px);
+    background-position: px2rem(35px) top;
+    background-repeat: no-repeat;
+    text-indent: px2rem(75px);
+    margin-top: px2rem(145px);
+    margin-bottom: px2rem(40px);
+    height: px2rem(29px);
+
+    @include text--middle(px2rem(29px));
+    @include font(5);
+
+    a {
+      color: color(8);
+    }
+
+    &--on {
+      background-image: url("./images/checkbox-on.png");
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: color(6);
+
+  th {
+    color: color(9);
+  }
+
+  td {
+    color: color(11);
+  }
+
+  th,
+  td {
+    padding: px2rem(22px);
+    border: 1px solid color(10);
+    text-align: center;
+    line-height: 120%;
+
+    @include font(5);
+  }
+}
