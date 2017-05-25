@@ -30,8 +30,6 @@ const config = {
       }
     ]
   },
-
-  includePath: `${consts.SRC}/styles`,
   postcss: [
     require('postcss-font-magician')(),
     require('cssnano')({
