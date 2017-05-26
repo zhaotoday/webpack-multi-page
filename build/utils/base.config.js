@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const helpers = require('./helpers')
 const consts = require('./consts')
+const es3ifyPlugin = require('es3ify-webpack-plugin')
 
 const config = {
   entry: helpers.getEntry(consts.PAGES),
@@ -26,7 +27,7 @@ const config = {
       },
       {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url?limit=8192&name=themes/images/[hash].[ext]'
+        loader: `url?limit=8192&name=${consts.IMAGES}[hash].[ext]`
       }
     ]
   },
@@ -47,6 +48,7 @@ const config = {
     })
   ],
   plugins: [
+    new es3ifyPlugin(),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
     ...helpers.getPlugins(consts.PAGES)
   ],
