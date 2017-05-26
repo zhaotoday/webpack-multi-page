@@ -1,5 +1,5 @@
 ## 简介
-基于 Webpack 2 开发、构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
+基于 Webpack 开发、构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
 > 开发 PC 端网站时，如果需要兼容 IE8，请尽量少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 功能
@@ -30,6 +30,7 @@ https://github.com/zhaotoday/webpack-website
 - [compass](http://compass-style.org/)
 - [postcss-utilities](https://github.com/ismamz/postcss-utilities)
 - [include-media](https://github.com/eduardoboucas/include-media)
+- [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 
 ## 使用
 #### 1. 命令
@@ -129,6 +130,30 @@ $breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
   }
 }
 ```
+
+## IE8 兼容
+添加 es3ify-webpack-plugin，解决 es3 语法兼容问题：
+```bash
+$ npm install --save-dev es3ify-webpack-plugin
+```
+```js
+const es3ifyPlugin = require('es3ify-webpack-plugin');
+
+// 在 Webpack plugins 配置中添加
+const config = {
+  plugins: [
+    new es3ifyPlugin()
+  ]
+}
+```
+添加 es5-shim 和 es5-sham，解决 es3 环境下 es5 API 的缺失问题：
+```html
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-sham.min.js"></script>
+<![endif]-->
+```
+> 如果无需兼容 IE8，请去掉以上相关操作！
 
 ## 组件化
 将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在文件夹 `/src/commons/components` 下。
