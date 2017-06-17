@@ -1,0 +1,11 @@
+@import "utils/mixins";
+@import "./variables";
+
+/**
+ * 字体
+ * @param {number} $index 字体列表索引
+ */
+@mixin font($index) {
+  @include _font($fonts, $index);
+}
+
