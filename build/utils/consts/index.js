@@ -1,4 +1,4 @@
-const projectConsts = require('./projects/example')
+const projectConsts = require('./projects/liruan')
 
 const path = require('path')
 // 源码目录
