@@ -1,1 +1,66 @@
-/* todo */
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+/* top-bar */
+@include b(top-bar) {
+  @include text--middle(36px);
+
+  background-color: #1767da;
+  border-bottom: 1px solid #1575da;
+  color: white;
+  overflow: hidden;
+
+  @include e(left, right) {
+    position: absolute;
+    top: 0;
+  }
+
+  @include e(left) {
+    left: 0;
+  }
+
+  @include e(right) {
+    right: 0;
+  }
+}
+
+/* nav-bar */
+@include b(nav-bar) {
+  height: 80px;
+  line-height: 80px;
+  background-color: #1767da;
+
+  @include e(logo) {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    background-image: url("./images/logo.png");
+    background-repeat: no-repeat;
+    line-height: 25px;
+    font-size: 20px;
+    text-indent: 40px;
+    color: white;
+
+    @include link--block(130px, 25px);
+  }
+
+  @include e(links) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+
+    @include e(item) {
+      margin-left: 30px;
+      color: #fff;
+      padding-bottom: 3px;
+      font-size: 16px;
+
+      @include m(active) {
+        padding: 8px 0;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}

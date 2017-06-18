@@ -7,8 +7,7 @@
  */
 @mixin text--middle($height) {
   height: $height;
-  line-height: $height + px2rem(1px);
-  overflow: hidden;
+  line-height: $height;
 }
 
 /**
@@ -69,31 +68,37 @@
 
 /**
  * BEM block
- * @param {string} $block block 选择器
+ * @param {array} $blocks block 选择器
  */
-@mixin b($block) {
-  .#{$block} {
-    @content;
+@mixin b($blocks...) {
+  @each $block in $blocks {
+    .#{$block} {
+      @content;
+    }
   }
 }
 
 /**
  * BEM element
- * @param {string} $element element 选择器
+ * @param {array} $elements element 选择器
  */
-@mixin e($element) {
-  &#{$element-separator + $element} {
-    @content;
+@mixin e($elements...) {
+  @each $element in $elements {
+    &#{$element-separator + $element} {
+      @content;
+    }
   }
 }
 
 /**
  * BEM modifier
- * @param {string} $modifier modifier 选择器
+ * @param {array} $modifiers modifier 选择器
  */
-@mixin m($modifier) {
-  &#{$modifier-separator + $modifier} {
-    @content;
+@mixin m($modifiers...) {
+  @each $modifier in $modifiers {
+    &#{$modifier-separator + $modifier} {
+      @content;
+    }
   }
 }
 

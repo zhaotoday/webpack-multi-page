@@ -8,7 +8,13 @@ html {
 }
 
 body {
-  font-family: $font-family-mobile;
+  min-width: $max-width;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  background-color: $bg-color;
+}
 
-  @include font(5);
+a {
+  text-decoration: none;
 }

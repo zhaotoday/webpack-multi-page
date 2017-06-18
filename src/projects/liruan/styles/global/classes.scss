@@ -1,0 +1,8 @@
+@import "../utils/variables";
+
+.container {
+  @include block--center;
+
+  position: relative;
+  width: $max-width;
+}

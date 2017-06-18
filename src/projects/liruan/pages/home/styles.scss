@@ -1,20 +1,56 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
-@import "~include-media/dist/_include-media.scss";
 
-$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
+/* home-slider */
+$slider-width: 1920px;
+$slider-height: 500px;
 
-body {
-  @include media("<=tablet") {
-    background-color: red;
-  }
+@include b(home-slider) {
+  background-color: #1767da;
+  position: relative;
+  width: 100%;
+  height: $slider-height;
+  overflow: hidden;
 
-  @include media(">tablet", "<desktop") {
-    background-color: yellow;
-  }
+  @include e(images) {
+    position: absolute;
+    width: $slider-width;
+    height: $slider-height;
+    left: 50%;
+    margin-left: -$slider-width / 2;
 
-  @include media(">=desktop") {
-    background-color: green;
+    @include e(item) {
+      img {
+        @include img--block($slider-width, $slider-height);
+      }
+
+      @include e(tip) {
+        margin-top: -380px;
+        color: white;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 16px;
+          padding-top: 60px;
+        }
+
+        a {
+          @include text--middle(46px);
+
+          display: block;
+          margin-top: 54px;
+          font-size: 16px;
+          color: #fff;
+          width: 180px;
+          border-radius: 3px;
+          text-align: center;
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
 }
