@@ -41,6 +41,11 @@
     text-align: center;
     border: 1px solid #fff;
   }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* home-services */
@@ -128,7 +133,7 @@
 
       float: left;
       width: 50%;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
       overflow: hidden;
 
       dt {
