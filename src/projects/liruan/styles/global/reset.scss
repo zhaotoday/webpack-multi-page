@@ -13,8 +13,10 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   background-color: $bg-color;
+  color: $color;
 }
 
 a {
+  color: $color;
   text-decoration: none;
 }
