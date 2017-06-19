@@ -133,7 +133,7 @@
  * @param {string} $bottom 底部 margin
  * @param {string} $left 左边 margin
  */
-@mixin margin($top, $right, $bottom, $left) {
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
   @if $top != null {
     margin-top: $top;
   }
@@ -158,7 +158,7 @@
  * @param {string} $bottom 底部 padding
  * @param {string} $left 左边 padding
  */
-@mixin padding($top, $right, $bottom, $left) {
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
   @if $top != null {
     padding-top: $top;
   }
@@ -190,5 +190,68 @@
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
+  }
+}
+
+/**
+ * 仅 IE8 可用
+ * @param {string} $property 属性
+ * @param {string} $value 值
+ */
+@mixin only-ie8($property, $value) {
+  #{$property}: $value + \0;
+}
+
+/**
+ * 相对定位
+ * @param {string} $top 顶部位置
+ * @param {string} $right 右边位置
+ * @param {string} $bottom 底部位置
+ * @param {string} $left 左边位置
+ */
+@mixin position--relative($top: null, $right: null, $bottom: null, $left: null) {
+  position: relative;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+}
+
+/**
+ * 绝对定位
+ * @param {string} $top 顶部位置
+ * @param {string} $right 右边位置
+ * @param {string} $bottom 底部位置
+ * @param {string} $left 左边位置
+ */
+@mixin position--absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
   }
 }
