@@ -84,7 +84,7 @@
  */
 @mixin e($elements...) {
   @each $element in $elements {
-    &#{$element-separator + $element} {
+    &#{$separator-element + $element} {
       @content;
     }
   }
@@ -96,7 +96,7 @@
  */
 @mixin m($modifiers...) {
   @each $modifier in $modifiers {
-    &#{$modifier-separator + $modifier} {
+    &#{$separator-modifier + $modifier} {
       @content;
     }
   }

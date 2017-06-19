@@ -4,9 +4,7 @@
 
 /* nav-bar */
 @include b(nav-bar) {
-  $heigth: 75px;
-
-  @include text--middle($heigth);
+  @include text--middle($height-top-bar);
   @include position--fixed(0);
 
   width: 100%;
