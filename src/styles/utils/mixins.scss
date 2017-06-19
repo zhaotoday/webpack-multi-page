@@ -143,11 +143,11 @@
   }
 
   @if $bottom != null {
-    margin-top: $bottom;
+    margin-bottom: $bottom;
   }
 
   @if $left != null {
-    margin-top: $left;
+    margin-left: $left;
   }
 }
 
@@ -168,11 +168,11 @@
   }
 
   @if $bottom != null {
-    padding-top: $bottom;
+    padding-bottom: $bottom;
   }
 
   @if $left != null {
-    padding-top: $left;
+    padding-left: $left;
   }
 }
 

@@ -4,9 +4,9 @@
 
 /* home-panel */
 @include b(home-panel) {
+  @include padding(70px, null, 70px, null);
+
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
 
   h2 {
     @include inline--block;
@@ -55,13 +55,12 @@
     @include clearfix;
 
     li {
+      @include padding(150px, 30px, null, 25px);
+
       background-repeat: no-repeat;
       width: 245px;
       float: left;
       overflow: hidden;
-      padding-left: 25px;
-      padding-top: 150px;
-      padding-right: 30px;
 
       dl {
         text-align: left;
@@ -101,11 +100,11 @@
     @include clearfix;
 
     li {
+      @include margin(null, null, 20px, 20px);
+
       width: 334px;
       height: 254px;
       float: left;
-      margin-left: 20px;
-      margin-bottom: 20px;
       padding: 25px;
       background-color: #fff;
       border: 1px solid #eee;
