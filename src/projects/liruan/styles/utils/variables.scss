@@ -12,14 +12,14 @@ $font-size-bg: 16px;
 // 字体大小 - 超大
 $font-size-xl: 30px;
 
-// 字体颜色 - 默认
-$color-text: #545764;
+// 颜色 - 默认
+$color: #545764;
 
-// 字体颜色 - 主色
-$color-text-primary: #2dbe60;
+// 颜色 - 主色
+$color-primary: #2dbe60;
 
-// 字体颜色 - 次色
-$color-text-secondary: red;
+// 颜色 - 次色
+$color-secondary: red;
 
 // 行高 - 默认
 $line-height: 180%;
@@ -28,7 +28,10 @@ $line-height: 180%;
 $page-min-width: 1200px;
 
 // 块背景色 - 默认
-$block-bg-color: white;
+$color-block: white;
 
 // 块背景色 - 主色
-$block-bg-color-primary: #f1f2f6;
+$color-block-primary: #f1f2f6;
+
+// top-bar 高度
+$height-top-bar: 75px;

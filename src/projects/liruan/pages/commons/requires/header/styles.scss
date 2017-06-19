@@ -10,7 +10,7 @@
   @include position--fixed(0);
 
   width: 100%;
-  background-color: $block-bg-color;
+  background-color: $color-block;
   z-index: 100;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 
@@ -43,7 +43,7 @@
       margin-left: 25px;
 
       @include m(active) {
-        color: $color-text-primary;
+        color: $color-primary;
       }
     }
   }

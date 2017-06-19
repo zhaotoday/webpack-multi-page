@@ -13,7 +13,7 @@
 
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid $color-text-primary;
+    border-bottom: 2px solid $color-primary;
     font-size: $font-size-xl;
   }
 
@@ -26,7 +26,7 @@
   }
 
   @include m(primary) {
-    background-color: $block-bg-color-primary;
+    background-color: $color-block-primary;
   }
 }
 
@@ -37,7 +37,7 @@
     @include inline--block;
 
     padding: 5px 25px;
-    background-color: $color-text-primary;
+    background-color: $color-primary;
     color: white;
     border-radius: 3px;
     text-align: center;
@@ -69,7 +69,7 @@
           @include inline--block;
 
           font-size: 22px;
-          border-bottom: 2px solid $color-text-primary;
+          border-bottom: 2px solid $color-primary;
           padding-bottom: 25px;
           margin-bottom: 10px;
         }
@@ -137,7 +137,7 @@
       dt {
         @include inline--block;
 
-        background-color: $color-text-primary;
+        background-color: $color-primary;
         padding: 0 10px;
         border-radius: 2px;
         color: white;
