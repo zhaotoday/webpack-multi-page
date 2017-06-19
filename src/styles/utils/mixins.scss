@@ -125,3 +125,70 @@
     clear: both;
   }
 }
+
+/**
+ * margin
+ * @param {string} $top 顶部 margin
+ * @param {string} $right 右边 margin
+ * @param {string} $bottom 底部 margin
+ * @param {string} $left 左边 margin
+ */
+@mixin margin($top, $right, $bottom, $left) {
+  @if $top != null {
+    margin-top: $top;
+  }
+
+  @if $right != null {
+    margin-right: $right;
+  }
+
+  @if $bottom != null {
+    margin-top: $bottom;
+  }
+
+  @if $left != null {
+    margin-top: $left;
+  }
+}
+
+/**
+ * padding
+ * @param {string} $top 顶部 padding
+ * @param {string} $right 右边 padding
+ * @param {string} $bottom 底部 padding
+ * @param {string} $left 左边 padding
+ */
+@mixin padding($top, $right, $bottom, $left) {
+  @if $top != null {
+    padding-top: $top;
+  }
+
+  @if $right != null {
+    padding-right: $right;
+  }
+
+  @if $bottom != null {
+    padding-top: $bottom;
+  }
+
+  @if $left != null {
+    padding-top: $left;
+  }
+}
+
+/**
+ * 超出文字用省略号代替
+ * @param {number} $lines 文字行数
+ */
+@mixin text--overflow($lines: 1) {
+  overflow: hidden;
+
+  @if $lines == 1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
