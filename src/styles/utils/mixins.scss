@@ -255,3 +255,13 @@
     left: $left;
   }
 }
+
+/**
+ * 兼容 IE8 的 display: inline-block
+ */
+@mixin inline--block() {
+  display: inline-block;
+
+  @include only-ie8(display, inline-block);
+  @include only-ie8(zoom, 1);
+}
