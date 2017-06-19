@@ -17,39 +17,32 @@
 
   @include e(logo) {
     @include link--block(130px, 25px);
+    @include position--absolute(25px, null, null, 0);
 
-    position: absolute;
-    left: 0;
-    top: 25px;
     font-size: 18px;
     padding-left: 35px;
     line-height: 25px;
 
     i {
-      position: absolute;
-      left: 0;
-      top: 0;
+      @include position--absolute(0, null, null, 0);
+
       font-size: 30px;
       color: #9599af;
     }
   }
 
   @include e(links, contact) {
-    position: absolute;
-    top: 0;
+    @include position--absolute(0);
   }
 
   @include e(links) {
     left: 140px;
 
     @include e(item) {
-      margin-left: 20px;
-      padding-bottom: 3px;
+      margin-left: 25px;
 
       @include m(active) {
-        padding: 2px 0;
         color: #2dbe60;
-        border-bottom: 1px solid #2dbe60;
       }
     }
   }
