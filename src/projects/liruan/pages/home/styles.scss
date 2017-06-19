@@ -13,8 +13,8 @@
 
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #2dbe60;
-    font-size: 30px;
+    border-bottom: 2px solid $color-text-primary;
+    font-size: $font-size-xl;
   }
 
   h3 {
@@ -25,19 +25,20 @@
     width: 400px;
   }
 
-  @include m(gray) {
-    background-color: #f1f2f6;
+  @include m(primary) {
+    background-color: $block-bg-color-primary;
   }
 }
 
 /* home-company */
 @include b(home-company) {
+  /* contact */
   @include e(contact) {
     @include inline--block;
 
     padding: 5px 25px;
-    background-color: #2dbe60;
-    color: #fff;
+    background-color: $color-text-primary;
+    color: white;
     border-radius: 3px;
     text-align: center;
   }
@@ -68,7 +69,7 @@
           @include inline--block;
 
           font-size: 22px;
-          border-bottom: 2px solid #2dbe60;
+          border-bottom: 2px solid $color-text-primary;
           padding-bottom: 25px;
           margin-bottom: 10px;
         }
@@ -101,12 +102,11 @@
     li {
       @include margin(null, null, 20px, 20px);
 
-      width: 334px;
+      width: 336px;
       height: 254px;
       float: left;
       padding: 25px;
-      background-color: #fff;
-      border: 1px solid #eee;
+      background-color: white;
 
       img {
         @include img--block(334px, 254px);
@@ -137,7 +137,7 @@
       dt {
         @include inline--block;
 
-        background-color: #2dbe60;
+        background-color: $color-text-primary;
         padding: 0 10px;
         border-radius: 2px;
         color: white;

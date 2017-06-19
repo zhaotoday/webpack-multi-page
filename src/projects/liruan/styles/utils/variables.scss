@@ -1,25 +1,34 @@
 @import "utils/variables";
 
-// 字体大小
+// 字体大小 - 小
+$font-size-sm: 12px;
+
+// 字体大小 - 默认
 $font-size: 14px;
 
-// 默认字体颜色
-$color: #545764;
+// 字体大小 - 大
+$font-size-bg: 16px;
 
-// 默认行高
+// 字体大小 - 超大
+$font-size-xl: 30px;
+
+// 字体颜色 - 默认
+$color-text: #545764;
+
+// 字体颜色 - 主色
+$color-text-primary: #2dbe60;
+
+// 字体颜色 - 次色
+$color-text-secondary: red;
+
+// 行高 - 默认
 $line-height: 180%;
 
-// 网页最大宽度
-$max-width: 1200px;
+// 页面最小宽度
+$page-min-width: 1200px;
 
-// 网页背景色
-$bg-color: white;
-
-// 块背景色
+// 块背景色 - 默认
 $block-bg-color: white;
 
-// 颜色列表
-$colors: #e71743 #9a9a9a #eee #232323 #999 #fff #e8e8e8 #0084ff #989898 #eee #222 #dc3434 #722826 #fff2cf #ee3822 #7c0e0c;
-
-// 字体大小
-$fonts: (36px) (14px) (15px) (18px) (12px) (16px) (11px) (38px);
+// 块背景色 - 主色
+$block-bg-color-primary: #f1f2f6;

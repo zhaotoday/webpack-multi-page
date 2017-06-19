@@ -3,20 +3,20 @@
 @import "../utils/functions";
 @import "../utils/mixins";
 
-html {
-  background-color: $bg-color;
+html,
+body {
+  background-color: $block-bg-color;
 }
 
 body {
-  min-width: $max-width;
+  min-width: $page-min-width;
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
-  background-color: $bg-color;
-  color: $color;
+  color: $color-text;
 }
 
 a {
-  color: $color;
+  color: $color-text;
   text-decoration: none;
 }

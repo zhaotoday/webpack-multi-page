@@ -257,6 +257,33 @@
 }
 
 /**
+ * 固定定位
+ * @param {string} $top 顶部位置
+ * @param {string} $right 右边位置
+ * @param {string} $bottom 底部位置
+ * @param {string} $left 左边位置
+ */
+@mixin position--fixed($top: null, $right: null, $bottom: null, $left: null) {
+  position: fixed;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+}
+
+/**
  * 兼容 IE8 的 display: inline-block
  */
 @mixin inline--block() {

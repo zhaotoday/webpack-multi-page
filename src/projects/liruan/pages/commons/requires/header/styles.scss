@@ -7,14 +7,14 @@
   $heigth: 75px;
 
   @include text--middle($heigth);
+  @include position--fixed(0);
 
   width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0;
+  background-color: $block-bg-color;
   z-index: 100;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 
+  /* logo */
   @include e(logo) {
     @include link--block(130px, 25px);
     @include position--absolute(25px, null, null, 0);
@@ -35,6 +35,7 @@
     @include position--absolute(0);
   }
 
+  /* links */
   @include e(links) {
     left: 140px;
 
@@ -42,18 +43,13 @@
       margin-left: 25px;
 
       @include m(active) {
-        color: #2dbe60;
+        color: $color-text-primary;
       }
     }
   }
 
+  /* contact */
   @include e(contact) {
     right: 0;
-
-    i {
-      font-size: 22px;
-      color: #9599af;
-      margin-left: 20px;
-    }
   }
 }
