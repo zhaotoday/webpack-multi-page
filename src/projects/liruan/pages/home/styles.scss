@@ -32,6 +32,12 @@
 
 /* home-company */
 @include b(home-company) {
+  /* qrcode */
+  @include e(qrcode) {
+    width: 200px;
+    height: 200px;
+  }
+
   /* contact */
   @include e(contact) {
     @include inline--block;
@@ -42,19 +48,16 @@
     border-radius: 3px;
     text-align: center;
   }
-
-  img {
-    width: 200px;
-    height: 200px;
-  }
 }
 
 /* home-services */
 @include b(home-services) {
-  ul {
+  /* list */
+  @include e(list) {
     @include clearfix;
 
-    li {
+    /* item */
+    @include e(item) {
       @include padding(150px, 30px, null, 25px);
 
       background-repeat: no-repeat;
@@ -74,32 +77,38 @@
           margin-bottom: 10px;
         }
       }
+
+      /* 1 */
+      @include e(1) {
+        background-image: url("./images/services/1.png");
+      }
+
+      /* 2 */
+      @include e(2) {
+        background-image: url("./images/services/2.png");
+      }
+
+      /* 3 */
+      @include e(3) {
+        background-image: url("./images/services/3.png");
+      }
+
+      /* 4 */
+      @include e(4) {
+        background-image: url("./images/services/4.png");
+      }
     }
-  }
-
-  @include e(item1) {
-    background-image: url("./images/services/1.png");
-  }
-
-  @include e(item2) {
-    background-image: url("./images/services/2.png");
-  }
-
-  @include e(item3) {
-    background-image: url("./images/services/3.png");
-  }
-
-  @include e(item4) {
-    background-image: url("./images/services/4.png");
   }
 }
 
 /* home-cases */
 @include b(home-cases) {
-  ul {
+  /* list */
+  @include e(list) {
     @include clearfix;
 
-    li {
+    /* item */
+    @include e(item) {
       @include margin(null, null, 20px, 20px);
 
       width: 336px;
@@ -111,22 +120,23 @@
       img {
         @include img--block(334px, 254px);
       }
-    }
-  }
 
-  @include e(item) {
-    @include e(first) {
-      margin-left: 0 !important;
+      /* first */
+      @include e(first) {
+        margin-left: 0 !important;
+      }
     }
   }
 }
 
 /* home-doc */
 @include b(home-doc) {
-  @include e(items) {
+  /* list */
+  @include e(list) {
     @include clearfix;
 
-    dl {
+    /* item */
+    @include e(item) {
       @include clearfix;
 
       float: left;
