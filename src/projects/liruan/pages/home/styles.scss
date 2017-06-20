@@ -10,11 +10,11 @@
 
   h2 {
     @include inline--block;
+    @include font(6);
 
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid $color-primary;
-    font-size: $font-size-xl;
+    border-bottom: 2px solid color(4);
   }
 
   h3 {
@@ -26,7 +26,7 @@
   }
 
   @include m(primary) {
-    background-color: $color-bg-primary;
+    background-color: color(6);
   }
 }
 
@@ -43,7 +43,7 @@
     @include inline--block;
 
     padding: 5px 25px;
-    background-color: $color-primary;
+    background-color: color(4);
     color: white;
     border-radius: 3px;
     text-align: center;
@@ -70,9 +70,9 @@
 
         dt {
           @include inline--block;
+          @include font(5);
 
-          font-size: 22px;
-          border-bottom: 2px solid $color-primary;
+          border-bottom: 2px solid color(4);
           padding-bottom: 25px;
           margin-bottom: 10px;
         }
@@ -115,7 +115,7 @@
       height: 254px;
       float: left;
       padding: 25px;
-      background-color: white;
+      background-color: color(2);
 
       img {
         @include img--block(334px, 254px);
@@ -147,15 +147,15 @@
       dt {
         @include inline--block;
 
-        background-color: $color-primary;
+        background-color: color(4);
         padding: 0 10px;
         border-radius: 2px;
-        color: white;
+        color: color(2);
         float: left;
       }
 
       a {
-        font-size: 16px;
+        @include font(2);
       }
 
       p {

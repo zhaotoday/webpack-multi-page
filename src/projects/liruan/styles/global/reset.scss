@@ -5,19 +5,20 @@
 
 html,
 body {
-  background-color: $color-block;
+  background-color: color(2);
 }
 
 body {
+  @include font(1);
+
   padding-top: $height-top-bar;
   min-width: $page-min-width;
   font-family: $font-family;
-  font-size: $font-size;
   line-height: $line-height;
-  color: $color;
+  color: color(1);
 }
 
 a {
-  color: $color;
+  color: color(1);
   text-decoration: none;
 }

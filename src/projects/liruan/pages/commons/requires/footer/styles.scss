@@ -1,7 +1,11 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
 .footer {
-  background-color: #1f1f2a;
+  background-color: color(5);
   padding: 60px 0;
-  color: #9599af;
+  color: color(3);
   line-height: 200%;
   text-align: center;
 }

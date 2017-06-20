@@ -8,7 +8,7 @@
   @include position--fixed(0);
 
   width: 100%;
-  background-color: $color-bg;
+  background-color: color(2);
   z-index: 100;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 
@@ -16,8 +16,8 @@
   @include e(logo) {
     @include link--block(130px, 25px);
     @include position--absolute(25px, null, null, 0);
+    @include font(3);
 
-    font-size: 18px;
     padding-left: 35px;
     line-height: 25px;
 
@@ -25,7 +25,7 @@
       @include position--absolute(0, null, null, 0);
 
       font-size: 30px;
-      color: #9599af;
+      color: color(3);
     }
   }
 
@@ -41,7 +41,7 @@
       margin-left: 25px;
 
       @include m(active) {
-        color: $color-primary;
+        color: color(4);
       }
     }
   }
