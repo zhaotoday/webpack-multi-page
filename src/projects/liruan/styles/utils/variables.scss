@@ -15,11 +15,17 @@ $font-size-xl: 30px;
 // 颜色 - 默认
 $color: #545764;
 
-// 颜色 - 主色
+// 颜色 - 主
 $color-primary: #2dbe60;
 
-// 颜色 - 次色
-$color-secondary: red;
+// 颜色 - 次
+$color-secondary: null;
+
+// 颜色 - 第三
+$color-tertiary: null;
+
+// 颜色 - 第四
+$color-quaternary: null;
 
 // 行高 - 默认
 $line-height: 180%;
@@ -27,11 +33,20 @@ $line-height: 180%;
 // 页面最小宽度
 $page-min-width: 1200px;
 
-// 块背景色 - 默认
-$color-block: white;
+// 背景色 - 默认
+$color-bg: white;
 
-// 块背景色 - 主色
-$color-block-primary: #f1f2f6;
+// 背景色 - 主
+$color-bg-primary: #f1f2f6;
+
+// 背景色 - 次
+$color-bg-secondary: null;
+
+// 背景色 - 第三
+$color-bg-tertiary: null;
+
+// 背景色 - 第四
+$color-quaternary: null;
 
 // top-bar 高度
 $height-top-bar: 75px;
