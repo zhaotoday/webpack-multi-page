@@ -12,7 +12,7 @@ body {
   @include font(1);
 
   padding-top: $height-top-bar;
-  min-width: $page-min-width;
+  min-width: $min-width;
   font-family: $font-family;
   line-height: $line-height;
   color: color(1);
