@@ -3,11 +3,11 @@
 @import "../../../../styles/utils/mixins";
 
 @include b(article) {
-  padding: 20px;
+  padding: 30px 20px;
 
   @include e(title) {
     @include font(5);
-    @include padding(15px, null, 20px, null);
+    @include padding(5px, null, 20px, null);
   }
 
   @include e(time) {

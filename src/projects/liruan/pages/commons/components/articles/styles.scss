@@ -1,0 +1,52 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+/* articles */
+@include b(articles) {
+  /* list */
+  @include e(list) {
+    @include clearfix;
+
+    /* item */
+    @include e(item) {
+      @include clearfix;
+
+      padding-bottom: 30px;
+      overflow: hidden;
+
+      dt {
+        @include inline--block;
+
+        background-color: color(4);
+        margin-top: 5px;
+        padding: 3px 10px;
+        border-radius: 2px;
+        color: color(2);
+        float: left;
+
+        h4 {
+          @include font(2);
+
+          text-align: center;
+        }
+      }
+
+      a {
+        @include font(2);
+      }
+
+      p {
+        padding-top: 6px;
+        color: color(7);
+      }
+
+      dd {
+        float: left;
+        width: 760px;
+        padding-left: 10px;
+        text-align: left;
+      }
+    }
+  }
+}

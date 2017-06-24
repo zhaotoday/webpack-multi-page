@@ -2,17 +2,3 @@
 @import "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
 @import "~github-markdown-css/github-markdown.css";
-
-/* sidebar */
-@include b(sidebar) {
-  /* qrcode */
-  @include e(qrcode) {
-    @include img--block(200px, 200px);
-    @include block--center;
-
-    /* tip */
-    @include e(tip) {
-      text-align: center;
-    }
-  }
-}

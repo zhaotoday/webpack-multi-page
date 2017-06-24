@@ -17,16 +17,28 @@
     dt {
       @include text--middle(40px);
       @include font(3);
-      /*@include inline--block;*/
+      @include inline--block;
 
       border-bottom: 2px solid color(4);
       margin-bottom: 15px;
     }
 
+    /* list */
     @include e(list) {
       li {
         @include text--middle(40px);
       }
+    }
+  }
+
+  /* qrcode */
+  @include e(qrcode) {
+    @include img--block(200px, 200px);
+    @include block--center;
+
+    /* tip */
+    @include e(tip) {
+      text-align: center;
     }
   }
 }

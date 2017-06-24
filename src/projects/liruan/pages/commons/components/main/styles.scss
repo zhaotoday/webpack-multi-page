@@ -2,10 +2,21 @@
 @import "../../../../styles/utils/functions";
 @import "../../../../styles/utils/mixins";
 
+/* main */
 @include b(main) {
   float: left;
   margin-bottom: 20px;
   background-color: color(2);
   width: 870px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, .05);
+
+  /* title */
+  @include e(title) {
+    @include font(5);
+    @include inline--block;
+    @include padding(5px, null, 10px, null);
+
+    border-bottom: 2px solid color(4);
+    margin-bottom: 30px;
+  }
 }
