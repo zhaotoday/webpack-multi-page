@@ -6,3 +6,7 @@
   position: relative;
   width: $min-width;
 }
+
+.clearfix {
+  @include clearfix;
+}

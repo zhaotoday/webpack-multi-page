@@ -23,6 +23,8 @@
     padding-bottom: 30px;
   }
 
+  background-color: color(2);
+
   @include m(reverse) {
     background-color: color(6);
   }

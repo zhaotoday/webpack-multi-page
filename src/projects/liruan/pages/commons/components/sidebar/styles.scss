@@ -1,0 +1,32 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+/* sidebar */
+@include b(sidebar) {
+  float: right;
+  width: 310px;
+
+  /* panel */
+  @include e(panel) {
+    background-color: color(2);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+
+    dt {
+      @include text--middle(40px);
+      @include font(3);
+      /*@include inline--block;*/
+
+      border-bottom: 2px solid color(4);
+      margin-bottom: 15px;
+    }
+
+    @include e(list) {
+      li {
+        @include text--middle(40px);
+      }
+    }
+  }
+}

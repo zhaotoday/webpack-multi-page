@@ -1,0 +1,11 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/functions";
+@import "../../../../styles/utils/mixins";
+
+@include b(main) {
+  float: left;
+  margin-bottom: 20px;
+  background-color: color(2);
+  width: 870px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .05);
+}
