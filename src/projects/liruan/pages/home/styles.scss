@@ -18,14 +18,12 @@
   }
 
   h3 {
-    @include inline--block;
-
-    font-weight: normal;
-    padding-bottom: 30px;
     width: 400px;
+    @include block--center;
+    padding-bottom: 30px;
   }
 
-  @include m(primary) {
+  @include m(reverse) {
     background-color: color(6);
   }
 }
@@ -34,8 +32,15 @@
 @include b(home-company) {
   /* qrcode */
   @include e(qrcode) {
-    width: 200px;
-    height: 200px;
+    @include link--block(200px, 200px);
+    @include block--center;
+
+    /* tip */
+    @include e(tip) {
+      @include padding(8px, null, 8px, null);
+
+      color: color(7);
+    }
   }
 
   /* contact */
@@ -129,8 +134,8 @@
   }
 }
 
-/* home-doc */
-@include b(home-doc) {
+/* home-docs */
+@include b(home-docs) {
   /* list */
   @include e(list) {
     @include clearfix;
