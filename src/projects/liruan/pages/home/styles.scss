@@ -2,32 +2,6 @@
 @import "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
 
-/* home-panel */
-@include b(home-panel) {
-  @include padding(70px, null, 70px, null);
-
-  text-align: center;
-
-  h2 {
-    @include inline--block;
-    @include font(6);
-
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid color(4);
-  }
-
-  h3 {
-    width: 400px;
-    @include block--center;
-    padding-bottom: 30px;
-  }
-
-  @include m(reverse) {
-    background-color: color(6);
-  }
-}
-
 /* home-company */
 @include b(home-company) {
   /* qrcode */

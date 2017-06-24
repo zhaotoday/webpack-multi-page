@@ -1,5 +1,5 @@
 const PROJECT = 'liruan'
-const PAGES = ['home']
+const PAGES = ['home', 'list']
 const CDN = '/'
 
 module.exports = {
