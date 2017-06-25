@@ -27,6 +27,7 @@
     @include e(list) {
       li {
         @include text--middle(40px);
+        @include text--overflow;
       }
     }
   }

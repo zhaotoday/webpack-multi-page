@@ -5,7 +5,7 @@
 /* nav-bar */
 @include b(nav-bar) {
   @include text--middle($height-top-bar);
-  @include position--fixed(0);
+  @include position--fixed(0, null, null, 0);
 
   width: 100%;
   background-color: color(2);

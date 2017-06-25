@@ -199,7 +199,7 @@
  * @param {string} $value 值
  */
 @mixin only-ie8($property, $value) {
-  #{$property}: $value + \0;
+  #{$property}: $value + \9;
 }
 
 /**
@@ -289,6 +289,6 @@
 @mixin inline--block() {
   display: inline-block;
 
-  @include only-ie8(display, inline-block);
+  @include only-ie8(display, inline);
   @include only-ie8(zoom, 1);
 }

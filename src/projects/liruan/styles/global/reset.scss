@@ -29,3 +29,11 @@ h3,
 h4 {
   font-weight: normal;
 }
+
+.markdown-body {
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+}
