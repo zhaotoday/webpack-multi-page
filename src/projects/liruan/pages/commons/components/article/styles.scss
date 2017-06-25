@@ -2,15 +2,34 @@
 @import "../../../../styles/utils/functions";
 @import "../../../../styles/utils/mixins";
 
+/* article */
 @include b(article) {
   padding: 30px 20px;
 
+  /* title */
   @include e(title) {
     @include font(5);
     @include padding(5px, null, 20px, null);
   }
 
+  /* time */
   @include e(time) {
     padding-bottom: 35px;
+  }
+
+  /* dl */
+  @include e(dl) {
+    dt {
+      @include font(3);
+      @include inline--block;
+
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid color(4);
+    }
+
+    dd {
+      padding-bottom: 30px;
+    }
   }
 }
