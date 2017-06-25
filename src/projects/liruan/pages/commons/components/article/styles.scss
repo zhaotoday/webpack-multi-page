@@ -23,13 +23,13 @@
       @include font(3);
       @include inline--block;
 
-      padding-bottom: 5px;
-      margin-bottom: 5px;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
       border-bottom: 1px solid color(4);
     }
 
     dd {
-      padding-bottom: 30px;
+      padding-bottom: 35px;
     }
   }
 }
