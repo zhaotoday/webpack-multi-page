@@ -12,24 +12,21 @@
     @include e(item) {
       @include clearfix;
 
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       overflow: hidden;
 
       dt {
         @include inline--block;
+        @include padding(4px, null, 4px, null);
 
+        width: 52px;
+        line-height: 20px;
+        text-align: center;
         background-color: color(4);
         margin-top: 5px;
-        padding: 3px 10px;
         border-radius: 2px;
         color: color(2);
         float: left;
-
-        h4 {
-          @include font(2);
-
-          text-align: center;
-        }
       }
 
       a {
@@ -39,6 +36,8 @@
       p {
         padding-top: 6px;
         color: color(7);
+        height: 50px;
+        overflow: hidden;
       }
 
       dd {
