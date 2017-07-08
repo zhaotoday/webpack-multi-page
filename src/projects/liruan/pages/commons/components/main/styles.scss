@@ -1,6 +1,4 @@
-@import "../../../../styles/utils/variables";
-@import "../../../../styles/utils/functions";
-@import "../../../../styles/utils/mixins";
+@import "../../../../styles/utils/index";
 
 /* main */
 @include b(main) {
