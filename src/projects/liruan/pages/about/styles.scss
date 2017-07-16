@@ -1,2 +1,17 @@
 @import "../../styles/utils/index";
-@import "~github-markdown-css/github-markdown.css";
+
+/* about-list */
+@include b(about-list) {
+  dt {
+    @include font(3);
+    @include inline--block;
+
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid color(4);
+  }
+
+  dd {
+    padding-bottom: 35px;
+  }
+}

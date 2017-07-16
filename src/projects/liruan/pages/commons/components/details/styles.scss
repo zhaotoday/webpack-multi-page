@@ -12,20 +12,4 @@
   @include e(link) {
     padding-bottom: 35px;
   }
-
-  /* dl */
-  @include e(dl) {
-    dt {
-      @include font(3);
-      @include inline--block;
-
-      padding-bottom: 8px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid color(4);
-    }
-
-    dd {
-      padding-bottom: 35px;
-    }
-  }
 }
