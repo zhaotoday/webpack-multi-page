@@ -1,7 +1,7 @@
 @import "../../styles/utils/index";
 
-/* about-list */
-@include b(about-list) {
+/* about */
+@include b(about) {
   dt {
     @include font(3);
     @include inline--block;
