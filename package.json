@@ -9,11 +9,11 @@
     "eslint": "eslint src/**/*.js",
     "stylelint": "stylelint src/**/*.scss",
     "clean": "rimraf dist",
-    "start": "better-npm-run start",
+    "dev": "better-npm-run dev",
     "build": "better-npm-run build"
   },
   "betterScripts": {
-    "start": {
+    "dev": {
       "command": "webpack-dev-server --config build --hot --inline --progress --colors",
       "env": {
         "NODE_ENV": "development"
