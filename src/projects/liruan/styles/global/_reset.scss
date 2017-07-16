@@ -30,7 +30,13 @@ h4 {
 .markdown-body {
   ul {
     li {
-      list-style-type: disc;
+      list-style-type: decimal;
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: decimal;
     }
   }
 }
