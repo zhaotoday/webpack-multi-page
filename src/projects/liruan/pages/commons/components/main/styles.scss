@@ -3,9 +3,10 @@
 /* main */
 @include b(main) {
   float: left;
+  padding: 30px 20px;
   margin-bottom: 20px;
   background-color: color(2);
-  width: 870px;
+  width: 830px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, .05);
 
   /* title */
@@ -16,10 +17,5 @@
 
     border-bottom: 2px solid color(4);
     margin-bottom: 30px;
-  }
-
-  /* padding */
-  @include e(padding) {
-    padding: 30px 20px;
   }
 }

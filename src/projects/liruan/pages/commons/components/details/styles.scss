@@ -1,17 +1,15 @@
 @import "../../../../styles/utils/index";
 
-/* article */
-@include b(article) {
-  padding: 30px 20px;
-
+/* details */
+@include b(details) {
   /* title */
   @include e(title) {
     @include font(5);
     @include padding(5px, null, 20px, null);
   }
 
-  /* time */
-  @include e(time) {
+  /* link */
+  @include e(link) {
     padding-bottom: 35px;
   }
 
