@@ -17,4 +17,8 @@
     border-bottom: 2px solid color(4);
     margin-bottom: 30px;
   }
+
+  @include e(padding) {
+    padding: 30px 20px;
+  }
 }
