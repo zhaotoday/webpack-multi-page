@@ -5,7 +5,9 @@
   @include padding(70px, null, 70px, null);
 
   text-align: center;
+  background-color: color(2);
 
+  /* h2 */
   h2 {
     @include inline--block;
     @include font(6);
@@ -15,14 +17,15 @@
     border-bottom: 2px solid color(4);
   }
 
+  /* h3 */
   h3 {
-    width: 400px;
     @include block--center;
+
+    width: 400px;
     padding-bottom: 30px;
   }
 
-  background-color: color(2);
-
+  /* reverse */
   @include m(reverse) {
     background-color: color(6);
   }

@@ -37,6 +37,8 @@
 
     /* tip */
     @include e(tip) {
+      color: color(3);
+
       text-align: center;
     }
   }
