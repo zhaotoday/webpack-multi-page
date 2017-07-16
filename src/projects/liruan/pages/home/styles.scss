@@ -106,15 +106,18 @@
   }
 }
 
-/* list */
-@include e(list) {
-  /* item */
-  @include e(item) {
-    float: left;
-    width: 50%;
+/* home-docs */
+@include b(home-docs) {
+  /* list */
+  @include b(list) {
+    /* item */
+    @include e(item) {
+      float: left;
+      width: 50%;
 
-    dd {
-      width: 500px;
+      dd {
+        width: 500px;
+      }
     }
   }
 }
