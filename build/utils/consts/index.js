@@ -1,6 +1,7 @@
-const projectConsts = require('./projects/liruan')
-
+const argv = require('yargs').argv
+const fs = require('fs')
 const path = require('path')
+
 // 源码目录
 const SRC = path.resolve('src')
 // 构建目录
@@ -12,11 +13,14 @@ const STYLES = 'static/styles/'
 // 图片路径
 const IMAGES = 'static/images/'
 // CDN
-const CDN = projectConsts.CDN
+const CDN = '/'
 // 项目
-const PROJECT = projectConsts.PROJECT
+const PROJECT = argv.project
+// 项目目录
+const PROJECT_DIR = `${SRC}/projects/${PROJECT}/pages`
 // 页面配置
-const PAGES = projectConsts.PAGES
+const PAGES = fs.existsSync(PROJECT_DIR)
+  ? fs.readdirSync(PROJECT_DIR) : []
 
 module.exports = {
   SRC,
@@ -26,5 +30,6 @@ module.exports = {
   IMAGES,
   CDN,
   PROJECT,
+  PROJECT_DIR,
   PAGES
 }

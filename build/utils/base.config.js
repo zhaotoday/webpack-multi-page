@@ -4,7 +4,7 @@ const consts = require('./consts')
 const es3ifyPlugin = require('es3ify-webpack-plugin')
 
 const config = {
-  entry: helpers.getEntry(consts.PAGES),
+  entry: helpers.getEntry(),
   output: {
     path: consts.DIST,
     publicPath: consts.CDN,
@@ -50,7 +50,7 @@ const config = {
   plugins: [
     new es3ifyPlugin(),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
-    ...helpers.getPlugins(consts.PAGES)
+    ...helpers.getPlugins()
   ],
   resolve: {
     root: __dirname,

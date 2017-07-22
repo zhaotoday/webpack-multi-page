@@ -14,13 +14,13 @@
   },
   "betterScripts": {
     "dev": {
-      "command": "webpack-dev-server --config build --hot --inline --progress --colors",
+      "command": "webpack-dev-server --config build --hot --inline --progress --colors --project",
       "env": {
         "NODE_ENV": "development"
       }
     },
     "build": {
-      "command": "npm run clean && webpack -p --config build --define process.env.NODE_ENV='\"production\"' --progress --profile --colors",
+      "command": "npm run clean && webpack -p --config build --define process.env.NODE_ENV='\"production\"' --progress --profile --colors --project",
       "env": {
         "NODE_ENV": "production"
       }
@@ -73,6 +73,7 @@
     "include-media": "^1.4.9",
     "iscroll": "^5.2.0",
     "sass-utils": "^1.0.2",
+    "yargs": "^8.0.2",
     "zepto": "^1.2.0"
   }
 }

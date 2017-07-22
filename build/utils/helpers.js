@@ -2,25 +2,24 @@ const consts = require('./consts')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const projectPath = `${consts.SRC}/projects/${consts.PROJECT}/pages`
 
-const getEntry = (pages) => {
+const getEntry = () => {
   const entry = {}
-  const allPages = ['commons', ...pages]
 
-  allPages.map((page) => {
-    entry[page] = `${projectPath}/${page}/scripts.js`
+  consts.PAGES.forEach(value => {
+    entry[value] = `${projectPath}/${value}/scripts.js`
   })
 
   return entry
 }
 
-const getPlugins = (pages) => {
+const getPlugins = () => {
   const plugins = []
 
-  pages.map((page) => {
+  consts.PAGES.filter(value => value !== 'commons').forEach(value => {
     plugins.push(
       new HtmlWebpackPlugin({
-        filename: `./${page}.html`,
-        template: `${projectPath}/${page}/template.html`,
+        filename: `./${value}.html`,
+        template: `${projectPath}/${value}/template.html`,
         inject: false
       })
     )
