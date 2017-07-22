@@ -1,5 +1,5 @@
 ## 简介
-基于 Webpack 开发、构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
+基于 Webpack 开发和构建多页面站点（普通 Web 站点）的前端工程化方案，支持多项目共存，同时适用于 PC 端和移动端。
 > 开发 PC 端网站时，如果需要兼容 IE8，请尽量少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 功能
@@ -28,7 +28,7 @@ https://github.com/zhaotoday/webpack-website
 - [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 
 ## 使用
-#### 1. 命令
+#### 1. 相关命令
 ```bash
 # 下载代码
 $ git clone https://github.com/zhaotoday/webpack-website.git
@@ -46,12 +46,9 @@ $ npm run eslintfix
 $ npm run stylelint
 ```
 
-#### 2. 修改 Webpack 配置
-- 新增 `/build/utils/consts/projects/{your-project}.js`；
-- 参考 `play.js` 配置 PROJECT、PAGES、CDN 常量，注意 PAGES，将其配置成自己开发的页面。
-
-#### 3. 开发网站页面
-在文件夹 `/src/projects/{your-project}/pages` 下开发网站页面，页面文件夹命名与第 2 步的配置相对应。
+#### 2. 开发自己的项目
+- 在 `/src/projects` 下参照 `liruan` 目录结构创建 `{your-project}`；
+- 在 `/src/projects/{your-project}/pages` 下开发网站页面。
 
 ## 兼容性
 - PC 端：IE8+（含 IE8）；
