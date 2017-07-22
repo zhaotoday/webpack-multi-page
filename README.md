@@ -27,8 +27,8 @@ https://github.com/zhaotoday/webpack-website
 ## 相关参考
 - [JavaScript 代码规范](https://github.com/feross/standard/blob/master/docs/README-zhcn.md)
 - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
+- [sass-utils](https://github.com/zhaotoday/sass-utils)
 - [compass](http://compass-style.org/)
-- [postcss-utilities](https://github.com/ismamz/postcss-utilities)
 - [include-media](https://github.com/eduardoboucas/include-media)
 - [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 
