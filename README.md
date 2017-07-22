@@ -17,12 +17,7 @@
 https://github.com/zhaotoday/webpack-website
 
 ## 线上例子
-建议在手机或 Chrome 的设备模拟器上打开。
-- http://www.rjwb.cn/pay.html
-- http://www.rjwb.cn/guide.html
-- http://www.rjwb.cn/how.html
-- http://www.rjwb.cn/qa.html
-- http://www.rjwb.cn/protocol.html
+- [www.liruan.cn](https://www.liruan.cn/)
 
 ## 相关参考
 - [JavaScript 代码规范](https://github.com/feross/standard/blob/master/docs/README-zhcn.md)
@@ -40,9 +35,9 @@ $ git clone https://github.com/zhaotoday/webpack-website.git
 # 安装依赖
 $ npm install
 # 开发、调试
-$ npm start
+$ npm run dev {your-project}
 # 构建
-$ npm run build
+$ npm run build {your-project}
 # 按 Standard 规范校验 JS 代码
 $ npm run eslint
 # 按 Standard 规范代码格式化 JS 代码
