@@ -1,7 +1,7 @@
 const fs = require('fs')
 const consts = require('./utils/consts')
 
-// --project 后面没加参数值的时为 true
+// --project 后面没加参数值的时候默认为 true
 if (consts.PROJECT === true) {
   console.error('Error: please add your project name after command "npm run build/dev".')
   process.exit()
