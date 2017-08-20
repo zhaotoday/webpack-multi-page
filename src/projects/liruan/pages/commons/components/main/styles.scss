@@ -1,6 +1,5 @@
 @import "../../../../styles/utils/index";
 
-/* main */
 @include b(main) {
   float: left;
   padding: 30px 20px;
@@ -9,7 +8,6 @@
   width: 830px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, .05);
 
-  /* title */
   @include e(title) {
     @include font(5);
     @include inline--block;

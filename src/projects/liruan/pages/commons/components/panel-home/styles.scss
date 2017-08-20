@@ -1,13 +1,11 @@
 @import "../../../../styles/utils/index";
 
-/* panel-home */
 @include b(panel-home) {
   @include padding(70px, null, 70px, null);
 
   text-align: center;
   background-color: color(2);
 
-  /* h2 */
   h2 {
     @include inline--block;
     @include font(6);
@@ -17,7 +15,6 @@
     border-bottom: 2px solid color(4);
   }
 
-  /* h3 */
   h3 {
     @include block--center;
 
@@ -25,7 +22,6 @@
     padding-bottom: 30px;
   }
 
-  /* reverse */
   @include m(reverse) {
     background-color: color(6);
   }

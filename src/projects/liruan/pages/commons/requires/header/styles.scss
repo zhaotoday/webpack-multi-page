@@ -1,6 +1,5 @@
 @import "../../../../styles/utils/index";
 
-/* nav-bar */
 @include b(nav-bar) {
   @include text--middle($height-top-bar);
   @include position--fixed(0, null, null, 0);
@@ -10,7 +9,6 @@
   z-index: 100;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 
-  /* logo */
   @include e(logo) {
     @include link--block(130px, 25px);
     @include position--absolute(25px, null, null, 0);
@@ -31,7 +29,6 @@
     @include position--absolute(0);
   }
 
-  /* links */
   @include e(links) {
     left: 140px;
 
@@ -44,7 +41,6 @@
     }
   }
 
-  /* contact */
   @include e(contact) {
     right: 0;
   }

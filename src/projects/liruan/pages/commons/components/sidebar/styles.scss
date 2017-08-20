@@ -1,11 +1,9 @@
 @import "../../../../styles/utils/index";
 
-/* sidebar */
 @include b(sidebar) {
   float: right;
   width: 310px;
 
-  /* panel */
   @include e(panel) {
     background-color: color(2);
     padding: 20px;
@@ -21,7 +19,6 @@
       margin-bottom: 15px;
     }
 
-    /* list */
     @include e(list) {
       li {
         @include text--middle(40px);
@@ -30,12 +27,10 @@
     }
   }
 
-  /* qrcode */
   @include e(qrcode) {
     @include img--block(200px, 200px);
     @include block--center;
 
-    /* tip */
     @include e(tip) {
       color: color(3);
 
