@@ -1,0 +1,12 @@
+@import "../../../../styles/utils/index";
+
+@include b(details) {
+  @include e(title) {
+    @include font(5);
+    @include padding(5px, null, 20px, null);
+  }
+
+  @include e(link) {
+    padding-bottom: 35px;
+  }
+}

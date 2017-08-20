@@ -1,0 +1,45 @@
+@import "../../../../styles/utils/index";
+
+@include b(list) {
+  @include clearfix;
+
+  @include e(item) {
+    @include clearfix;
+
+    padding-bottom: 40px;
+    overflow: hidden;
+
+    dt {
+      @include inline--block;
+      @include padding(4px, null, 4px, null);
+
+      width: 52px;
+      line-height: 20px;
+      text-align: center;
+      background-color: color(4);
+      margin-top: 5px;
+      border-radius: 2px;
+      color: color(2);
+      float: left;
+    }
+
+    dd {
+      float: left;
+      width: 760px;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    a {
+      @include font(2);
+    }
+
+    p {
+      padding-top: 6px;
+      color: color(7);
+      height: 50px;
+      word-break: break-all;
+      overflow: hidden;
+    }
+  }
+}

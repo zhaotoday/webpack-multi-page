@@ -1,0 +1,45 @@
+<article class="markdown-body entry-content" itemprop="text"><h2><a id="user-content-简介" class="anchor" href="#简介" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>简介</h2>
+  <p>BEM 的意思就是块（block）、元素（element）、修饰符（modifier），是由 Yandex 团队提出的一种前端命名方法论。这种巧妙的命名方法让你的 CSS 类对其他开发者来说更加透明而且更有意义。BEM 命名约定更加严格，而且包含更多的信息，它们用于一个团队开发一个耗时的大项目。</p>
+  <blockquote>
+    <p>重要的是要注意，这里使用的基于 BEM 的命名方式是经过 Nicolas Gallagher 修改过的。</p>
+  </blockquote>
+  <h2><a id="user-content-命名约定" class="anchor" href="#命名约定" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>命名约定</h2>
+  <div class="highlight highlight-source-css"><pre><span class="pl-e">.block</span> {}
+<span class="pl-e">.block__element</span> {}
+<span class="pl-e">.block--modifier</span> {}</pre></div>
+  <p>之所以使用两个连字符和下划线而不是一个，是为了让 block 可以用单个连字符来界定，如：</p>
+  <div class="highlight highlight-source-css"><pre><span class="pl-e">.site-search</span> {} <span class="pl-c"><span class="pl-c">/*</span> 块 <span class="pl-c">*/</span></span>
+<span class="pl-e">.site-search__field</span> {} <span class="pl-c"><span class="pl-c">/*</span> 元素 <span class="pl-c">*/</span></span>
+<span class="pl-e">.site-search--full</span> {} <span class="pl-c"><span class="pl-c">/*</span> 修饰符 <span class="pl-c">*/</span></span></pre></div>
+  <h2><a id="user-content-举个栗子" class="anchor" href="#举个栗子" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>举个栗子</h2>
+  <ul>
+    <li>block__element：块里的元素，如：nav（block）里的 a 标签（element）；</li>
+    <li>block__element--modifier：块里的元素的状态、属性或修饰，如：nav 里的 a 标签，有 active、hover、normal 3 种状态（modifier）。</li>
+  </ul>
+  <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">nav</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>nav<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>nav__item nav__item--active<span class="pl-pds">"</span></span>&gt;当前状态&lt;/<span class="pl-ent">a</span>&gt;
+  &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>nav__item nav__item--hover<span class="pl-pds">"</span></span>&gt;鼠标移上时的状态&lt;/<span class="pl-ent">a</span>&gt;
+  &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>nav__item nav__item--normal<span class="pl-pds">"</span></span>&gt;正常状态&lt;/<span class="pl-ent">a</span>&gt;
+&lt;/<span class="pl-ent">nav</span>&gt;</pre></div>
+  <div class="highlight highlight-source-scss"><pre><span class="pl-e">.nav</span> {
+  <span class="pl-e">&amp;__item</span> {
+    <span class="pl-e">&amp;--active</span> {
+    }
+    <span class="pl-e">&amp;--hover</span> {
+    }
+    <span class="pl-e">&amp;--normal</span> {
+    }
+  }
+}</pre></div>
+  <h2><a id="user-content-总结" class="anchor" href="#总结" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h2>
+  <ul>
+    <li>B（block）：某一块展示/功能区域，比如：.nav。</li>
+    <li>E（element）：这块展示/功能区域里的某个元素，比如: .nav__item。</li>
+    <li>M（modifier）：某个元素或者某个块的状态，比如：.nav--hide, .nav__item--active 等。</li>
+  </ul>
+  <h2><a id="user-content-参考" class="anchor" href="#参考" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+  <ul>
+    <li><a href="http://www.qianduan.org/post-458.html">BEM 命名规范</a></li>
+    <li><a href="https://github.com/zhongxia245/blog/issues/48">CSS命名方式=》BEM</a></li>
+  </ul>
+</article>
