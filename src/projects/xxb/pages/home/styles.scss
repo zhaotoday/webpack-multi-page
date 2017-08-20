@@ -1,123 +1,61 @@
 @import "../../styles/utils/index";
 
-/* home-company */
-@include b(home-company) {
-  /* qrcode */
-  @include e(qrcode) {
-    @include link--block(200px, 200px);
-    @include block--center;
+@include b(home-banner) {
+  @include size(100%, 581px);
 
-    /* tip */
-    @include e(tip) {
-      @include padding(8px, null, 8px, null);
+  background: {
+    image: url("./images/banner/bg.jpg");
+    repeat: no-repeat;
+    position: center;
+  }
 
-      color: color(7);
+  .container {
+    height: 581px;
+  }
+
+  @include e(money) {
+    @include size(404px, 113px);
+    @include position--absolute(130px, null, null, 74px);
+
+    background: {
+      image: url("./images/banner/money.png");
     }
   }
 
-  /* contact */
-  @include e(contact) {
-    @include inline--block;
+  @include e(number) {
+    @include position--absolute(293px, null, null, 128px);
 
-    padding: 5px 25px;
-    background-color: color(4);
-    color: white;
-    border-radius: 3px;
-    text-align: center;
-  }
-}
+    color: color(1);
 
-/* home-services */
-@include b(home-services) {
-  /* list */
-  @include e(list) {
-    @include clearfix;
+    h2 {
+      @include font(8);
+      @include text--middle(60px);
 
-    /* item */
-    @include e(item) {
-      @include padding(150px, 30px, null, 25px);
+      margin-bottom: 8px;
+    }
 
-      background-repeat: no-repeat;
-      width: 245px;
-      float: left;
-      overflow: hidden;
+    p {
+      @include font(5);
 
-      dl {
-        text-align: left;
-
-        dt {
-          @include inline--block;
-          @include font(5);
-
-          border-bottom: 2px solid color(4);
-          padding-bottom: 25px;
-          margin-bottom: 10px;
-        }
-      }
-
-      /* 1 */
-      @include e(1) {
-        background-image: url("./images/services/1.png");
-      }
-
-      /* 2 */
-      @include e(2) {
-        background-image: url("./images/services/2.png");
-      }
-
-      /* 3 */
-      @include e(3) {
-        background-image: url("./images/services/3.png");
-      }
-
-      /* 4 */
-      @include e(4) {
-        background-image: url("./images/services/4.png");
-      }
+      text-indent: 8px;
     }
   }
-}
 
-/* home-cases */
-@include b(home-cases) {
-  /* list */
-  @include e(list) {
-    @include clearfix;
+  @include e(join) {
+    @include link--block(290px, 72px);
+    @include position--absolute(428px, null, null, 128px);
 
-    /* item */
-    @include e(item) {
-      @include margin(null, null, 20px, 20px);
-
-      width: 336px;
-      height: 254px;
-      float: left;
-      padding: 25px;
-      background-color: color(2);
-
-      img {
-        @include img--block(334px, 254px);
-      }
-
-      /* first */
-      @include e(first) {
-        margin-left: 0;
-      }
+    background: {
+      image: url("./images/banner/join.png");
     }
   }
-}
 
-/* home-docs */
-@include b(home-docs) {
-  /* list */
-  @include b(list) {
-    /* item */
-    @include e(item) {
-      float: left;
-      width: 50%;
+  @include e(followers) {
+    @include size(636px, 551px);
+    @include position--absolute(null, 60px, 0);
 
-      dd {
-        width: 500px;
-      }
+    background: {
+      image: url("./images/banner/followers.png");
     }
   }
 }

@@ -1,47 +1,38 @@
 @import "../../../../styles/utils/index";
 
-@include b(nav-bar) {
-  @include text--middle($height-top-bar);
-  @include position--fixed(0, null, null, 0);
+@include b(header) {
+  @include size(100%, 90px);
 
-  width: 100%;
-  background-color: color(2);
-  z-index: 100;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: color(1);
+  border-bottom: 2px solid color(2);
 
   @include e(logo) {
-    @include link--block(130px, 25px);
-    @include position--absolute(25px, null, null, 0);
-    @include font(3);
+    @include link--block(169px, 51px);
+    @include position--absolute(20px, null, null, 0);
 
-    padding-left: 35px;
-    line-height: 25px;
+    background-image: url("./images/logo.png");
+  }
 
-    i {
-      @include position--absolute(0, null, null, 0);
+  @include e(words) {
+    @include size(347px, 23px);
+    @include position--absolute(35px, null, null, 210px);
 
-      font-size: 30px;
-      color: color(3);
+    background-image: url("./images/words.png");
+  }
+
+  @include e(download) {
+    @include link--block(137px, 47px);
+    @include text--middle(47px);
+    @include font(4);
+    @include position--absolute(22px, 0);
+
+    border-radius: 47px;
+    background: {
+      color: color(2);
+      image: url("./images/phone.png");
+      repeat: no-repeat;
+      position: 20px 13px;
     }
-  }
-
-  @include e(links, contact) {
-    @include position--absolute(0);
-  }
-
-  @include e(links) {
-    left: 140px;
-
-    @include e(item) {
-      margin-left: 25px;
-
-      @include m(active) {
-        color: color(4);
-      }
-    }
-  }
-
-  @include e(contact) {
-    right: 0;
+    text-indent: 45px;
   }
 }

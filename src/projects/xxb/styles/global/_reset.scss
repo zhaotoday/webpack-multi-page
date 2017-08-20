@@ -2,13 +2,12 @@
 
 html,
 body {
-  background-color: color(6);
+  background-color: color(1);
 }
 
 body {
   @include font(1);
 
-  padding-top: $height-top-bar;
   min-width: $min-width;
   font-family: $font-family;
   line-height: $line-height;
