@@ -1,0 +1,12 @@
+@import "../../../../styles/utils/index";
+
+/* breadcrumb */
+@include b(breadcrumb) {
+  @include padding(15px, null, 12px, null);
+
+  /* a, span */
+  a,
+  span {
+    @include margin(null, 8px, null, 8px);
+  }
+}

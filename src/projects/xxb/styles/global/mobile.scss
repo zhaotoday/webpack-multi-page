@@ -1,0 +1,62 @@
+@import "~include-media/dist/_include-media.scss";
+
+body {
+  @include media("<=tablet") {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+@include b(nav-bar) {
+  @include e(logo) {
+    @include media("<=tablet") {
+      left: 10px !important;
+    }
+  }
+
+  @include e(links) {
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+
+  @include e(contact) {
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+}
+
+@include b(container) {
+  @include media("<=tablet") {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@include b(panel-home) {
+  h2 {
+    @include media("<=tablet") {
+      font-size: 24px !important;
+    }
+  }
+
+  h3 {
+    width: 300px !important;
+  }
+}
+
+@include b(home-cases__list) {
+  @include e(item) {
+    @include media("<=tablet") {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+
+      @include e(first) {
+        margin-left: auto !important;
+      }
+    }
+  }
+}
