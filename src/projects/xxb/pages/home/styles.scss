@@ -59,3 +59,60 @@
     }
   }
 }
+
+@include b(home-helps) {
+  @include padding(122px, null, 122px, null);
+
+  background-color: color(5);
+
+  h2 {
+    @include font(9);
+    @include text--middle(60px);
+
+    text-align: center;
+    padding-bottom: 66px;
+
+    span {
+      color: color(7);
+    }
+  }
+
+  @include e(item) {
+    @include size(138px, 130px);
+    @include font(4);
+
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+
+    @include m(active) {
+      cursor: text;
+      background-image: url("./images/helps/active.png");
+    }
+
+    i {
+      display: block;
+      @include block--center;
+      @include size(56px, 61px);
+
+      margin-bottom: 8px;
+    }
+
+    @include e(icon) {
+      @for $i from 1 through 7 {
+        @include e($i) {
+          background-image: url("./images/helps/" + $i + ".png");
+        }
+      }
+    }
+  }
+
+  @include e(divider) {
+    @include size(16px, 5px);
+    @include margin(70px, 10px, null, 10px);
+
+    float: left;
+    background-image: url("./images/helps/divider.png");
+  }
+}

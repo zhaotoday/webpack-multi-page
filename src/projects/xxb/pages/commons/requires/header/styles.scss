@@ -26,6 +26,7 @@
     @include font(4);
     @include position--absolute(22px, 0);
 
+    color: color(1);
     border-radius: 47px;
     background: {
       color: color(2);
