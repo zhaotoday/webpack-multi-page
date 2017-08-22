@@ -145,7 +145,7 @@ const config = {
 <script src="//cdn.liruan.cn/es5-shim/4.5.9/es5-sham.min.js"></script>
 <![endif]-->
 ```
-引入 selectivizr.js，使 IE8 支持 CSS3 伪类以及属性选择器
+引入 selectivizr.js，使 IE8 支持 CSS3 伪类以及属性选择器：
 ```html
 <!--[if lt IE 9]>
 <script src="//cdn.liruan.cn/nwmatcher/1.3.6/nwmatcher.min.js"></script>
