@@ -1,0 +1,54 @@
+@import "../../../../styles/utils/index";
+
+@include b(video-card) {
+  width: 440px;
+  border: 1px solid #eeeeee;
+
+  @include e(img) {
+    @include link--block(100%, 300px);
+
+    font-size: 0;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  @include e(title) {
+    padding-left: 5px;
+  }
+
+  @include e(remarks) {
+    color: #979797;
+
+    p {
+      &:first-child {
+        float: left;
+        padding-left: 5px;
+      }
+
+      &:last-child {
+        float: right;
+        text-align: right;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  @include m(sm) {
+    width: 212px;
+
+    @include b(video-card) {
+      @include e(img) {
+        height: 120px;
+
+        &::before {
+          @include size(100px, 100px);
+          @include position--absolute(50px, null, null, 50px);
+
+          background-color: red;
+          content: '';
+          display: block;
+        }
+      }
+    }
+  }
+}

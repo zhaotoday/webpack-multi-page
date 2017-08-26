@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  @include font(1);
+  @include font(2);
 
   min-width: $min-width;
   font-family: $font-family;
