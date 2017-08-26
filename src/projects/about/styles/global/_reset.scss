@@ -1,0 +1,41 @@
+@import "~compass-mixins/lib/compass/reset";
+
+html,
+body {
+  background-color: color(1);
+}
+
+body {
+  @include font(2);
+
+  min-width: $min-width;
+  font-family: $font-family;
+  line-height: $line-height;
+  color: color(6);
+}
+
+a {
+  color: color(6);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+.markdown-body {
+  ul {
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: decimal;
+    }
+  }
+}

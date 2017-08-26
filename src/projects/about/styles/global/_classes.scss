@@ -1,0 +1,11 @@
+.container {
+  @include block--center;
+  @include clearfix;
+
+  position: relative;
+  width: $min-width;
+}
+
+.clearfix {
+  @include clearfix;
+}
