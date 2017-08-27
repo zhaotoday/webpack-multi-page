@@ -1,282 +1,174 @@
 @import "../../styles/utils/index";
 
-@include b(home-banner) {
-  @include size(100%, 581px);
+@mixin position($left, $top) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: $left;
+  margin-top: $top;
+}
 
+@include b(page-1, page-2, page-3, page-4) {
+  width: 100%;
+  height: 100%;
+  position: relative;
   background: {
-    image: url("./images/banner/bg.jpg");
+    position: center center;
     repeat: no-repeat;
-    position: center;
-  }
-
-  .container {
-    height: 581px;
-  }
-
-  @include e(money) {
-    @include size(404px, 113px);
-    @include position--absolute(130px, null, null, 74px);
-
-    background: {
-      image: url("./images/banner/money.png");
-    }
-  }
-
-  @include e(number) {
-    @include position--absolute(293px, null, null, 128px);
-
-    color: color(1);
-
-    h2 {
-      @include font(8);
-      @include text--middle(60px);
-
-      margin-bottom: 8px;
-    }
-
-    p {
-      @include font(5);
-
-      text-indent: 8px;
-    }
-  }
-
-  @include e(join) {
-    @include link--block(290px, 72px);
-    @include position--absolute(428px, null, null, 128px);
-
-    background: {
-      image: url("./images/banner/join.png");
-    }
-  }
-
-  @include e(followers) {
-    @include size(636px, 551px);
-    @include position--absolute(null, 60px, 0);
-
-    background: {
-      image: url("./images/banner/followers.png");
-    }
   }
 }
 
-@include b(home-helps) {
-  @include padding(122px, null, 122px, null);
-
-  background-color: color(1);
-
-  h2 {
-    @include font(9);
-    @include text--middle(60px);
-
-    text-align: center;
-    padding-bottom: 66px;
-
-    span {
-      color: color(7);
-    }
+@include b(page-1) {
+  background: {
+    color: #28b197;
+    image: url("./images/page-1/bg.jpg");
   }
 
-  @include e(tabs) {
-    li {
-      &:nth-child(odd) {
-        @include size(138px, 130px);
-        @include font(4);
+  @include e(phone) {
+    @include position(-541px, -333px);
+    @include size(415px, 640px);
 
-        float: left;
-        text-align: center;
-        padding-top: 20px;
-        cursor: pointer;
-
-        i {
-          @include block--center;
-          @include size(56px, 61px);
-
-          display: block;
-          margin-bottom: 8px;
-        }
-
-        @for $i from 1 through 7 {
-          $n: $i * 2 - 1;
-
-          &:nth-child(#{$n}) {
-            i {
-              background-image: url("./images/helps/" + $i + ".png");
-            }
-          }
-        }
-      }
-
-      &:nth-child(even) {
-        @include size(16px, 5px);
-        @include margin(70px, 10px, null, 10px);
-
-        float: left;
-        background-image: url("./images/helps/divider.png");
-      }
-
-      &.active {
-        cursor: text;
-        background-image: url("./images/helps/active.png");
-      }
-    }
+    background-image: url("./images/page-1/phone.png");
   }
 
-  @include e(contents) {
-    li {
-      &.active {
-      }
-    }
+  @include e(words) {
+    @include position(-9px, -228px);
+    @include size(415px, 205px);
+
+    background-image: url("./images/page-1/words.png");
+  }
+
+  @include e(downloads) {
+    @include position(-11px, 29px);
   }
 }
 
-@include b(home-stars) {
-  @include e(tabs) {
-    padding-top: 30px;
-    background-color: #f8f8f8;
-
-    ul {
-      padding-left: 25px;
-    }
-
-    li {
-      margin: 25px;
-      float: left;
-      position: relative;
-      text-align: center;
-      font-size: 16px;
-      cursor: pointer;
-
-      &::before {
-        @include circle(100px);
-        @include position--absolute(3px, null, null, 3px);
-
-        border: 3px solid white;
-        content: '';
-        display: block;
-      }
-
-      img {
-        @include circle(106px);
-
-        display: block;
-        border: 3px solid #1f1f2a;
-        margin-bottom: 15px;
-      }
-
-      &.active {
-        @include margin(10px, 10px, 0, 10px);
-
-        position: relative;
-        cursor: inherit;
-        padding-bottom: 40px;
-
-        &::before {
-          @include size(140px, 140px);
-
-          border-color: #ffc000;
-        }
-
-        &::after {
-          @include size(100%, 25px);
-          @include position--absolute(null, null, 0, 0);
-
-          content: '';
-          display: block;
-          background: {
-            image: url("./images/stars/tabs/active.png");
-            repeat: no-repeat;
-            position: center 0;
-          }
-        }
-
-        img {
-          @include size(146px, 146px);
-        }
-      }
-    }
-
-    .container {
-      position: relative;
-    }
-
-    @include e(left, right) {
-      @include size(28px, 54px);
-      @include position--absolute(60px);
-
-      cursor: pointer;
-    }
-
-    @include e(left) {
-      left: 0;
-      background-image: url("./images/stars/tabs/left.png");
-    }
-
-    @include e(right) {
-      right: 0;
-      background-image: url("./images/stars/tabs/right.png");
-    }
+@include b(page-2) {
+  background: {
+    color: #815fd7;
+    image: url("./images/page-2/bg.jpg");
   }
 
-  @include e(contents) {
-    dl {
-      padding-top: 80px;
-      border-left: 4px solid #f6f6f6;
-      position: relative;
+  @include e(phone) {
+    @include position(-482px, -312px);
+    @include size(309px, 621px);
 
-      dt {
-        @include position--absolute(30px, null, null, 0);
-        @include size(150px, 30px);
+    background-image: url("./images/page-2/phone.png");
+  }
 
-        background: {
-          image: url("./images/contents/someday.png");
-          position: right 0;
-          repeat: no-repeat;
-        }
-        padding-right: 60px;
-        left: -200px;
-        text-align: right;
-      }
+  @include e(words) {
+    @include position(25px, -301px);
+    @include size(313px, 75px);
 
-      dd {
-        @include padding(15px, null, 45px);
+    background-image: url("./images/page-2/words.png");
+  }
 
-        position: relative;
-        margin-left: -30px;
-        padding-left: 70px;
-        background: {
-          image: url("./images/contents/plane.png");
-          repeat: no-repeat;
-        }
-      }
-    }
+  @include e(come-on) {
+    @include position(-132px, -97px);
+    @include size(650px, 420px);
 
-    @include m(new) {
-      @include margin(null, null, -5px, 10px);
-    }
+    background-image: url("./images/page-2/come-on.png");
+  }
 
-    @include e(videos) {
-      width: 900px;
-
-      .video-card {
-        float: left;
-
-        &--sm {
-          @include margin(null, null, 10px, 10px)
-        }
-      }
-    }
+  @include e(downloads) {
+    @include position(-13px, -190px);
   }
 }
 
-.load-more {
-  @include text--middle(48px);
-  @include padding(null, 30px, null, 30px);
+@include b(page-3) {
+  background: {
+    color: #3394d9;
+    image: url("./images/page-3/bg.jpg");
+  }
 
-  color: #2aaf9a;
-  border-radius: 48px;
-  font-size: 18px;
-  display: inline-block;
-  border: 2px solid #2aaf9a;
+  @include e(phone) {
+    @include position(-482px, -312px);
+    @include size(309px, 621px);
+
+    background-image: url("./images/page-3/phone.png");
+  }
+
+  @include e(words) {
+    @include position(25px, -301px);
+    @include size(313px, 73px);
+
+    background-image: url("./images/page-3/words.png");
+  }
+
+  @include e(come-on) {
+    @include position(-70px, -26px);
+    @include size(828px, 558px);
+
+    background-image: url("./images/page-3/come-on.png");
+  }
+
+  @include e(downloads) {
+    @include position(-13px, -190px);
+  }
+}
+
+@include b(page-4) {
+  background: {
+    color: #ffae00;
+    image: url("./images/page-4/bg.jpg");
+  }
+
+  @include e(phone) {
+    @include position(-482px, -312px);
+    @include size(309px, 621px);
+
+    background-image: url("./images/page-4/phone.png");
+  }
+
+  @include e(words) {
+    @include position(25px, -301px);
+    @include size(308px, 74px);
+
+    background-image: url("./images/page-4/words.png");
+  }
+
+  @include e(come-on) {
+    @include position(-137px, -30px);
+    @include size(669px, 494px);
+
+    background-image: url("./images/page-4/come-on.png");
+  }
+
+  @include e(downloads) {
+    @include position(-13px, -190px);
+  }
+}
+
+@include b(next) {
+  @include position--fixed(null, null, 47px, 50%);
+  @include size(42px, 61px);
+
   cursor: pointer;
+  margin-left: -21px;
+  z-index: 99;
+  background-image: url("./images/next.png");
+}
+
+@include b(nav) {
+  @include position--fixed(50%, 125px);
+  margin-top: -70px;
+  z-index: 99;
+  width: 23px;
+
+  li {
+    @include size(23px, 22px);
+
+    background: {
+      image: url("./images/nav.png");
+      position: center center;
+      repeat: no-repeat;
+    }
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    &.active {
+      background-image: url("./images/nav-active.png");
+      cursor: inherit;
+    }
+  }
 }

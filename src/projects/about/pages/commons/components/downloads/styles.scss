@@ -1,0 +1,26 @@
+@import "../../../../styles/utils/index";
+
+@include b(downloads) {
+  position: relative;
+
+  @include e(qrcode) {
+    @include size(140px, 140px);
+
+    background-image: url("./images/qrcode.png");
+  }
+
+  @include e(android, ios) {
+    @include link--block(238px, 60px);
+    @include position--absolute(null, null, null, 186px);
+  }
+
+  @include e(ios) {
+    top: 0;
+    background-image: url("./images/ios.png");
+  }
+
+  @include e(android) {
+    bottom: 0;
+    background-image: url("./images/android.png");
+  }
+}

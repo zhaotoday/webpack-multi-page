@@ -1,39 +1,23 @@
 @import "../../../../styles/utils/index";
 
 @include b(header) {
-  @include size(100%, 90px);
+  @include position--fixed(40px, null, null, 50%);
 
-  background-color: color(1);
-  border-bottom: 2px solid color(2);
+  margin-left: -490px;
+  height: 46px;
+  z-index: 99;
 
   @include e(logo) {
-    @include link--block(169px, 51px);
-    @include position--absolute(20px, null, null, 0);
+    @include link--block(151px, 46px);
 
+    margin-left: 20px;
     background-image: url("./images/logo.png");
   }
 
-  @include e(words) {
-    @include size(347px, 23px);
-    @include position--absolute(35px, null, null, 210px);
+  @include e(back) {
+    @include link--block(142px, 44px);
+    @include position--absolute(1px, 0);
 
-    background-image: url("./images/words.png");
-  }
-
-  @include e(download) {
-    @include link--block(137px, 47px);
-    @include text--middle(47px);
-    @include font(4);
-    @include position--absolute(22px, 0);
-
-    color: color(1);
-    border-radius: 47px;
-    background: {
-      color: color(2);
-      image: url("./images/phone.png");
-      repeat: no-repeat;
-      position: 20px 13px;
-    }
-    text-indent: 45px;
+    background-image: url("./images/back.png");
   }
 }
