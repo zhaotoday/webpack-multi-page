@@ -2,6 +2,8 @@
 
 @include b(video-card) {
   width: 440px;
+  height: 392px;
+  overflow: hidden;
   border: 1px solid #eeeeee;
 
   @include e(img) {
@@ -13,41 +15,54 @@
   }
 
   @include e(title) {
-    padding-left: 5px;
+    @include padding(13px, null, 13px, 10px);
+
+    font-size: 16px;
   }
 
   @include e(remarks) {
     color: #979797;
 
     p {
+      height: 30px;
+      font-size: 14px;
+
       &:first-child {
         float: left;
-        padding-left: 5px;
+        padding-left: 10px;
       }
 
       &:last-child {
         float: right;
         text-align: right;
-        padding-right: 5px;
+        padding-right: 10px;
       }
     }
   }
 
   @include m(sm) {
     width: 212px;
+    height: 185px;
 
     @include b(video-card) {
       @include e(img) {
         height: 120px;
 
         &::before {
-          @include size(100px, 100px);
-          @include position--absolute(50px, null, null, 50px);
+          @include size(50px, 50px);
+          @include position--absolute(50%, null, null, 50%);
+          @include margin(-25px, null, null, -25px);
 
-          background-color: red;
+          background-color: gray;
           content: '';
           display: block;
         }
+      }
+
+      @include e(title) {
+        @include padding(0, null, 0, 10px);
+
+        font-size: 14px;
       }
     }
   }

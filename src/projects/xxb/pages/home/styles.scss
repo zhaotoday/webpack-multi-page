@@ -23,7 +23,7 @@
   }
 
   @include e(number) {
-    @include position--absolute(293px, null, null, 128px);
+    @include position--absolute(288px, null, null, 121px);
 
     color: color(1);
 
@@ -31,7 +31,7 @@
       @include font(8);
       @include text--middle(60px);
 
-      margin-bottom: 8px;
+      margin-bottom: 22px;
     }
 
     p {
@@ -61,7 +61,7 @@
 }
 
 @include b(home-helps) {
-  @include padding(122px, null, 122px, null);
+  @include padding(110px, null, 78px, null);
 
   background-color: color(1);
 
@@ -70,7 +70,7 @@
     @include text--middle(60px);
 
     text-align: center;
-    padding-bottom: 66px;
+    padding-bottom: 60px;
 
     span {
       color: color(7);
@@ -109,7 +109,7 @@
 
       &:nth-child(even) {
         @include size(16px, 5px);
-        @include margin(70px, 10px, null, 10px);
+        @include margin(70px, 11px, null, 12px);
 
         float: left;
         background-image: url("./images/helps/divider.png");
@@ -124,6 +124,11 @@
 
   @include e(contents) {
     li {
+      @include padding(44px, null, null, 24px);
+
+      line-height: 200%;
+      font-size: 18px;
+
       &.active {
       }
     }
@@ -132,15 +137,15 @@
 
 @include b(home-stars) {
   @include e(tabs) {
-    padding-top: 30px;
+    padding-top: 65px;
     background-color: #f8f8f8;
 
     ul {
-      padding-left: 25px;
+      padding-left: 34px;
     }
 
     li {
-      margin: 25px;
+      margin: 26px;
       float: left;
       position: relative;
       text-align: center;
@@ -148,7 +153,7 @@
       cursor: pointer;
 
       &::before {
-        @include circle(100px);
+        @include circle(96px);
         @include position--absolute(3px, null, null, 3px);
 
         border: 3px solid white;
@@ -157,19 +162,19 @@
       }
 
       img {
-        @include circle(106px);
+        @include circle(102px);
 
         display: block;
         border: 3px solid #1f1f2a;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 
       &.active {
-        @include margin(10px, 10px, 0, 10px);
+        @include margin(5px, 10px, 0, 10px);
 
         position: relative;
         cursor: inherit;
-        padding-bottom: 40px;
+        padding-bottom: 28px;
 
         &::before {
           @include size(140px, 140px);
@@ -219,13 +224,16 @@
   }
 
   @include e(contents) {
+    padding-left: 223px;
+
     dl {
-      padding-top: 80px;
+      padding-top: 123px;
       border-left: 4px solid #f6f6f6;
       position: relative;
+      font-size: 18px;
 
       dt {
-        @include position--absolute(30px, null, null, 0);
+        @include position--absolute(50px, null, null, 0);
         @include size(150px, 30px);
 
         background: {
@@ -239,11 +247,11 @@
       }
 
       dd {
-        @include padding(15px, null, 45px);
+        @include padding(15px, null, 46px);
 
         position: relative;
-        margin-left: -30px;
-        padding-left: 70px;
+        margin-left: -27px;
+        padding-left: 90px;
         background: {
           image: url("./images/contents/plane.png");
           repeat: no-repeat;
@@ -256,13 +264,15 @@
     }
 
     @include e(videos) {
-      width: 900px;
+      width: 1000px;
+      margin-top: 40px;
+      margin-bottom: 54px;
 
       .video-card {
         float: left;
 
         &--sm {
-          @include margin(null, null, 10px, 10px)
+          @include margin(null, null, 20px, 20px)
         }
       }
     }

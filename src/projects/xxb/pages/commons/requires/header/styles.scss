@@ -8,14 +8,14 @@
 
   @include e(logo) {
     @include link--block(169px, 51px);
-    @include position--absolute(20px, null, null, 0);
+    @include position--absolute(20px, null, null, 5px);
 
     background-image: url("./images/logo.png");
   }
 
   @include e(words) {
     @include size(347px, 23px);
-    @include position--absolute(35px, null, null, 210px);
+    @include position--absolute(35px, null, null, 214px);
 
     background-image: url("./images/words.png");
   }
@@ -24,7 +24,7 @@
     @include link--block(137px, 47px);
     @include text--middle(47px);
     @include font(4);
-    @include position--absolute(22px, 0);
+    @include position--absolute(23px, 5px);
 
     color: color(1);
     border-radius: 47px;
