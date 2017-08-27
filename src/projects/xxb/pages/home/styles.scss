@@ -116,7 +116,7 @@
       }
 
       &.active {
-        cursor: text;
+        cursor: inherit;
         background-image: url("./images/helps/active.png");
       }
     }
