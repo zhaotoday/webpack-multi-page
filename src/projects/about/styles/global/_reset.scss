@@ -8,12 +8,9 @@ body {
 }
 
 body {
-  @include font(2);
-
   min-width: $min-width;
 }
 
 a {
-  color: color(6);
   text-decoration: none;
 }
