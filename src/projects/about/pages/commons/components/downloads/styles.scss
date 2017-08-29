@@ -4,14 +4,14 @@
   position: relative;
 
   @include e(qrcode) {
-    @include size(140px, 140px);
+    @include size(105px, 106px);
 
     background-image: url("./images/qrcode.png");
   }
 
   @include e(android, ios) {
-    @include link--block(238px, 60px);
-    @include position--absolute(null, null, null, 186px);
+    @include link--block(179px, 46px);
+    @include position--absolute(null, null, null, 139px);
   }
 
   @include e(ios) {

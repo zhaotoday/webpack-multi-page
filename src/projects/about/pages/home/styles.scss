@@ -25,21 +25,21 @@
   }
 
   @include e(phone) {
-    @include position(-541px, -333px);
-    @include size(415px, 640px);
+    @include position(-378px, -207px);
+    @include size(312px, 479px);
 
     background-image: url("./images/page-1/phone.png");
   }
 
   @include e(words) {
-    @include position(-9px, -228px);
-    @include size(415px, 205px);
+    @include position(21px, -136px);
+    @include size(305px, 153px);
 
     background-image: url("./images/page-1/words.png");
   }
 
   @include e(downloads) {
-    @include position(-11px, 29px);
+    @include position(21px, 55px);
   }
 }
 
@@ -141,29 +141,29 @@
 
 @include b(next) {
   @include position--fixed(null, null, 47px, 50%);
-  @include size(42px, 61px);
+  @include size(32px, 46px);
 
   cursor: pointer;
-  margin-left: -21px;
+  margin-left: -16px;
   z-index: 99;
   background-image: url("./images/next.png");
 }
 
 @include b(nav) {
-  @include position--fixed(50%, 125px);
-  margin-top: -70px;
+  @include position--fixed(50%, 90px);
+  margin-top: -57px;
   z-index: 99;
   width: 23px;
 
   li {
-    @include size(23px, 22px);
+    @include size(18px, 17px);
 
     background: {
       image: url("./images/nav.png");
       position: center center;
       repeat: no-repeat;
     }
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     cursor: pointer;
 
     &.active {

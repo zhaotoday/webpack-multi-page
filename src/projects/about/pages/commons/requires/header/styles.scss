@@ -10,13 +10,13 @@
   @include e(logo) {
     @include link--block(151px, 46px);
 
-    margin-left: 20px;
+    margin-left: 28px;
     background-image: url("./images/logo.png");
   }
 
   @include e(back) {
-    @include link--block(142px, 44px);
-    @include position--absolute(1px, 0);
+    @include link--block(130px, 40px);
+    @include position--absolute(1px, 15px);
 
     background-image: url("./images/back.png");
   }
