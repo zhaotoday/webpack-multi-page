@@ -50,28 +50,28 @@
   }
 
   @include e(phone) {
-    @include position(-482px, -312px);
-    @include size(309px, 621px);
+    @include position(-336px, -190px);
+    @include size(232px, 464px);
 
     background-image: url("./images/page-2/phone.png");
   }
 
   @include e(words) {
-    @include position(25px, -301px);
-    @include size(313px, 75px);
+    @include position(44px, -184px);
+    @include size(236px, 58px);
 
     background-image: url("./images/page-2/words.png");
   }
 
   @include e(come-on) {
-    @include position(-132px, -97px);
-    @include size(650px, 420px);
+    @include position(-74px, -29px);
+    @include size(489px, 316px);
 
     background-image: url("./images/page-2/come-on.png");
   }
 
   @include e(downloads) {
-    @include position(-13px, -190px);
+    @include position(17px, -100px);
   }
 }
 
@@ -82,28 +82,28 @@
   }
 
   @include e(phone) {
-    @include position(-482px, -312px);
-    @include size(309px, 621px);
+    @include position(-336px, -190px);
+    @include size(232px, 464px);
 
     background-image: url("./images/page-3/phone.png");
   }
 
   @include e(words) {
-    @include position(25px, -301px);
-    @include size(313px, 73px);
+    @include position(45px, -180px);
+    @include size(235px, 54px);
 
     background-image: url("./images/page-3/words.png");
   }
 
   @include e(come-on) {
-    @include position(-70px, -26px);
-    @include size(828px, 558px);
+    @include position(-30px, 41px);
+    @include size(429px, 267px);
 
     background-image: url("./images/page-3/come-on.png");
   }
 
   @include e(downloads) {
-    @include position(-13px, -190px);
+    @include position(17px, -100px);
   }
 }
 
@@ -114,28 +114,28 @@
   }
 
   @include e(phone) {
-    @include position(-482px, -312px);
-    @include size(309px, 621px);
+    @include position(-336px, -190px);
+    @include size(232px, 464px);
 
     background-image: url("./images/page-4/phone.png");
   }
 
   @include e(words) {
-    @include position(25px, -301px);
-    @include size(308px, 74px);
+    @include position(44px, -179px);
+    @include size(233px, 54px);
 
     background-image: url("./images/page-4/words.png");
   }
 
   @include e(come-on) {
-    @include position(-137px, -30px);
-    @include size(669px, 494px);
+    @include position(-95px, 36px);
+    @include size(500px, 367px);
 
     background-image: url("./images/page-4/come-on.png");
   }
 
   @include e(downloads) {
-    @include position(-13px, -190px);
+    @include position(17px, -100px);
   }
 }
 
