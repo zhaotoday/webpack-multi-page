@@ -1,0 +1,11 @@
+@import "../../../../styles/utils/index";
+
+@include b(avatar) {
+  @include size(px2rem(238px), px2rem(177px));
+  @include block--center;
+
+  background: {
+    image: url("./images/bg.png");
+    size: 100% 100%;
+  }
+}

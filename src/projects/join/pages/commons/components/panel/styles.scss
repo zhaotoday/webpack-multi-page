@@ -1,0 +1,65 @@
+@import "../../../../styles/utils/index";
+
+@include b(panel) {
+  @include block--center;
+  @include margin(px2rem(43px));
+
+  width: px2rem(702px);
+  position: relative;
+
+  background: {
+    image: url("./images/body.png");
+    size: 100% 1px;
+  }
+
+  &::before,
+  &::after {
+    @include size(px2rem(702px), px2rem(23px));
+
+    content: '';
+    display: block;
+    z-index: -1;
+    background: {
+      image: url("./images/top.png");
+      size: px2rem(702px) px2rem(23px);
+    }
+  }
+
+  &:before {
+    @include position--absolute(px2rem(-22px), null, null, 0);
+  }
+
+  &::after {
+    @include position--absolute(null, null, px2rem(-22px), 0);
+
+    transform: rotate(180deg);
+  }
+
+  @include e(clip) {
+    @include size(px2rem(85px), px2rem(78px));
+    @include position--absolute(-px2rem(-43px), px2rem(33px));
+
+    background: {
+      image: url("./images/clip.png");
+      size: 100% 100%;
+    }
+  }
+
+  @include e(link) {
+    @include size(px2rem(26px), px2rem(148px));
+    @include position--absolute(null, null, px2rem(-80px));
+
+    background: {
+      image: url("./images/link.png");
+      size: 100% 100%;
+    }
+
+    @include e(left) {
+      left: px2rem(20px);
+    }
+
+    @include e(right) {
+      right: px2rem(20px);
+    }
+  }
+}
