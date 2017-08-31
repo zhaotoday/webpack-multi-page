@@ -1,0 +1,23 @@
+@import "../../../../styles/utils/index";
+
+@include b(header) {
+  @include position--fixed(40px, null, null, 50%);
+
+  margin-left: -490px;
+  height: 46px;
+  z-index: 99;
+
+  @include e(logo) {
+    @include link--block(151px, 46px);
+
+    margin-left: 28px;
+    background-image: url("./images/logo.png");
+  }
+
+  @include e(back) {
+    @include link--block(130px, 40px);
+    @include position--absolute(1px, 15px);
+
+    background-image: url("./images/back.png");
+  }
+}
