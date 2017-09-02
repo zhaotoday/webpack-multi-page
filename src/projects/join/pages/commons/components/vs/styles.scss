@@ -1,0 +1,34 @@
+@import "../../../../styles/utils/index";
+
+@include b(vs) {
+  @include size(px2rem(570px), px2rem(173px));
+  @include block--center;
+
+  position: relative;
+
+  dl {
+    @include position--absolute(px2rem(18px));
+
+    &:first-child {
+      left: px2rem(58px);
+    }
+
+    &:last-child {
+      text-align: right;
+      right: px2rem(58px);
+    }
+  }
+
+  dt {
+    @include font(4);
+
+    color: color(8);
+    padding-bottom: px2rem(20px);
+  }
+
+  dd {
+    @include font(5);
+
+    color: color(5);
+  }
+}
