@@ -1,5 +1,12 @@
 @import "~compass-mixins/lib/compass/reset";
 
+html,
+body {
+  @include size(100%, 1200px);
+
+  background-color: color(1);
+}
+
 a {
   text-decoration: none;
 }

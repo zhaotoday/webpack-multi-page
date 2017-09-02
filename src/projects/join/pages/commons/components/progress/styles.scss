@@ -1,0 +1,60 @@
+@import "../../../../styles/utils/index";
+
+@include b(progress) {
+  @include block--center;
+  @include size(px2rem(570px), px2rem(6px));
+
+  position: relative;
+  background-color: color(6);
+
+  @include e(num, total) {
+    @include font(7);
+    @include position--absolute(px2rem(-60px));
+  }
+
+  @include e(num) {
+    color: color(5);
+    left: 0;
+  }
+
+  @include e(total) {
+    color: color(4);
+    right: 0;
+    text-align: right;
+  }
+
+  @include e(join, target) {
+    @include position--absolute(px2rem(31px));
+    @include font(4);
+
+    color: color(8);
+  }
+
+  @include e(join) {
+    left: 0;
+  }
+
+  @include e(target) {
+    right: 0;
+    text-align: right;
+  }
+
+  @include e(current) {
+    height: px2rem(6px);
+    background-color: color(5);
+    position: relative;
+
+    @include e(percent) {
+      @include size(px2rem(60px), px2rem(24px));
+      @include text--middle(px2rem(24px));
+      @include position--absolute(px2rem(-12px), px2rem(-30px));
+      @include font(6);
+
+      text-align: center;
+      border: 2px solid color(5);
+      background-color: color(7);
+      color: color(5);
+      border-radius: px2rem(24px);
+    }
+  }
+}

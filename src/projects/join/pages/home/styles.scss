@@ -1,1 +1,19 @@
 @import "../../styles/utils/index";
+
+@include b(join-voucher) {
+  padding-top: px2rem(10px);
+  height: px2rem(676px);
+
+  .desc {
+    padding-bottom: px2rem(14px);
+  }
+}
+
+@include b(activity-details) {
+  padding-top: px2rem(34px);
+  height: px2rem(356px);
+
+  .desc {
+    padding-bottom: px2rem(80px);
+  }
+}

@@ -2,8 +2,10 @@
 
 @include b(panel) {
   @include block--center;
-  @include margin(px2rem(43px));
+  @include margin(px2rem(43px), null, px2rem(64px));
 
+  box-sizing: border-box;
+  z-index: 1;
   width: px2rem(702px);
   position: relative;
 
@@ -18,10 +20,10 @@
 
     content: '';
     display: block;
-    z-index: -1;
+    z-index: 2;
     background: {
       image: url("./images/top.png");
-      size: px2rem(702px) px2rem(23px);
+      size: 100% px2rem(23px);
     }
   }
 
@@ -37,8 +39,9 @@
 
   @include e(clip) {
     @include size(px2rem(85px), px2rem(78px));
-    @include position--absolute(-px2rem(-43px), px2rem(33px));
+    @include position--absolute(px2rem(-42px), px2rem(35px));
 
+    z-index: 3;
     background: {
       image: url("./images/clip.png");
       size: 100% 100%;
@@ -47,19 +50,20 @@
 
   @include e(link) {
     @include size(px2rem(26px), px2rem(148px));
-    @include position--absolute(null, null, px2rem(-80px));
+    @include position--absolute(px2rem(-107px));
 
+    z-index: 3;
     background: {
       image: url("./images/link.png");
       size: 100% 100%;
     }
 
     @include e(left) {
-      left: px2rem(20px);
+      left: px2rem(51px);
     }
 
     @include e(right) {
-      right: px2rem(20px);
+      right: px2rem(51px);
     }
   }
 }

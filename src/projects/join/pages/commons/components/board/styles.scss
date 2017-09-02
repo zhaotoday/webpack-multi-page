@@ -1,0 +1,22 @@
+@import "../../../../styles/utils/index";
+
+@include b(board) {
+  @include block--center;
+  @include size(px2rem(380px), px2rem(173px));
+
+  background-image: url("./images/bg.png");
+  text-align: center;
+
+  h2 {
+    @include font(4);
+    @include padding(px2rem(25px), null, px2rem(6px));
+
+    color: color(4);
+  }
+
+  p {
+    @include font(5);
+
+    color: color(5);
+  }
+}
