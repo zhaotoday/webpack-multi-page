@@ -8,7 +8,7 @@
   background-color: color(6);
 
   @include e(num, total) {
-    @include font(7);
+    @include font(2);
     @include position--absolute(px2rem(-60px));
   }
 
@@ -46,10 +46,11 @@
 
     @include e(percent) {
       @include size(px2rem(60px), px2rem(24px));
-      @include text--middle(px2rem(24px));
       @include position--absolute(px2rem(-12px), px2rem(-30px));
-      @include font(6);
+      @include font(7);
 
+      line-height: px2rem(24px + 1px);
+      overflow: hidden;
       text-align: center;
       border: 2px solid color(5);
       background-color: color(7);

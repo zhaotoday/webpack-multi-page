@@ -5,7 +5,8 @@
   @include block--center;
   @include font(3);
 
-  line-height: px2rem(48px);
+  line-height: px2rem(48px + 1px);
+  overflow: hidden;
   text-align: center;
   background: {
     image: url("./images/bg.png");

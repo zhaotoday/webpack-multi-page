@@ -2,9 +2,14 @@
 
 html,
 body {
-  @include size(100%, 1200px);
-
+  width: 100%;
+  overflow-x: hidden;
   background-color: color(1);
+}
+
+body {
+  font-family: $font-family-mobile;
+  padding-top: px2rem(137px);
 }
 
 a {

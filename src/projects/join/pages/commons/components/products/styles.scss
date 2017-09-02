@@ -1,0 +1,70 @@
+@import "../../../../styles/utils/index";
+
+@include b(products) {
+  @include margin(px2rem(7px), auto, px2rem(37px), auto);
+
+  width: px2rem(570px);
+
+  @include e(item) {
+    padding: px2rem(18px);
+    box-sizing: border-box;
+    height: px2rem(180px);
+    border: 1px solid color(9);
+    border-radius: 6px;
+    margin-bottom: px2rem(29px);
+
+    img {
+      @include img--block(px2rem(187px), px2rem(141px));
+
+      float: left;
+    }
+
+    dl {
+      @include font(6);
+      @include size(px2rem(314px), px2rem(100px));
+
+      float: left;
+      padding-left: px2rem(28px);
+      line-height: 120%;
+
+      dt {
+        color: color(4);
+
+        height: px2rem(90px);
+        line-height: 120%;
+        padding-bottom: px2rem(20px);
+      }
+
+      dd {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    @include e(price) {
+      @include position--absolute(0, null, null, 0);
+
+      color: color(10);
+
+      &::after {
+        @include size(px2rem(50px), px2rem(24px));
+        @include position--absolute(0, px2rem(-60px));
+        @include font(7);
+
+        content: '包邮';
+        text-align: center;
+        line-height: px2rem(24px + 1px);
+        overflow: hidden;
+        display: block;
+        border: 1px solid color(10);
+      }
+    }
+
+    @include e(num) {
+      @include position--absolute(0, 0);
+      @include font(7);
+
+      color: color(8);
+    }
+  }
+}

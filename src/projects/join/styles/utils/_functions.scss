@@ -13,8 +13,5 @@
  * @return {string}
  */
 @function px2rem($px) {
-  /*
   @return _px2rem($px);
-  */
-  @return $px;
 }

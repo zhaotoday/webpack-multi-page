@@ -28,11 +28,11 @@
   }
 
   &:before {
-    @include position--absolute(px2rem(-22px), null, null, 0);
+    @include position--absolute(px2rem(-20px), null, null, 0);
   }
 
   &::after {
-    @include position--absolute(null, null, px2rem(-22px), 0);
+    @include position--absolute(null, null, px2rem(-20px), 0);
 
     transform: rotate(180deg);
   }

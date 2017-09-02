@@ -7,14 +7,14 @@
 
   text-align: center;
   color: color(2);
-  line-height: px2rem(38px);
+  line-height: px2rem(38px + 1px);
   position: relative;
   margin-bottom: px2rem(18px);
 
   &::before,
   &::after {
     @include size(px2rem(19px), px2rem(24px));
-    @include position--absolute(9px);
+    @include position--absolute(px2rem(6px));
 
     content: '';
     display: block;
