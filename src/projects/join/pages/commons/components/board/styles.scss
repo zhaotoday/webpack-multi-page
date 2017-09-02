@@ -4,7 +4,10 @@
   @include block--center;
   @include size(px2rem(380px), px2rem(173px));
 
-  background-image: url("./images/bg.png");
+  background: {
+    image: url("./images/bg.png");
+    size: 100% 100%;
+  }
   text-align: center;
 
   h2 {

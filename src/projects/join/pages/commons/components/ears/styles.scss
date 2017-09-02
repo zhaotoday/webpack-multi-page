@@ -18,7 +18,10 @@
 
     content: '';
     display: block;
-    background-image: url("./images/ear.png");
+    background: {
+      image: url("./images/ear.png");
+      size: 100% 100%;
+    }
   }
 
   &::before {

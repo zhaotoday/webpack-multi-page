@@ -1,8 +1,7 @@
 @import "../../styles/utils/index";
 
 @include b(join-voucher) {
-  padding-top: px2rem(10px);
-  height: px2rem(676px);
+  @include padding(px2rem(10px), null, px2rem(36px));
 
   .desc {
     padding-bottom: px2rem(14px);
@@ -10,8 +9,7 @@
 }
 
 @include b(activity-details) {
-  padding-top: px2rem(34px);
-  height: px2rem(356px);
+  @include padding(px2rem(34px), null, px2rem(98px));
 
   .desc {
     padding-bottom: px2rem(80px);
