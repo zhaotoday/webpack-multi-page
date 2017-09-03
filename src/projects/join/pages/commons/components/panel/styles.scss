@@ -21,25 +21,25 @@
     content: '';
     display: block;
     z-index: 2;
-    background: {
-      image: url("./images/top.png");
-      size: 100% px2rem(23px);
-    }
+    background-size: 100% px2rem(23px);
   }
 
   &:before {
     @include position--absolute(px2rem(-20px), null, null, 0);
+
+    background-image: url("./images/top.png");
   }
 
   &::after {
     @include position--absolute(null, null, px2rem(-20px), 0);
 
-    transform: rotate(180deg);
+    background-image: url("./images/bottom.png");
+    background-position: 0 bottom;
   }
 
   @include e(clip) {
     @include size(px2rem(85px), px2rem(78px));
-    @include position--absolute(px2rem(-42px), px2rem(35px));
+    @include position--absolute(px2rem(-40px), px2rem(35px));
 
     z-index: 3;
     background: {

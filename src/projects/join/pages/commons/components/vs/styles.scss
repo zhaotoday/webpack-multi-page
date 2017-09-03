@@ -1,22 +1,16 @@
 @import "../../../../styles/utils/index";
 
 @include b(vs) {
-  @include size(px2rem(570px), px2rem(173px));
+  @include size(px2rem(650px), px2rem(155px));
   @include block--center;
 
   position: relative;
+  display: flex;
+  margin-top: px2rem(18px);
 
   dl {
-    @include position--absolute(px2rem(18px));
-
-    &:first-child {
-      left: px2rem(58px);
-    }
-
-    &:last-child {
-      text-align: right;
-      right: px2rem(58px);
-    }
+    text-align: center;
+    flex: 1;
   }
 
   dt {
