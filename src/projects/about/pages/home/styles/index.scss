@@ -1,11 +1,20 @@
-@import "../../styles/utils/index";
+@import "../../../styles/utils/index";
+@import "./libs/animate";
 
-@mixin position($left, $top) {
-  position: absolute;
+@mixin position($left, $top, $position-value: absolute) {
+  position: $position-value;
   left: 50%;
   top: 50%;
   margin-left: $left;
   margin-top: $top;
+}
+
+.phone {
+  @include position(-378px, -207px, fixed);
+  @include size(312px, 479px);
+
+  z-index: 999;
+  background-image: url("../images/page-1/phone.png");
 }
 
 @include b(page-1, page-2, page-3, page-4) {
@@ -21,53 +30,75 @@
 @include b(page-1) {
   background: {
     color: #28b197;
-    image: url("./images/page-1/bg.jpg");
+    image: url("../images/page-1/bg.jpg");
   }
 
   @include e(phone) {
     @include position(-378px, -207px);
     @include size(312px, 479px);
 
-    background-image: url("./images/page-1/phone.png");
+    background-image: url("../images/page-1/phone.png");
   }
 
   @include e(words) {
     @include position(21px, -136px);
     @include size(305px, 153px);
 
-    background-image: url("./images/page-1/words.png");
+    background-image: url("../images/page-1/words.png");
   }
 
   @include e(downloads) {
     @include position(21px, 55px);
+  }
+
+  @include e(cloud-1) {
+    @include size(63px, 39px);
+    @include position(-429px, -38px);
+
+    background-image: url("../images/page-1/clouds/1.png");
+  }
+
+  @include e(cloud-2) {
+    @include size(91px, 57px);
+    @include position(-131px, 50px);
+
+    background-image: url("../images/page-1/clouds/2.png");
+  }
+
+  @include e(cloud-3) {
+    @include size(91px, 56px);
+    @include position(265px, -203px);
+
+    background-image: url("../images/page-1/clouds/3.png");
   }
 }
 
 @include b(page-2) {
   background: {
     color: #815fd7;
-    image: url("./images/page-2/bg.jpg");
+    image: url("../images/page-2/bg.jpg");
   }
 
   @include e(phone) {
     @include position(-336px, -190px);
     @include size(232px, 464px);
 
-    background-image: url("./images/page-2/phone.png");
+    background-image: url("../images/page-2/phone.png");
   }
 
   @include e(words) {
     @include position(44px, -184px);
     @include size(236px, 58px);
 
-    background-image: url("./images/page-2/words.png");
+    background-image: url("../images/page-2/words.png");
   }
 
   @include e(come-on) {
     @include position(-74px, -29px);
     @include size(489px, 316px);
 
-    background-image: url("./images/page-2/come-on.png");
+    display: none;
+    background-image: url("../images/page-2/come-on.png");
   }
 
   @include e(downloads) {
@@ -78,28 +109,29 @@
 @include b(page-3) {
   background: {
     color: #3394d9;
-    image: url("./images/page-3/bg.jpg");
+    image: url("../images/page-3/bg.jpg");
   }
 
   @include e(phone) {
     @include position(-336px, -190px);
     @include size(232px, 464px);
 
-    background-image: url("./images/page-3/phone.png");
+    background-image: url("../images/page-3/phone.png");
   }
 
   @include e(words) {
     @include position(45px, -180px);
     @include size(235px, 54px);
 
-    background-image: url("./images/page-3/words.png");
+    background-image: url("../images/page-3/words.png");
   }
 
   @include e(come-on) {
-    @include position(-30px, 41px);
+    @include position(-30px, 21px);
     @include size(429px, 267px);
 
-    background-image: url("./images/page-3/come-on.png");
+    display: none;
+    background-image: url("../images/page-3/come-on.png");
   }
 
   @include e(downloads) {
@@ -110,28 +142,29 @@
 @include b(page-4) {
   background: {
     color: #ffae00;
-    image: url("./images/page-4/bg.jpg");
+    image: url("../images/page-4/bg.jpg");
   }
 
   @include e(phone) {
     @include position(-336px, -190px);
     @include size(232px, 464px);
 
-    background-image: url("./images/page-4/phone.png");
+    background-image: url("../images/page-4/phone.png");
   }
 
   @include e(words) {
     @include position(44px, -179px);
     @include size(233px, 54px);
 
-    background-image: url("./images/page-4/words.png");
+    background-image: url("../images/page-4/words.png");
   }
 
   @include e(come-on) {
     @include position(-95px, 36px);
     @include size(500px, 367px);
 
-    background-image: url("./images/page-4/come-on.png");
+    display: none;
+    background-image: url("../images/page-4/come-on.png");
   }
 
   @include e(downloads) {
@@ -146,7 +179,7 @@
   cursor: pointer;
   margin-left: -16px;
   z-index: 99;
-  background-image: url("./images/next.png");
+  background-image: url("../images/next.png");
 }
 
 @include b(nav) {
@@ -159,7 +192,7 @@
     @include size(18px, 17px);
 
     background: {
-      image: url("./images/nav.png");
+      image: url("../images/nav.png");
       position: center center;
       repeat: no-repeat;
     }
@@ -167,7 +200,7 @@
     cursor: pointer;
 
     &.active {
-      background-image: url("./images/nav-active.png");
+      background-image: url("../images/nav-active.png");
       cursor: inherit;
     }
   }
