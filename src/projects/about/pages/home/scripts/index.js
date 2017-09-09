@@ -1,6 +1,6 @@
 import '../styles/index.scss'
 
-$(function () {
+$(() => {
   var $nav = $('#nav')
   var $next = $('#next')
   var $pages = $('#pages')
