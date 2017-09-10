@@ -1,10 +1,20 @@
 @import "../../../../styles/utils/index";
 
 @include b(breadcrumb) {
-  @include padding(15px, null, 12px, null);
+  @include padding(32px, null, 13px, 20px);
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 33px;
+
+  background: {
+    image: url("./images/home.png");
+    repeat: no-repeat;
+    position-y: 33px;
+  }
 
   a,
   span {
-    @include margin(null, 8px, null, 8px);
+    @include margin(null, 6px, null, 6px);
   }
 }

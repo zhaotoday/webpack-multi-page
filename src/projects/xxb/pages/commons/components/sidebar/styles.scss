@@ -2,39 +2,185 @@
 
 @include b(sidebar) {
   float: right;
-  width: 310px;
+  width: 300px;
 
   @include e(panel) {
-    background-color: color(2);
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
 
-    dt {
-      @include text--middle(40px);
-      @include font(3);
-      @include inline--block;
+    @include e(head) {
+      height: 53px;
+      line-height: 42px;
+      background-repeat: no-repeat;
+      position: relative;
 
-      border-bottom: 2px solid color(4);
-      margin-bottom: 15px;
-    }
+      h2 {
+        text-indent: 36px;
+        font-size: 24px;
+      }
 
-    @include e(list) {
-      li {
-        @include text--middle(40px);
-        @include text--overflow;
+      a {
+        @include link--block(50px, 30px);
+        @include position--absolute(6px, 0);
+
+        line-height: 30px;
+        text-align: center;
+        color: #999999;
       }
     }
-  }
 
-  @include e(qrcode) {
-    @include img--block(200px, 200px);
-    @include block--center;
+    @include m(plan) {
+      @include b(sidebar) {
+        @include e(panel) {
+          @include e(head) {
+            background: {
+              image: url("./images/plan.png");
+              position-y: 10px;
+            }
+          }
 
-    @include e(tip) {
-      color: color(3);
+          @include e(body) {
+            box-sizing: border-box;
+            border-left: 2px solid #fac200;
+            border-top: 2px solid #e8e8e8;
+            border-right: 2px solid #e8e8e8;
+            border-bottom: 2px solid #e8e8e8;
 
-      text-align: center;
+            dt {
+              @include text--middle(72px);
+
+              background-color: #f8f8f8;
+              font-size: 16px;
+              font-weight: bold;
+
+              img {
+                @include circle(46px);
+                @include margin(13px, 18px, null, 36px);
+
+                display: block;
+                float: left;
+              }
+            }
+
+            dd {
+              height: 300px;
+            }
+
+            ul {
+              @include margin(5px, 5px, 5px, -5px);
+              height: 295px;
+              overflow-y: auto;
+
+              &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+              }
+
+              &::-webkit-scrollbar-track {
+                background-color: white;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background-color: #eee;
+              }
+            }
+
+            li {
+              color: #999;
+              box-sizing: border-box;
+              padding-left: 46px;
+              position: relative;
+              height: 74px;
+              box-sizing: border-box;
+              padding-top: 8px;
+              line-height: 200%;
+
+              &::before {
+                @include size(23px, 10px);
+                @include position--absolute(16px, null, null, 0);
+
+                display: block;
+                content: '';
+                background: {
+                  image: url("./images/list.png");
+                  repeat: no-repeat;
+                  position: 1px 1px;
+                }
+              }
+
+              &:hover {
+                color: #000;
+
+                &::before {
+                  background: {
+                    image: url("./images/list-active.png");
+                    position: 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include m(news) {
+      @include b(sidebar) {
+        @include e(panel) {
+          @include e(head) {
+            background: {
+              image: url("./images/news.png");
+              position-y: 10px;
+            }
+          }
+
+          @include e(body) {
+            dt {
+              height: 168px;
+              position: relative;
+              box-sizing: border-box;
+              border: 2px solid #000;
+              border-radius: 4px;
+              overflow: hidden;
+
+              img {
+                @include img--block(100%, 168px);
+              }
+
+              a {
+                @include link--block(100%, 40px);
+                @include position--absolute(null, null, 0, 0);
+                @include text--overflow;
+
+                line-height: 40px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                text-indent: 10px;
+              }
+            }
+
+            ul {
+              margin-top: 10px;
+            }
+
+            li {
+              @include text--middle(30px);
+              @include text--overflow;
+
+              text-indent: 15px;
+
+              background: {
+                image: url("./images/dot.png");
+                repeat: no-repeat;
+                position: 0 12px;
+              }
+
+              a:hover {
+                color: #28b197;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

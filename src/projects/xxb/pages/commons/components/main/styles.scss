@@ -1,19 +1,27 @@
 @import "../../../../styles/utils/index";
 
 @include b(main) {
+  padding-bottom: 50px;
+  box-sizing: border-box;
   float: left;
-  padding: 30px 20px;
-  margin-bottom: 20px;
-  background-color: color(2);
-  width: 830px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .05);
+  width: 852px;
 
   @include e(title) {
-    @include font(5);
-    @include inline--block;
-    @include padding(5px, null, 10px, null);
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
 
-    border-bottom: 2px solid color(4);
-    margin-bottom: 30px;
+  @include e(subtitle) {
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  @include e(content) {
+    font-size: 16px;
+    line-height: 190%;
+
+    p {
+      padding-bottom: 30px;
+    }
   }
 }
