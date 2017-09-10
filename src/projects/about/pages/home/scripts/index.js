@@ -42,12 +42,12 @@ $(() => {
     direction: 'vertical'
   })
 
-  // 点击索引按钮
+  // 索引按钮监听点击事件
   $nav.on('click', 'li', function () {
     $pages.moveTo($(this).data('index'))
   })
 
-  // 点击下一页
+  // 下一页按钮监听点击事件
   $next.on('click', function () {
     $pages.moveDown()
   }).addClass('animated slideInUp')
@@ -65,7 +65,7 @@ $(() => {
   $clouds.each((index) => {
     setTimeout(() => {
       $clouds.eq(index).addClass('animated slideInLeft')
-    }, index * 70)
+    }, index * 150)
   })
 
   // 首屏云朵监听 animationEnd 事件

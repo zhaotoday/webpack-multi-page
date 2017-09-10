@@ -88,10 +88,11 @@
         padding-top: 20px;
         cursor: pointer;
 
-        i {
+        &::before {
           @include block--center;
           @include size(56px, 61px);
 
+          content: '';
           display: block;
           margin-bottom: 8px;
         }
@@ -100,7 +101,7 @@
           $n: $i * 2 - 1;
 
           &:nth-child(#{$n}) {
-            i {
+            &::before {
               background-image: url("./images/helps/" + $i + ".png");
             }
           }
@@ -242,7 +243,7 @@
           repeat: no-repeat;
         }
         padding-right: 60px;
-        left: -200px;
+        left: -203px;
         text-align: right;
       }
 
