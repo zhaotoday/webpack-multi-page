@@ -1,8 +1,12 @@
 import './styles.scss'
-
 import waterfall from '../../scripts/libs/waterfall'
 
 $(() => {
+  lightbox.option({
+    resizeDuration: 200,
+    albumLabel: '%1 / %2'
+  })
+
   $('#waterfall').waterfall({
     itemCls: 'waterfall-item',
     prefix: 'waterfall',
@@ -11,6 +15,7 @@ $(() => {
     gutterWidth: 20,
     gutterHeight: 20,
     loadingMsg: '',
-    debug: false
+    debug: false,
+    checkImagesLoaded: true
   })
 })
