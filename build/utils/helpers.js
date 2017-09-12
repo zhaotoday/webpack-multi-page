@@ -25,7 +25,7 @@ const getPlugins = () => {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${value}.html`,
-        template: `${projectPath}/${value}/template.html`,
+        template: `${projectPath}/${value}/template.hbs`,
         inject: false
       })
     )

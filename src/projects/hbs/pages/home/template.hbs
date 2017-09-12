@@ -1,0 +1,11 @@
+{{#[../commons/helpers/data] '_'}}
+  <h2>全局数据：</h2>
+  <p>{{_.title}}</p>
+
+  <h2>局部数据：</h2>
+  {{#[../commons/helpers/data] 'items'}}
+    {{#each items}}
+      <p>{{title}}</p>
+    {{/each}}
+  {{/[../commons/helpers/data]}}
+{{/[../commons/helpers/data]}}

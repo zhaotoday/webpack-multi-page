@@ -19,11 +19,22 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]='+consts.SRC+'/styles!postcss')
+        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.html$/,
         loader: 'html?interpolate&minimize=false'
+      },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars',
+        query: {
+          inlineRequires: '\/images\/'
+        }
       },
       {
         test: /\.(png|jpg|svg)$/,
