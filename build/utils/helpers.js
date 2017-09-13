@@ -7,12 +7,9 @@ const getEntry = () => {
   const entry = {}
 
   consts.PAGES.forEach(value => {
-    const paths = [
-      `${projectPath}/${value}/scripts.js`,
-      `${projectPath}/${value}/scripts/index.js`
-    ]
+    const path = `${projectPath}/${value}/scripts`
 
-    entry[value] = fs.existsSync(paths[0]) ? paths[0] : paths[1]
+    entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
   })
 
   return entry
@@ -22,10 +19,12 @@ const getPlugins = () => {
   const plugins = []
 
   consts.PAGES.filter(value => value !== 'commons').forEach(value => {
+    const template = `${projectPath}/${value}/template`
+
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${value}.html`,
-        template: `${projectPath}/${value}/template.hbs`,
+        template: fs.existsSync(`${template}.html`) ? `${template}.html` : `${template}.hbs`,
         inject: false
       })
     )

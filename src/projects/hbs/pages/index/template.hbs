@@ -1,11 +1,18 @@
-{{#[../commons/helpers/data] '_'}}
+{{#[../commons/helpers/model] '_'}}
+  <!DOCTYPE html>
+  <html>
+  {{> ../commons/requires/head/template}}
+  <body>
   <h2>全局数据：</h2>
   <p>{{_.title}}</p>
 
   <h2>局部数据：</h2>
-  {{#[../commons/helpers/data] 'items'}}
+  {{#[../commons/helpers/model] 'items'}}
     {{#each items}}
       <p>{{title}}</p>
     {{/each}}
-  {{/[../commons/helpers/data]}}
-{{/[../commons/helpers/data]}}
+  {{/[../commons/helpers/model]}}
+  {{> ../commons/requires/foot/template}}
+  </body>
+  </html>
+{{/[../commons/helpers/model]}}
