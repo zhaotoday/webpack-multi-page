@@ -14,6 +14,10 @@ body {
 
   background: none !important;
   color: #094d40;
+
+  a {
+    color: #094d40;
+  }
 }
 
 @include b(helps) {

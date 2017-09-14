@@ -83,9 +83,9 @@
         @include size(138px, 130px);
         @include font(4);
 
+        padding-top: 20px;
         float: left;
         text-align: center;
-        padding-top: 20px;
         cursor: pointer;
 
         &::before {
@@ -124,13 +124,16 @@
   }
 
   @include e(contents) {
-    li {
-      @include padding(44px, null, null, 24px);
+    @include padding(44px, null, null, 24px);
 
+    li {
+      display: none;
       line-height: 200%;
+      min-height: 72px;
       font-size: 18px;
 
       &.active {
+        display: block;
       }
     }
   }
