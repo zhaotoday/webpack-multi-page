@@ -16,7 +16,7 @@ body {
   color: #094d40;
 }
 
-@include b(helpers) {
+@include b(helps) {
   @include e(key-visual, fee, content) {
     position: absolute;
   }
