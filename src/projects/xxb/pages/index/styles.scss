@@ -1,6 +1,6 @@
 @import "../../styles/utils/index";
 
-@include b(home-banner) {
+@include b(index-banner) {
   @include size(100%, 581px);
 
   background: {
@@ -60,7 +60,7 @@
   }
 }
 
-@include b(home-helps) {
+@include b(index-helps) {
   @include padding(110px, null, 78px, null);
 
   background-color: color(1);
@@ -136,7 +136,7 @@
   }
 }
 
-@include b(home-stars) {
+@include b(index-stars) {
   @include e(tabs) {
     padding-top: 65px;
     background-color: #f8f8f8;
