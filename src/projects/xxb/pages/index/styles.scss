@@ -129,7 +129,7 @@
     li {
       display: none;
       line-height: 200%;
-      min-height: 72px;
+      min-height: 117px;
       font-size: 18px;
 
       &.active {
@@ -141,11 +141,12 @@
 
 @include b(index-stars) {
   @include e(tabs) {
+    height: 220px;
     padding-top: 65px;
     background-color: #f8f8f8;
 
     ul {
-      padding-left: 34px;
+      @include size(10000px, 220px);
     }
 
     li {
@@ -225,10 +226,17 @@
       right: 0;
       background-image: url("./images/stars/tabs/right.png");
     }
+
+    @include e(wrap) {
+      @include position--absolute(0, null, null, 34px);
+      @include size(1132px, 220px);
+
+      overflow: hidden;
+    }
   }
 
   @include e(contents) {
-    padding-left: 223px;
+    padding-left: 265px;
 
     dl {
       padding-top: 123px;

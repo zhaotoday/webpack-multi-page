@@ -50,41 +50,55 @@ ${require('../commons/requires/header/template.html')}
 <div class="index-stars">
   <div class="index-stars__tabs">
     <div class="container">
-      <div class="index-stars__tabs__left"></div>
-      <ul>
-        <li>
-          <img src="./images/stars/1.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/2.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/3.jpg">
-          赵丽颖
-        </li>
-        <li class="active">
-          <img src="./images/stars/4.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/5.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/6.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/7.jpg">
-          赵丽颖
-        </li>
-      </ul>
-      <div class="index-stars__tabs__right"></div>
+      <div id="stars-tabs-left" class="index-stars__tabs__left"></div>
+      <div id="stars-tabs-wrap" class="index-stars__tabs__wrap">
+        <ul>
+          <li>
+            <img src="./images/stars/1.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/2.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/3.jpg">
+            赵丽颖
+          </li>
+          <li class="active">
+            <img src="./images/stars/4.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/5.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/6.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/7.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/1.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/2.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/3.jpg">
+            赵丽颖
+          </li>
+        </ul>
+      </div>
+      <div id="stars-tabs-right" class="index-stars__tabs__right"></div>
     </div>
   </div>
-  <ul class="index-stars__contents container">
+  <ul id="stars-content" class="index-stars__contents container">
     <li class="active">
       <dl>
         <dt>
@@ -176,7 +190,7 @@ ${require('../commons/requires/header/template.html')}
             </div>
           </div>
           <div style="text-align: center;">
-            <span class="load-more">加载更多数据...</span>
+            <span id="load-more" class="load-more">加载更多数据...</span>
           </div>
         </dd>
       </dl>
