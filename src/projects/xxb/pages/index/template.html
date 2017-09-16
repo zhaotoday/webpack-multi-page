@@ -1,85 +1,104 @@
 ﻿<!DOCTYPE html>
 <html>
 ${require('../commons/requires/head/template.html')}
-<link href="/static/styles/home.css" rel="stylesheet">
+<link href="/static/styles/index.css" rel="stylesheet">
 <body>
 ${require('../commons/requires/header/template.html')}
-<div class="home-banner">
+<div class="index-banner">
   <div class="container">
-    <div class="home-banner__money"></div>
-    <div class="home-banner__number">
+    <div class="index-banner__money"></div>
+    <div class="index-banner__number">
       <h2>￥165897</h2>
       <p>星小班累计班费（含所有明星）</p>
     </div>
-    <a class="home-banner__join" href="/"></a>
-    <div class="home-banner__followers"></div>
+    <a class="index-banner__join" href="/"></a>
+    <div class="index-banner__followers"></div>
   </div>
 </div>
-<div class="home-helps">
+<div class="index-helps">
   <div class="container">
     <h2>我们为 <span>后援团</span> 提供哪些帮助？</h2>
-    <ul class="home-helps__tabs clearfix">
+    <ul id="helps-tabs" class="index-helps__tabs clearfix">
       <li class="active">申请班费</li>
       <li></li>
-      <li>申请班费</li>
+      <li>集资众筹</li>
       <li></li>
-      <li>申请班费</li>
+      <li>周边寄卖</li>
       <li></li>
-      <li>申请班费</li>
+      <li>公交应援</li>
       <li></li>
-      <li>申请班费</li>
+      <li>爱心公益</li>
       <li></li>
-      <li>申请班费</li>
+      <li>报名统计</li>
       <li></li>
-      <li>申请班费</li>
+      <li>LED应援</li>
     </ul>
-    <ul class="home-helps__contents">
+    <ul id="helps-content" class="index-helps__contents">
       <li class="active">
         1、在星小班每一个明星都是一个独立的班级，“班费”则是该班级的共有经费<br>
         2、所有申请入驻的后援团均有机申请使用班费
       </li>
-      <li></li>
+      <li>集资众筹</li>
+      <li>周边寄卖</li>
+      <li>公交应援</li>
+      <li>爱心公益</li>
+      <li>报名统计</li>
+      <li>LED应援</li>
     </ul>
   </div>
 </div>
-<div class="home-stars">
-  <div class="home-stars__tabs">
+<div class="index-stars">
+  <div class="index-stars__tabs">
     <div class="container">
-      <div class="home-stars__tabs__left"></div>
-      <ul>
-        <li>
-          <img src="./images/stars/1.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/2.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/3.jpg">
-          赵丽颖
-        </li>
-        <li class="active">
-          <img src="./images/stars/4.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/5.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/6.jpg">
-          赵丽颖
-        </li>
-        <li>
-          <img src="./images/stars/7.jpg">
-          赵丽颖
-        </li>
-      </ul>
-      <div class="home-stars__tabs__right"></div>
+      <div id="stars-tabs-left" class="index-stars__tabs__left"></div>
+      <div id="stars-tabs-wrap" class="index-stars__tabs__wrap">
+        <ul>
+          <li>
+            <img src="./images/stars/1.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/2.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/3.jpg">
+            赵丽颖
+          </li>
+          <li class="active">
+            <img src="./images/stars/4.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/5.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/6.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/7.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/1.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/2.jpg">
+            赵丽颖
+          </li>
+          <li>
+            <img src="./images/stars/3.jpg">
+            赵丽颖
+          </li>
+        </ul>
+      </div>
+      <div id="stars-tabs-right" class="index-stars__tabs__right"></div>
     </div>
   </div>
-  <ul class="home-stars__contents container">
+  <ul id="stars-content" class="index-stars__contents container">
     <li class="active">
       <dl>
         <dt>
@@ -87,11 +106,11 @@ ${require('../commons/requires/header/template.html')}
         </dt>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
         </dd>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
         </dd>
       </dl>
       <dl>
@@ -100,11 +119,11 @@ ${require('../commons/requires/header/template.html')}
         </dt>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
         </dd>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
         </dd>
       </dl>
       <dl>
@@ -113,12 +132,12 @@ ${require('../commons/requires/header/template.html')}
         </dt>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
         </dd>
         <dd>
           <a href="/">【北京】在北京参加《王祖蓝和他的朋友演唱会》在里面当嘉宾。</a>
-          <img class="home-stars__contents--new" src="./images/contents/new.png">
-          <div class="home-stars__contents__videos clearfix">
+          <img class="index-stars__contents--new" src="./images/contents/new.png">
+          <div class="index-stars__contents__videos clearfix">
             <div class="video-card">
               <a class="video-card__img" href="#">
                 <img src="./images/contents/demos/video.jpg">
@@ -171,7 +190,7 @@ ${require('../commons/requires/header/template.html')}
             </div>
           </div>
           <div style="text-align: center;">
-            <span class="load-more">加载更多数据...</span>
+            <span id="load-more" class="load-more">加载更多数据...</span>
           </div>
         </dd>
       </dl>
@@ -179,7 +198,7 @@ ${require('../commons/requires/header/template.html')}
   </ul>
 </div>
 ${require('../commons/requires/footer/template.html')}
-</body>
 ${require('../commons/requires/foot/template.html')}
-<script src="/static/scripts/home.js"></script>
+<script src="/static/scripts/index.js"></script>
+</body>
 </html>

@@ -1,6 +1,6 @@
 @import "../../styles/utils/index";
 
-@include b(home-banner) {
+@include b(index-banner) {
   @include size(100%, 581px);
 
   background: {
@@ -60,7 +60,7 @@
   }
 }
 
-@include b(home-helps) {
+@include b(index-helps) {
   @include padding(110px, null, 78px, null);
 
   background-color: color(1);
@@ -83,9 +83,9 @@
         @include size(138px, 130px);
         @include font(4);
 
+        padding-top: 20px;
         float: left;
         text-align: center;
-        padding-top: 20px;
         cursor: pointer;
 
         &::before {
@@ -124,25 +124,29 @@
   }
 
   @include e(contents) {
-    li {
-      @include padding(44px, null, null, 24px);
+    @include padding(44px, null, null, 24px);
 
+    li {
+      display: none;
       line-height: 200%;
+      min-height: 117px;
       font-size: 18px;
 
       &.active {
+        display: block;
       }
     }
   }
 }
 
-@include b(home-stars) {
+@include b(index-stars) {
   @include e(tabs) {
+    height: 220px;
     padding-top: 65px;
     background-color: #f8f8f8;
 
     ul {
-      padding-left: 34px;
+      @include size(10000px, 220px);
     }
 
     li {
@@ -222,10 +226,17 @@
       right: 0;
       background-image: url("./images/stars/tabs/right.png");
     }
+
+    @include e(wrap) {
+      @include position--absolute(0, null, null, 34px);
+      @include size(1132px, 220px);
+
+      overflow: hidden;
+    }
   }
 
   @include e(contents) {
-    padding-left: 223px;
+    padding-left: 265px;
 
     dl {
       padding-top: 123px;
