@@ -1,14 +1,8 @@
-{{#[/../commons/helpers/data]}}
-<!DOCTYPE html>
-<html>
-{{> ../commons/requires/head/template}}
-<link href="/static/styles/index.css" rel="stylesheet">
-<body>
-<h2>全局数据：</h2>
-<p>{{global.title}}</p>
-<h2>局部数据：</h2>
-{{> ../commons/requires/foot/template}}
-<script src="/static/scripts/index.js"></script>
-</body>
-</html>
+{{#[/../commons/helpers/data] 'index'}}
+  {{> ../commons/requires/head/template}}
+  <h2>全局数据：</h2>
+  <p>{{global.domain}}</p>
+  <h2>局部数据：</h2>
+  <p>{{index.name}}</p>
+  {{> ../commons/requires/foot/template}}
 {{/[/../commons/helpers/data]}}

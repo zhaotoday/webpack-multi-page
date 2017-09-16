@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="{{global.keywords}}">
-  <meta name="description" content="{{global.description}}">
-  <title>{{global.title}}</title>
+  <meta name="keywords" content="{{head.keywords}}">
+  <meta name="description" content="{{head.description}}">
+  <title>{{head.title}}</title>
   <link href="/static/styles/commons.css" rel="stylesheet">
+  {{#[/../../helpers/styles] styles}}
+  {{/[/../../helpers/styles]}}
 </head>
+<body>
