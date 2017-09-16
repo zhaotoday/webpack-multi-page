@@ -1,6 +1,6 @@
 {
-  "global": {
-    "title": "福建网龙",
-    "domain": "nd.com.cn"
-  }
+  "title": "网站标题",
+  "domain": "domain.cn",
+  "keywords": "关键词1,关键词2",
+  "description": "网站描述"
 }
