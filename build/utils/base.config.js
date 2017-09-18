@@ -33,7 +33,8 @@ const config = {
         test: /\.hbs$/,
         loader: 'handlebars',
         query: {
-          inlineRequires: '\/images\/'
+          inlineRequires: '\/images\/',
+          helperDirs: [__dirname + '/../handlebars/helpers']
         }
       },
       {
