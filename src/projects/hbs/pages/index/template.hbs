@@ -1,10 +1,5 @@
-{{#[data] 'hbs' 'index'}}
-  {{> ../commons/requires/head/template}}
-  <h2>全局数据：</h2>
-  {{env.current}}
-  <p>{{global.domain}}</p>
-  <h2>局部数据：</h2>
-  <p>{{index.name}}</p>
-  <img src="./images/example.jpg">
-  {{> ../commons/requires/foot/template}}
-{{/[data]}}
+{{#data 'hbs' 'index'}}
+{{> ../commons/requires/head/template}}
+{{> template.src}}
+{{> ../commons/requires/foot/template}}
+{{/data}}
