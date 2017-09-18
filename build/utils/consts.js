@@ -10,7 +10,9 @@ const SCRIPTS = 'static/scripts/'
 const STYLES = 'static/styles/'
 // 图片路径
 const IMAGES = 'static/images/'
-// CDN，1. 调试时为：/；2. 生产时推荐格式为：//{PROJECT}.cdn.cn/ 或 //cdn.cn/${PROJECT}/
+// CDN
+// 1. 开发时为：/；
+// 2. 构建时推荐格式为：//{PROJECT}.cdn.cn/ 或 //cdn.cn/${PROJECT}/
 const CDN = '/'
 
 module.exports = {
