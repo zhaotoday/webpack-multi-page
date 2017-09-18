@@ -5,8 +5,7 @@
   <meta name="keywords" content="{{head.keywords}}">
   <meta name="description" content="{{head.description}}">
   <title>{{head.title}}</title>
-  <link href="/static/styles/commons.css" rel="stylesheet">
-  {{#[/../../helpers/styles] styles}}
-  {{/[/../../helpers/styles]}}
+  {{{styles 'hbs' 'commons'}}}
+  {{{styles 'hbs' styles}}}
 </head>
 <body>

@@ -10,8 +10,8 @@ const SCRIPTS = 'static/scripts/'
 const STYLES = 'static/styles/'
 // 图片路径
 const IMAGES = 'static/images/'
-// CDN，推荐格式为：https://{PROJECT}.cdn.cn/ 或 https://cdn.cn/${PROJECT}/
-const CDN = ENV === 'dev' ? '/' : 'https://{PROJECT}.lrcdn.cn/'
+// CDN，1. 调试时为：/；2. 生产时推荐格式为：//{PROJECT}.cdn.cn/ 或 //cdn.cn/${PROJECT}/
+const CDN = '/'
 
 module.exports = {
   ENV,
