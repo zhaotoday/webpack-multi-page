@@ -13,4 +13,4 @@ if (!fs.existsSync(project.DIR)) {
   process.exit()
 }
 
-module.exports = require(`./webpack.${process.env.NODE_ENV === 'development' ? 'dev' : 'prod'}`)
+module.exports = require(`./webpack.${consts.ENV}`)

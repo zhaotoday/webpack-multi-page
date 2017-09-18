@@ -1,4 +1,3 @@
-const consts = require('./consts')
 const project = require('./project')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs')

@@ -1,6 +1,9 @@
 const config = require('./utils/base.config')
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const consts = require('./utils/consts')
+const project = require('./utils/project')
 
 module.exports = {
   entry: config.entry,
@@ -12,6 +15,10 @@ module.exports = {
     return config.postcss
   },
   plugins: [
+    new CleanWebpackPlugin([project.DIST], {
+      verbose: true,
+      dry: false
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new UglifyJsPlugin({

@@ -1,13 +1,14 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const helpers = require('./helpers')
 const consts = require('./consts')
+const project = require('./project')
 const es3ifyPlugin = require('es3ify-webpack-plugin')
 
 const config = {
   entry: helpers.getEntry(),
   output: {
-    path: consts.DIST,
-    publicPath: consts.CDN,
+    path: project.DIST,
+    publicPath: project.CDN,
     filename: `${consts.SCRIPTS}[name].js`,
   },
   module: {
