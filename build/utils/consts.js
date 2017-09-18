@@ -1,5 +1,3 @@
-const argv = require('yargs').argv
-const fs = require('fs')
 const path = require('path')
 
 // 源码目录
@@ -14,13 +12,6 @@ const STYLES = 'static/styles/'
 const IMAGES = 'static/images/'
 // CDN
 const CDN = '/'
-// 项目
-const PROJECT = argv.project
-// 项目目录
-const PROJECT_DIR = `${SRC}/projects/${PROJECT}/pages`
-// 页面配置
-const PAGES = fs.existsSync(PROJECT_DIR)
-  ? fs.readdirSync(PROJECT_DIR) : []
 
 module.exports = {
   SRC,
@@ -28,8 +19,5 @@ module.exports = {
   SCRIPTS,
   STYLES,
   IMAGES,
-  CDN,
-  PROJECT,
-  PROJECT_DIR,
-  PAGES
+  CDN
 }
