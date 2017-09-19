@@ -19,7 +19,7 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
       },
       {
