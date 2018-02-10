@@ -1,17 +1,15 @@
 ## 简介
-基于 Webpack 开发和构建多页面站点（普通 Web 站点）的前端工程化方案，支持多项目共存，同时适用于 PC 端和移动端。
-> 开发 PC 端网站时，如果需要兼容 IE8，请尽量少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
+基于 Webpack 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，支持多项目共存，同时适用于 PC 端和移动端。
+> 开发 PC 端网站时，如果需要兼容 IE8，请尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
-## 功能
+## 特性
 - 前端工程化
-- 多项目共存
-- 支持响应式
-- 模块化
-- 组件化
-- 开发、调试和构建
 - 集成 PostCSS、Sass
-- JS 代码规范性校验
-- CSS 代码规范性校验
+- 支持多项目共存
+- 支持响应式
+- 支持模块化、组件化
+- 支持开发、调试和构建
+- 支持 JS、CSS 代码规范性校验
 
 ## 项目地址
 https://github.com/zhaotoday/webpack-website
@@ -66,7 +64,7 @@ import 'core-js/es6/promise'
 ```
 
 ## 样式编写规范
-请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：  
+请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：
 HTML 代码：
 ```html
 <nav class="nav">
