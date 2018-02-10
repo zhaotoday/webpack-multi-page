@@ -2,8 +2,8 @@ const config = require('./utils/base.config')
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const consts = require('./utils/consts')
 const project = require('./utils/project')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: config.entry,
@@ -27,6 +27,10 @@ module.exports = {
       }
     }),
     new webpack.NoErrorsPlugin(),
+    new CopyWebpackPlugin([{
+      from: `${project.DIR}assets`,
+      to: `${project.DIST}/assets`
+    }]),
     ...config.plugins
   ],
   resolve: config.resolve

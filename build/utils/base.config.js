@@ -3,6 +3,7 @@ const helpers = require('./helpers')
 const consts = require('./consts')
 const project = require('./project')
 const es3ifyPlugin = require('es3ify-webpack-plugin')
+const path = require('path')
 
 const config = {
   entry: helpers.getEntry(),
@@ -68,7 +69,10 @@ const config = {
   resolve: {
     root: __dirname,
     modulesDirectories: ['src', 'node_modules'],
-    extensions: ['', '.js', '.html', '.scss']
+    extensions: ['', '.js', '.html', '.scss'],
+    alias: {
+      '@': path.resolve('src')
+    }
   }
 }
 
