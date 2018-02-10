@@ -1,3 +1,3 @@
-// import '../styles/index.scss'
+import '../styles/index.scss'
 
-alert('contact page')
+console.log('contact page')
