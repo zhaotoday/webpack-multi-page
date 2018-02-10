@@ -4,7 +4,7 @@ const consts = require('./consts')
 const path = require('path')
 
 // 名称
-const NAME = argv.project
+const NAME ='hbs'// argv.project
 // 目录
 const DIR = `${consts.SRC}/projects/${NAME}/`
 // 页面
