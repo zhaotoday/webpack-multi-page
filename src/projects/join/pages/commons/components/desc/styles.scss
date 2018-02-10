@@ -1,9 +1,0 @@
-@import "../../../../styles/utils/index";
-
-@include b(desc) {
-  @include font(3);
-  @include block--center;
-
-  line-height: 180%;
-  width: px2rem(570px);
-}

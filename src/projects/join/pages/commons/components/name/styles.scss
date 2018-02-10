@@ -1,9 +1,0 @@
-@import "../../../../styles/utils/index";
-
-@include b(name) {
-  @include font(2);
-
-  color: color(3);
-  text-align: center;
-  padding-bottom: px2rem(33px);
-}
