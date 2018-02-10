@@ -1,6 +1,6 @@
-module.exports = (project, page, options) => {
-  const globalData = require(`../../../src/projects/${project}/data/global.json`)
-  const pageData = require(`../../../src/projects/${project}/data/${page}.json`)
+module.exports = (page, options) => {
+  const globalData = require(`../../../src/config/global.json`)
+  const pageData = require(`../../../src/config/${page}.json`)
 
   return options.fn({
     styles: [page],

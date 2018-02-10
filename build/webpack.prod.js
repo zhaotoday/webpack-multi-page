@@ -2,7 +2,7 @@ const config = require('./utils/base.config')
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const project = require('./utils/project')
+const path = require('path')
 
 module.exports = {
   entry: config.entry,
@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     ...config.plugins,
-    new CleanWebpackPlugin([project.DIST], {
+    new CleanWebpackPlugin([path.resolve('dist')], {
       verbose: true,
       dry: false
     }),

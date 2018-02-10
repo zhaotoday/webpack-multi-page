@@ -1,12 +1,12 @@
-const project = require('./project')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs')
+const consts = require('./consts')
 
 const getEntry = () => {
   const entry = {}
 
-  project.PAGES.forEach(value => {
-    const path = `${project.DIR}pages/${value}/scripts`
+  fs.readdirSync(`${consts.SRC}/pages`).forEach(value => {
+    const path = `${consts.SRC}/pages/${value}/scripts`
 
     entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
   })
@@ -17,8 +17,8 @@ const getEntry = () => {
 const getPlugins = () => {
   const plugins = []
 
-  project.PAGES.filter(value => value !== 'commons').forEach(value => {
-    const template = `${project.DIR}pages/${value}/template`
+  fs.readdirSync(`${consts.SRC}/pages`).filter(value => value !== 'commons').forEach(value => {
+    const template = `${consts.SRC}/pages/${value}/template`
 
     plugins.push(
       new HtmlWebpackPlugin({

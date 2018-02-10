@@ -1,7 +1,5 @@
 const consts = require('../../utils/consts')
 
-module.exports = (project, path) => {
-  const baseURL = consts.CDN.replace('{PROJECT}', project)
-
-  return `<script src="${baseURL}assets${path}"></script>`
+module.exports = path => {
+  return `<script src="${consts.CDN}assets${path}"></script>`
 }

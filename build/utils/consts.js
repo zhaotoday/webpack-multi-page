@@ -12,8 +12,8 @@ const STYLES = 'static/styles/'
 const IMAGES = 'static/images/'
 // CDN
 // 1. 开发时为：/；
-// 2. 构建时推荐格式为：//{PROJECT}.cdn.cn/ 或 //cdn.cn/${PROJECT}/
-const CDN = '/'
+// 2. 构建时为：//lrcdn.cn/${PROJECT}/；
+const CDN = ENV === 'dev' ? '/' : '//lrcdn.cn/project/'
 
 module.exports = {
   ENV,
