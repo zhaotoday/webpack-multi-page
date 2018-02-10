@@ -12,7 +12,7 @@
 - 支持 JS、CSS 代码规范性校验
 
 ## 项目地址
-https://github.com/zhaotoday/webpack-website
+https://github.com/zhaotoday/webpack-multi-page
 
 ## 线上例子
 - [www.liruan.cn](https://www.liruan.cn/)
@@ -29,7 +29,7 @@ https://github.com/zhaotoday/webpack-website
 #### 1. 相关命令
 ```bash
 # 下载代码
-$ git clone https://github.com/zhaotoday/webpack-website.git
+$ git clone https://github.com/zhaotoday/webpack-multi-page.git
 # 安装依赖
 $ npm install
 # 开发、调试
