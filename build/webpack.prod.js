@@ -1,6 +1,5 @@
 const config = require('./utils/base.config')
 const webpack = require('webpack')
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
 
@@ -18,7 +17,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new UglifyJsPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }

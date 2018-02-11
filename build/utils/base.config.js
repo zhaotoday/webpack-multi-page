@@ -95,9 +95,7 @@ const config = {
         postcss: [
           require('postcss-font-magician')(),
           require('cssnano')(),
-          require('postcss-utilities')({
-            ie8: true
-          })
+          require('postcss-utilities')({ie8: true})
         ]
       }
     }),
