@@ -79,7 +79,7 @@ const config = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              publicPath: '/',
+              publicPath: consts.CDN,
               outputPath: consts.IMAGES,
               name: '[hash].[ext]'
             }
