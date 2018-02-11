@@ -7,7 +7,7 @@ const path = require('path')
 const config = {
   entry: helpers.getEntry(),
   output: {
-    path: path.resolve('dist'),
+    path: consts.DIST,
     publicPath: consts.CDN,
     filename: `${consts.SCRIPTS}[name].js`,
   },

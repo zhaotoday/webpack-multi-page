@@ -4,6 +4,8 @@ const path = require('path')
 const ENV = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
 // 源码目录
 const SRC = path.resolve('src')
+// 构建目录
+const DIST = path.resolve('dist')
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
 // 样式路径
@@ -18,6 +20,7 @@ const CDN = ENV === 'dev' ? '/' : '//lrcdn.cn/project/'
 module.exports = {
   ENV,
   SRC,
+  DIST,
   SCRIPTS,
   STYLES,
   IMAGES,
