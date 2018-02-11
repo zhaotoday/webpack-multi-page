@@ -2,6 +2,7 @@ const config = require('./utils/base.config')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
+const consts = require('./utils/consts')
 
 module.exports = {
   entry: config.entry,
@@ -11,7 +12,8 @@ module.exports = {
   },
   plugins: [
     ...config.plugins,
-    new CleanWebpackPlugin([path.resolve('dist')], {
+    new CleanWebpackPlugin([consts.DIST], {
+      root: path.resolve(),
       verbose: true,
       dry: false
     }),
