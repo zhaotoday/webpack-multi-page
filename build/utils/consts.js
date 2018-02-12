@@ -6,6 +6,8 @@ const ENV = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
 const SRC = path.resolve('src')
 // 构建目录
 const DIST = path.resolve('dist')
+// 页面目录
+const PAGES = `${SRC}/pages`
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
 // 样式路径
@@ -21,6 +23,7 @@ module.exports = {
   ENV,
   SRC,
   DIST,
+  PAGES,
   SCRIPTS,
   STYLES,
   IMAGES,
