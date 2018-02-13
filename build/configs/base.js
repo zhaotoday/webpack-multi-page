@@ -15,7 +15,6 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        enforce: 'post',
         exclude: /node_modules/,
         use: [
           {
