@@ -8,8 +8,12 @@ module.exports = {
     rules: config.module.rules
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    ...config.plugins
+    ...config.plugins,
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development')
+      }
+    })
   ],
   resolve: config.resolve
 }

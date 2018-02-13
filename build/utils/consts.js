@@ -1,5 +1,7 @@
 const path = require('path')
 
+// 开发、调试端口
+const DEV_PORT = 8083
 // 当前环境
 const ENV = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
 // 源码目录
@@ -20,6 +22,7 @@ const IMAGES = 'static/images/'
 const CDN = ENV === 'dev' ? '/' : '//lrcdn.cn/project/'
 
 module.exports = {
+  DEV_PORT,
   ENV,
   SRC,
   DIST,

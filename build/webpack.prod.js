@@ -1,8 +1,5 @@
 const config = require('./utils/base.config')
 const webpack = require('webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const path = require('path')
-const consts = require('./utils/consts')
 
 module.exports = {
   entry: config.entry,
@@ -12,10 +9,10 @@ module.exports = {
   },
   plugins: [
     ...config.plugins,
-    new CleanWebpackPlugin([consts.DIST], {
-      root: path.resolve(),
-      verbose: true,
-      dry: false
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
