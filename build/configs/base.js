@@ -31,14 +31,27 @@ const config = {
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true
+              }
+            },
             {
               loader: 'sass-loader',
               options: {
                 includePaths: [`${consts.SRC}/styles`]
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [
+                  require('postcss-font-magician')(),
+                  require('cssnano')()
+                ]
+              }
+            }
           ],
           publicPath: '../'
         })
@@ -88,16 +101,6 @@ const config = {
     ]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        context: __dirname,
-        postcss: [
-          require('postcss-font-magician')(),
-          require('cssnano')(),
-          require('postcss-utilities')({ie8: true})
-        ]
-      }
-    }),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
     ...helpers.getPlugins()
   ],
