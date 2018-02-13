@@ -1,7 +1,7 @@
 const consts = require('./utils/consts')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
-const webpackConfig = require(`./utils/${process.env.NODE_ENV}.config`)
+const webpackConfig = require(`./configs/${process.env.NODE_ENV}`)
 const compiler = webpack(webpackConfig)
 
 if (process.env.NODE_ENV === 'production') {
