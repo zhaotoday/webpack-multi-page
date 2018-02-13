@@ -1,10 +1,10 @@
 const consts = require('./utils/consts')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
-const webpackConfig = require(`./webpack.${consts.ENV}`)
+const webpackConfig = require(`./utils/${process.env.NODE_ENV}.config`)
 const compiler = webpack(webpackConfig)
 
-if (consts.ENV === 'prod') {
+if (process.env.NODE_ENV === 'production') {
   compiler.run((err, stats) => {
     console.log(stats.toString({
       chunks: true,

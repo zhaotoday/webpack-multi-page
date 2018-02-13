@@ -1,4 +1,4 @@
-const config = require('./utils/base.config')
+const config = require('./base.config')
 const webpack = require('webpack')
 
 module.exports = {
