@@ -34,7 +34,7 @@ const config = {
             {
               loader: 'css-loader',
               options: {
-                minimize: true
+                minimize: process.env.NODE_ENV === 'production'
               }
             },
             {
