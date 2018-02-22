@@ -1,11 +1,10 @@
 ## 简介
-基于 Webpack 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，支持多项目共存，同时适用于 PC 端和移动端。
+基于 Webpack 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
 > 开发 PC 端网站时，如果需要兼容 IE8，请尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 特性
 - 前端工程化
 - 集成 PostCSS、Sass
-- 支持多项目共存
 - 支持响应式
 - 支持模块化、组件化
 - 支持开发、调试和构建
@@ -40,9 +39,9 @@ $ git clone https://github.com/zhaotoday/webpack-multi-page.git
 # 安装依赖
 $ npm install
 # 开发、调试
-$ npm run dev {your-project}
+$ npm run dev
 # 构建
-$ npm run build {your-project}
+$ npm run build
 # 按 Standard 规范校验 JS 代码
 $ npm run eslint
 # 按 Standard 规范代码格式化 JS 代码
