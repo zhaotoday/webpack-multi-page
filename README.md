@@ -164,6 +164,12 @@ const config = {
 |- build                           // Webpack 配置
 |- src                             // 源码目录
 |    |- pages                      // 页面
+|       |- commons                 // 公用代码
+|          |- components           // 组件集合
+|             |- my-component      // my-component 组件
+|          |- snippets             // 代码块，在各页面的 html 模板中引入
+|             |- head              // 头部，也就是 <head> 标签
+|             |- foot              // 底部，如：在页面底部引入的公用 JS、统计代码等
 |       |- index                   // 首页（举例）
 |          |- images               // 图片
 |          |- scripts              // 脚本
@@ -174,13 +180,7 @@ const config = {
 |             |- images            // 样式图片
 |          |- template.hbs         // 模板
 |       |- news                    // 新闻页面（举例）
-|       |- commons                 // 公用代码
-|          |- components           // 组件集合
-|             |- my-component      // my-component 组件
-|          |- snippets             // 代码块，在各页面的 html 模板中引入
-|             |- head              // 头部，也就是 <head> 标签
-|             |- foot              // 底部，如：在页面底部引入的公用 JS、统计代码等
-|    |- assets                     // 资源
+|    |- assets                     // 静态资源
 |       |- scripts                 // 脚本
 |          |- libs                 // JS 库
 |          |- utils                // 一些 JS 工具集合
@@ -189,10 +189,10 @@ const config = {
 |             |- polyfills.js      // polyfill
 |          |- styles               // 样式
 |             |- global            // 全局样式
-|                |- reset.scss     // 样式重置
+|                |- reset.scss     // 重置
 |                |- classes        // 样式类
-|             |- utils             // 样式工具集合
-|                |- functions.scss // SASS 函数
-|                |- mixins.scss    // SASS 混合
-|                |- variables.scss // SASS 变量
+|             |- utils             // Sass 工具集合
+|                |- functions.scss // 函数
+|                |- mixins.scss    // 混合
+|                |- variables.scss // 变量
 ```
