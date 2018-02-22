@@ -1,4 +1,9 @@
+// 引入公用样式
 import '../styles/index.scss'
+// 引入组件样式
 import '../components/my-component/styles/index.scss'
+// 引入全局脚本
+import './utils/polyfills'
 import './utils/render'
 import './utils/bind'
+import './utils/init'

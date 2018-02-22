@@ -176,7 +176,8 @@ const config = {
 |             |- head.hbs          // 头部，也就是 <head> 标签
 |             |- foot.hbs          // 底部，如：在页面底部引入的公用 JS、统计代码等
 |          |- scripts              // 脚本
-|             |- index.js          // 引入 components 中的所有样式文件和 styles/index.scss
+|             |- index.js          // 需要引入 components 中的所有样式文件和 styles/index.scss
+|             |- utils
 |          |- styles               // 样式
 |             |- index.scss
 |             |- reset.scss        // 重置
