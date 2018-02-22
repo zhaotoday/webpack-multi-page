@@ -1,34 +1,12 @@
 {
-  "name": "website",
+  "name": "webpack-build",
   "version": "1.0.0",
   "description": "website",
   "main": "index.js",
-  "scripts": {
-    "test": "test",
-    "eslintfix": "eslint src/**/*.js --fix",
-    "eslint": "eslint src/**/*.js",
-    "stylelint": "stylelint src/**/*.scss",
-    "dev": "better-npm-run dev",
-    "prebuild": "rimraf dist",
-    "build": "better-npm-run build"
-  },
+  "scripts": {},
   "betterScripts": {
-    "dev": {
-      "command": "node build/index.js",
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
-    "build": {
-      "command": "node build/index.js",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    }
   },
-  "keywords": [
-    "site"
-  ],
+  "keywords": [],
   "author": "zhaojintian",
   "license": "ISC",
   "devDependencies": {
