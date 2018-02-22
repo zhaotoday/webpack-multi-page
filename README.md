@@ -167,26 +167,33 @@ const config = {
 |       |- commons                 // 公用代码，构建成 commons.js 和 commons.css
 |          |- components           // 组件集合
 |             |- my-component      // my-component 组件
+|                |- template.hbs   // 模板
+|                |- images         // 引用的图片
+|                |- styles         // 样式
+|                   |- index.scss
+|                   |- images
 |          |- snippets             // 代码块，在各页面的 html 模板中引入
 |             |- head.hbs          // 头部，也就是 <head> 标签
 |             |- foot.hbs          // 底部，如：在页面底部引入的公用 JS、统计代码等
-|       |- index                   // 首页（举例）
-|          |- images               // 图片
+|       |- my-page                 // my-page 页面
+|          |- template.hbs         // 模板
+|          |- images               // 引用的图片
 |          |- scripts              // 脚本
 |             |- index.js
 |             |- utils
 |          |- styles               // 样式
 |             |- index.scss
 |             |- images
-|          |- template.hbs         // 模板
-|       |- news                    // 新闻页面（举例）
 |    |- assets                     // 静态资源
+|       |- data                    // 配置数据
+|          |- global.json          // 全局配置数据
 |       |- scripts                 // 脚本
 |          |- libs                 // JS 库
 |          |- utils                // JS 工具集合
 |       |- styles                  // 样式
 |          |- global               // 全局样式
 |             |- reset.scss        // 重置
+|             |- fonts.scss        // 字体
 |             |- classes           // 样式类
 |          |- utils                // Sass 工具集合
 |             |- functions.scss    // 函数
