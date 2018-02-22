@@ -1,6 +1,6 @@
 ## 简介
 基于 Webpack 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
-> 开发 PC 端网站时，如果需要兼容 IE8，请尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
+> 如果需要兼容 IE8，请尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 特性
 - 前端工程化
@@ -9,6 +9,10 @@
 - 支持模块化、组件化
 - 支持开发、调试和构建
 - 支持 JS、CSS 代码规范性校验
+
+## 兼容
+- PC 端：IE8+（含 IE8）；
+- 移动端：主流浏览器；
 
 ## 项目地址
 https://github.com/zhaotoday/webpack-multi-page
@@ -49,12 +53,8 @@ $ npm run eslint
 $ npm run stylelint
 ```
 
-## 兼容性
-- PC 端：IE8+（含 IE8）；
-- 移动端：主流浏览器；
-
 ## 添加 polyfill
-用 ES6 开发移动端网站时，可按需引入 polyfill，提高浏览器兼容性。
+使用 ES6 语法开发时，可按需引入 polyfill，提高浏览器兼容性。
 ```bash
 # 安装 core-js
 $ npm install --save core-js
