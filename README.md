@@ -175,6 +175,14 @@ const config = {
 |          |- snippets             // 代码块，在各页面的 html 模板中引入
 |             |- head.hbs          // 头部，也就是 <head> 标签
 |             |- foot.hbs          // 底部，如：在页面底部引入的公用 JS、统计代码等
+|          |- scripts              // 脚本
+|             |- index.js          // 引入 components 中的所有样式文件和 styles/index.scss
+|          |- styles               // 样式
+|             |- index.scss
+|             |- reset.scss        // 重置
+|             |- fonts.scss        // 字体
+|             |- classes           // 样式类
+|             |- images
 |       |- my-page                 // my-page 页面
 |          |- template.hbs         // 模板
 |          |- images               // 引用的图片
@@ -191,10 +199,6 @@ const config = {
 |          |- libs                 // JS 库
 |          |- utils                // JS 工具集合
 |       |- styles                  // 样式
-|          |- global               // 全局样式
-|             |- reset.scss        // 重置
-|             |- fonts.scss        // 字体
-|             |- classes           // 样式类
 |          |- utils                // Sass 工具集合
 |             |- functions.scss    // 函数
 |             |- mixins.scss       // 混合
