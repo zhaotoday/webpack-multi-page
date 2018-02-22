@@ -31,8 +31,7 @@ https://github.com/zhaotoday/webpack-multi-page
 - [webpack报错no postcss config...](https://www.cnblogs.com/wang715100018066/p/7049981.html)
 - [webpack-dev-server 示例](https://github.com/webpack/webpack-dev-server/blob/master/examples/api/simple/server.js)
 
-## 使用
-#### 1. 相关命令
+## 命令
 ```bash
 # 下载代码
 $ git clone https://github.com/zhaotoday/webpack-multi-page.git
@@ -49,10 +48,6 @@ $ npm run eslintfix
 # 校验 CSS 代码
 $ npm run stylelint
 ```
-
-#### 2. 开发自己的项目
-- 在 `/src/projects` 下参照 `liruan` 目录结构创建 `{your-project}`；
-- 在 `/src/projects/{your-project}/pages` 下开发网站页面。
 
 ## 兼容性
 - PC 端：IE8+（含 IE8）；
