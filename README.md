@@ -25,7 +25,7 @@ https://github.com/zhaotoday/webpack-multi-page
 - [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 - [PostCSS](https://github.com/postcss/postcss/blob/master/README.cn.md)
 
-## Webpack 相关参考
+## Webpack
 - [Webpack 中文文档](https://www.webpackjs.com/concepts/)
 - [Webpack 2.2 中文文档](http://www.css88.com/doc/webpack2/)
 - [webpack报错no postcss config...](https://www.cnblogs.com/wang715100018066/p/7049981.html)
@@ -33,18 +33,18 @@ https://github.com/zhaotoday/webpack-multi-page
 
 ## 命令
 ```bash
-# 下载代码
-$ git clone https://github.com/zhaotoday/webpack-multi-page.git
-# 安装依赖
-$ npm install
 # 开发、调试
 $ npm run dev
+
 # 构建
 $ npm run build
-# 按 Standard 规范校验 JS 代码
-$ npm run eslint
-# 按 Standard 规范代码格式化 JS 代码
+
+# fix JS 代码
 $ npm run eslintfix
+
+# 校验 JS 代码
+$ npm run eslint
+
 # 校验 CSS 代码
 $ npm run stylelint
 ```
