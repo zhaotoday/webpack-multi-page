@@ -40,6 +40,9 @@ https://github.com/zhaotoday/webpack-multi-page
 # 开发、调试
 $ npm run dev
 
+# 预览
+$ open http://localhost:8083/webpack-dev-server/index.html
+
 # 构建
 $ npm run build
 
@@ -158,49 +161,38 @@ const config = {
 
 ## 目录结构
 ```
-|-- build                                    // Webpack 配置
-|-- src                                      // 源码目录
-|   |-- projects                             // 项目集合
-|       |-- play                             // play 项目（举例）
-|           |-- pages                        // 网站页面
-|               |-- home                     // 首页（举例）
-|                   |-- images               // 首页图片
-|                   |-- scripts.js           // 首页脚本
-|                   |-- styles.scss          // 首页样式
-|                   |-- template.html        // 首页 html 模板
-|               |-- news                     // 新闻页面（举例）
-|           |-- commons                      // 公用代码
-|               |-- components               // 公共组件
-|                   |-- panel                // 面板组件（举例）
-|                       |-- images           // 面板组件相关图片
-|                       |-- styles.scss      // 面板组件相关样式
-|                   |-- list                 // 列表组件（举例）
-|               |-- requires                 // 公用代码块，在各页面的 html 模板中引入
-|                   |-- head                 // 头部代码块，也就是 <head> 标签
-|                   |-- foot                 // 底部代码块，如：在页面底部引入的公用 JS、统计代码等
-|                   |-- header               // 页面头部展示内容，如：导航菜单等
-|                   |-- footer               // 页面底部展示内容，如：页脚导航链接、版权信息等
-|           |-- scripts                      // 脚本
-|               |-- libs                     // JS 库
-|               |-- utils                    // 一些 JS 工具集合
-|                   |-- helpers.js           // 帮助函数集合
-|                   |-- consts .js           // 常量配置
-|                   |-- polyfill.js          // polyfill
-|           |-- styles                       // 样式
-|               |-- global                   // 全局样式
-|                   |-- reset.scss           // 样式重置
-|                   |-- classes              // 样式类
-|               |-- utils                    // 样式工具集合
-|                   |-- functions.scss       // SASS 函数
-|                   |-- mixins.scss          // SASS 混合
-|                   |-- variables.scss       // SASS 变量
-|   |-- scripts                              // 脚本（全局）
-|       |-- libs                             // JS 库
-|       |-- utils                            // 一些 JS 工具集合
-|           |-- helpers.js                   // 帮助函数集合
-|   |-- styles                               // 样式（全局）
-|       |-- utils                            // 样式工具集合
-|           |-- functions.scss               // SASS 函数
-|           |-- mixins.scss                  // SASS 混合
-|           |-- variables.scss               // SASS 变量
+|- build                           // Webpack 配置
+|- src                             // 源码目录
+|    |- pages                      // 页面
+|       |- index                   // 首页（举例）
+|          |- images               // 图片
+|          |- scripts              // 脚本
+|             |- index.js
+|             |- utils
+|          |- styles               // 样式
+|             |- index.scss
+|             |- images            // 样式图片
+|          |- template.hbs         // 模板
+|       |- news                    // 新闻页面（举例）
+|       |- commons                 // 公用代码
+|          |- components           // 组件集合
+|             |- my-component      // my-component 组件
+|          |- snippets             // 代码块，在各页面的 html 模板中引入
+|             |- head              // 头部，也就是 <head> 标签
+|             |- foot              // 底部，如：在页面底部引入的公用 JS、统计代码等
+|    |- assets                     // 资源
+|       |- scripts                 // 脚本
+|          |- libs                 // JS 库
+|          |- utils                // 一些 JS 工具集合
+|             |- helpers.js        // 帮助函数集合
+|             |- consts .js        // 常量配置
+|             |- polyfills.js      // polyfill
+|          |- styles               // 样式
+|             |- global            // 全局样式
+|                |- reset.scss     // 样式重置
+|                |- classes        // 样式类
+|             |- utils             // 样式工具集合
+|                |- functions.scss // SASS 函数
+|                |- mixins.scss    // SASS 混合
+|                |- variables.scss // SASS 变量
 ```
