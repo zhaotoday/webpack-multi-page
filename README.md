@@ -5,6 +5,7 @@
 ## 特性
 - 前端工程化
 - 集成 PostCSS、Sass
+- 支持 EJS/Handlebars 模板引擎
 - 支持响应式
 - 支持模块化、组件化
 - 支持开发、调试和构建
@@ -28,6 +29,8 @@ https://github.com/zhaotoday/webpack-multi-page
 - [include-media](https://github.com/eduardoboucas/include-media)
 - [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 - [PostCSS](https://github.com/postcss/postcss/blob/master/README.cn.md)
+- [EJS 模板引擎](https://ejs.bootcss.com)
+- [Handlebars 模板引擎](http://handlebarsjs.cn)
 
 ## Webpack
 - [Webpack 中文文档](https://www.webpackjs.com/concepts/)

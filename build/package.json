@@ -36,7 +36,7 @@
     "better-npm-run": "^0.1.0",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
-    "ejs-compiled-loader": "^1.1.0",
+    "ejs-compiled-loader": "^2.2.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "handlebars": "^4.0.11",
