@@ -1,0 +1,83 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "eslintfix": "eslint src/**/*.js --fix",
+    "eslint": "eslint src/**/*.js",
+    "stylelint": "stylelint src/**/*.scss",
+    "dev": "better-npm-run dev",
+    "build": "better-npm-run build"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "webpack-dev-server --config build --hot --inline --progress --colors --project",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build": {
+      "command": "webpack -p --config build --define process.env.NODE_ENV='\"production\"' --progress --profile --colors --project",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "keywords": [
+    "site"
+  ],
+  "author": "zhaojintian",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "better-npm-run": "0.0.15",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.1",
+    "cssnano": "^3.10.0",
+    "es3ify-webpack-plugin": "0.0.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
+    "handlebars": "^4.0.10",
+    "handlebars-loader": "^1.6.0",
+    "html": "^1.0.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.7.2",
+    "postcss-font-magician": "^1.6.1",
+    "postcss-loader": "^1.3.3",
+    "postcss-reporter": "^3.0.0",
+    "postcss-utilities": "^0.7.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.4"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "compass-mixins": "^0.12.10",
+    "github-markdown-css": "^2.8.0",
+    "include-media": "^1.4.9",
+    "iscroll": "^5.2.0",
+    "lightbox2": "^2.9.0",
+    "sass-utils": "^1.0.8",
+    "yargs": "^8.0.2",
+    "zepto": "^1.2.0"
+  }
+}
