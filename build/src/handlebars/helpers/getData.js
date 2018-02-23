@@ -1,6 +1,6 @@
 module.exports = (page, options) => {
-  const globalData = require(`../../../../src/assets/data/global.json`)
-  const pageData = require(`../../../../src/assets/data/${page}.json`)
+  const globalData = require(`../../../../src/mock/data/global.json`)
+  const pageData = require(`../../../../src/mock/data/${page}.json`)
 
   return options.fn({
     styles: [page],

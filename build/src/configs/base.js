@@ -84,6 +84,14 @@ const config = {
         ]
       },
       {
+        test: /\.ejs$/,
+        use: [
+          {
+            loader: 'ejs-compiled-loader'
+          }
+        ]
+      },
+      {
         test: /\.(png|jpg|svg)$/,
         use: [
           {

@@ -6,10 +6,10 @@ const getEntry = () => {
   const entry = {}
 
   fs.readdirSync(consts.PAGES).forEach(value => {
-      const path = `${consts.PAGES}/${value}/scripts`
+    const path = `${consts.PAGES}/${value}/scripts`
 
-      entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
-    })
+    entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
+  })
 
   return entry
 }
@@ -23,7 +23,11 @@ const getPlugins = () => {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${value}.html`,
-        template: fs.existsSync(`${template}.html`) ? `${template}.html` : `${template}.hbs`,
+        template: fs.existsSync(`${template}.html`)
+          ? `${template}.html`
+          : fs.existsSync(`${template}.hbs`)
+            ? `${template}.hbs`
+            : `${template}.ejs`,
         inject: false
       })
     )
