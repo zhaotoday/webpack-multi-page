@@ -12,12 +12,12 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
-        loader: 'babel-loader',
+        test: /\.js$/,
+        loader: 'babel',
         exclude: /node_modules/
       },
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
       },
       {

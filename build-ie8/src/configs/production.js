@@ -1,6 +1,7 @@
 const config = require('./base')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const es3ifyPlugin = require('es3ify-webpack-plugin')
 
 module.exports = {
   entry: config.entry,
@@ -21,10 +22,11 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new UglifyJsPlugin({
       uglifyOptions: {
-        ie8: true,
+        ie8: true
       }
     }),
     new webpack.NoErrorsPlugin(),
+    new es3ifyPlugin(),
     ...config.plugins
   ],
   resolve: config.resolve
