@@ -1,16 +1,33 @@
-const fs = require('fs')
+const config = require('./utils/base.config')
+const webpack = require('webpack')
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const consts = require('./utils/consts')
 const project = require('./utils/project')
 
-// --project 后面没加参数值的时候默认为 true
-if (project.NAME === true) {
-  console.error('Error: please add your project name after command "npm run build/dev".')
-  process.exit()
+module.exports = {
+  entry: config.entry,
+  output: config.output,
+  module: {
+    loaders: config.module.loaders
+  },
+  postcss: function () {
+    return config.postcss
+  },
+  plugins: [
+    new CleanWebpackPlugin([project.DIST], {
+      verbose: true,
+      dry: false
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.NoErrorsPlugin(),
+    ...config.plugins
+  ],
+  resolve: config.resolve
 }
-
-if (!fs.existsSync(project.DIR)) {
-  console.error('Error: the project doesn\'t exist.')
-  process.exit()
-}
-
-module.exports = require(`./webpack.${consts.ENV}`)
