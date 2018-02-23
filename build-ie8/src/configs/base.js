@@ -1,5 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const helpers = require('../../../build/src/utils/helpers')
+const helpers = require('../utils/helpers')
 const consts = require('../../../build/src/utils/consts')
 
 const config = {
@@ -37,6 +37,10 @@ const config = {
         }
       },
       {
+        test: /\.ejs$/,
+        loader: 'ejs-compiled'
+      },
+      {
         test: /\.(png|jpg|svg)$/,
         loader: `url?limit=8192&name=${consts.IMAGES}[hash].[ext]`
       }
@@ -59,7 +63,6 @@ const config = {
     })
   ],
   plugins: [
-    new require('es3ify-webpack-plugin')(),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
     ...helpers.getPlugins()
   ],
