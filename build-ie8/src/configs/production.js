@@ -1,5 +1,6 @@
 const config = require('./base')
 const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: config.entry,
@@ -11,11 +12,16 @@ module.exports = {
     return config.postcss
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        ie8: true,
       }
     }),
     new webpack.NoErrorsPlugin(),

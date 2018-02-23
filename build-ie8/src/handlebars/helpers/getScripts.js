@@ -1,4 +1,4 @@
-const consts = require('../../utils/consts')
+const consts = require('../../../../build/src/utils/consts')
 
 module.exports = scripts => {
   if (typeof scripts === 'string') scripts = [scripts]
