@@ -1,11 +1,11 @@
 {
   "head": {
-    "title": "网站标题",
-    "keywords": "网站关键词1,网站关键词2",
-    "description": "网站描述"
+    "title": "title for website",
+    "keywords": "keyword1,keyword2",
+    "description": "description for website"
   },
   "global": {
-    "company": "公司名称",
+    "company": "some company",
     "domain": "company.cn"
   }
 }
