@@ -1,2 +1,2 @@
-<% const data = require('../../server/ejs') %>
-<%= data %>
+<% const $ = require('../../mock/getData')('contact') %>
+<%= JSON.stringify($) %>
