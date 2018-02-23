@@ -1,7 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const helpers = require('../utils/helpers')
-const consts = require('../utils/consts')
-const path = require('path')
+const helpers = require('../../../build/src/utils/helpers')
+const consts = require('../../../build/src/utils/consts')
 
 const config = {
   entry: helpers.getEntry(),
@@ -11,112 +10,63 @@ const config = {
     filename: `${consts.SCRIPTS}[name].js`,
   },
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true
-            }
-          }
-        ]
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
-        include: [consts.SRC],
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: process.env.NODE_ENV === 'production'
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                includePaths: [`${consts.SRC}/styles`]
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  require('postcss-font-magician')(),
-                  require('cssnano')()
-                ]
-              }
-            }
-          ],
-          publicPath: '../'
-        })
+        test: /\.s?css$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
       },
       {
         test: /\.json$/,
-        use: ['json-loader']
+        loader: 'json'
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              interpolate: true,
-              minimize: false
-            }
-          }
-        ]
+        loader: 'html?interpolate&minimize=false'
       },
       {
         test: /\.hbs$/,
-        use: [
-          {
-            loader: 'handlebars-loader',
-            options: {
-              inlineRequires: '\/images\/',
-              helperDirs: [__dirname + '/../handlebars/helpers']
-            }
-          }
-        ]
-      },
-      {
-        test: /\.ejs$/,
-        use: [
-          {
-            loader: 'ejs-compiled-loader'
-          }
-        ]
+        loader: 'handlebars',
+        query: {
+          inlineRequires: '\/images\/',
+          helperDirs: [__dirname + '/../handlebars/helpers']
+        }
       },
       {
         test: /\.(png|jpg|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              publicPath: consts.CDN + consts.IMAGES,
-              outputPath: consts.IMAGES,
-              name: '[hash].[ext]'
-            }
-          }
-        ]
+        loader: `url?limit=8192&name=${consts.IMAGES}[hash].[ext]`
       }
     ]
   },
+  postcss: [
+    require('postcss-font-magician')(),
+    require('cssnano')({
+      filterPlugins: false,
+      sourcemap: true,
+      autoprefixer: {
+        add: true,
+        remove: true,
+        browserslist: ['last 2 versions']
+      },
+      safe: true,
+      discardComments: {
+        removeAll: true
+      }
+    })
+  ],
   plugins: [
+    new require('es3ify-webpack-plugin')(),
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
     ...helpers.getPlugins()
   ],
   resolve: {
-    modules: ['src', 'node_modules'],
-    extensions: ['.js', '.html', '.scss'],
-    alias: {
-      '@': path.resolve('src')
-    }
+    root: __dirname,
+    modulesDirectories: ['src', 'node_modules'],
+    extensions: ['', '.js', '.html', '.scss']
   }
 }
 
