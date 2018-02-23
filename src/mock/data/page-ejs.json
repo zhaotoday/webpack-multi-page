@@ -1,0 +1,10 @@
+{
+  "head": {
+    "title": "title for page ejs",
+    "keywords": "keywords for page ejs",
+    "description": "description for page ejs"
+  },
+  "pageEJS": {
+    "name": "name for page ejs"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "head": {
+    "title": "title for page hbs",
+    "keywords": "keywords for page hbs",
+    "description": "description for page hbs"
+  },
+  "pageHBS": {
+    "name": "name for page hbs"
+  }
+}
