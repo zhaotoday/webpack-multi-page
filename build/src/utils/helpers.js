@@ -18,16 +18,10 @@ const getPlugins = () => {
   const plugins = []
 
   fs.readdirSync(consts.VIEWS).filter(value => value !== 'commons').forEach(value => {
-    const view = `${consts.VIEWS}/${value}`
-
     plugins.push(
       new HtmlWebpackPlugin({
-        filename: `./${value}.html`,
-        template: fs.existsSync(`${view}.html`)
-          ? `${view}.html`
-          : fs.existsSync(`${view}.hbs`)
-            ? `${view}.hbs`
-            : `${view}.ejs`,
+        filename: `./${value.split('.')[0]}.html`,
+        template: `${consts.VIEWS}/${value}`,
         inject: false
       })
     )
