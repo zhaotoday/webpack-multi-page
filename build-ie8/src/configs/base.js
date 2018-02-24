@@ -29,14 +29,6 @@ const config = {
         loader: 'html?interpolate&minimize=false'
       },
       {
-        test: /\.hbs$/,
-        loader: 'handlebars',
-        query: {
-          inlineRequires: '\/images\/',
-          helperDirs: [__dirname + '/../handlebars/helpers']
-        }
-      },
-      {
         test: /\.ejs$/,
         loader: 'ejs-compiled'
       },

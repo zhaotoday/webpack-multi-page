@@ -72,18 +72,6 @@ const config = {
         ]
       },
       {
-        test: /\.hbs$/,
-        use: [
-          {
-            loader: 'handlebars-loader',
-            options: {
-              inlineRequires: '\/images\/',
-              helperDirs: [__dirname + '/../handlebars/helpers']
-            }
-          }
-        ]
-      },
-      {
         test: /\.ejs$/,
         use: [
           {
