@@ -8,6 +8,8 @@ const SRC = path.resolve('./website/src')
 const DIST = path.resolve('../dist')
 // 页面目录
 const VIEWS = `${SRC}/views`
+// 静态资源目录
+const STATIC = `${SRC}/static`
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
 // 样式路径
@@ -24,6 +26,7 @@ module.exports = {
   SRC,
   DIST,
   VIEWS,
+  STATIC,
   SCRIPTS,
   STYLES,
   IMAGES,

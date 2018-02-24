@@ -5,8 +5,8 @@ const consts = require('./consts')
 const getEntry = () => {
   const entry = {}
 
-  fs.readdirSync(consts.VIEWS).forEach(value => {
-    const path = `${consts.VIEWS}/${value}/scripts`
+  fs.readdirSync(consts.STATIC).forEach(value => {
+    const path = `${consts.STATIC}/${value}/scripts`
 
     entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
   })
@@ -18,16 +18,16 @@ const getPlugins = () => {
   const plugins = []
 
   fs.readdirSync(consts.VIEWS).filter(value => value !== 'commons').forEach(value => {
-    const template = `${consts.VIEWS}/${value}/template`
+    const view = `${consts.VIEWS}/${value}`
 
     plugins.push(
       new HtmlWebpackPlugin({
         filename: `./${value}.html`,
-        template: fs.existsSync(`${template}.html`)
-          ? `${template}.html`
-          : fs.existsSync(`${template}.hbs`)
-            ? `${template}.hbs`
-            : `${template}.ejs`,
+        template: fs.existsSync(`${view}.html`)
+          ? `${view}.html`
+          : fs.existsSync(`${view}.hbs`)
+            ? `${view}.hbs`
+            : `${view}.ejs`,
         inject: false
       })
     )
