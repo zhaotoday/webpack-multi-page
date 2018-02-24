@@ -4,7 +4,7 @@
 ## 特性
 - 前端工程化
 - 集成 PostCSS、Sass
-- 支持 EJS/Handlebars 模板引擎
+- 支持 EJS 模板引擎
 - 支持响应式
 - 支持模块化、组件化
 - 支持开发、调试和构建
@@ -172,19 +172,15 @@ const config = {
 ## 目录结构
 ```
 |- build                           // Webpack 配置
-|- src                             // 源码目录
-|    |- pages                      // 页面
-|       |- commons                 // 公用代码，构建成 commons.js 和 commons.css
+|- src                             // 源码
+|    |- static                     // 静态资源
+|       |- commons                 // 公用脚本和样式，构建成 commons.js 和 commons.css
 |          |- components           // 组件集合
 |             |- my-component      // my-component 组件
-|                |- template.hbs   // 模板
-|                |- images         // 引用的图片
+|                |- images         // 页面引用图片
 |                |- styles         // 样式
 |                   |- index.scss
-|                   |- images
-|          |- snippets             // 代码块，在各页面的 html 模板中引入
-|             |- head.hbs          // 头部，也就是 <head> 标签
-|             |- foot.hbs          // 底部，如：在页面底部引入的公用 JS、统计代码等
+|                   |- images      // CSS 引用图片
 |          |- scripts              // 脚本
 |             |- index.js          // 需要引入 components 中的所有样式文件和 styles/index.scss
 |             |- utils
@@ -193,19 +189,28 @@ const config = {
 |             |- reset.scss        // 重置
 |             |- fonts.scss        // 字体
 |             |- classes           // 样式类
-|             |- images
-|       |- my-page                 // my-page 页面
-|          |- template.hbs         // 模板
-|          |- images               // 引用的图片
+|             |- images            // CSS 引用图片
+|       |- my-view                 // my-view 页面
+|          |- images               // 页面引用图片
 |          |- scripts              // 脚本
 |             |- index.js
 |             |- utils
 |          |- styles               // 样式
 |             |- index.scss
-|             |- images
-|    |- assets                     // 静态资源
+|             |- images            // CSS 引用图片
+|    |- views                      // 页面
+|       |- commons                 // 公用组件、代码块等
+|          |- components           // 组件集合
+|             |- my-component.ejs  // my-component 组件
+|          |- snippets             // 代码块，在各页面的 html 模板中引入
+|             |- head.ejs          // 头部，也就是 <head> 标签
+|             |- foot.ejs          // 底部，如：在页面底部引入的公用 JS、统计代码等
+|       |- my-view.ejs             // my-view 页面
+|    |- mock                       // mock 数据
 |       |- data                    // 配置数据
 |          |- global.json          // 全局配置数据
+|          |- my-view.json         // my-view 页面配置数据
+|    |- assets                     // 公用静态资源
 |       |- scripts                 // 脚本
 |          |- libs                 // JS 库
 |          |- utils                // JS 工具集合
