@@ -5,7 +5,7 @@ const DEV_PORT = 8083
 // 源码目录
 const SRC = path.resolve('./website/src')
 // 构建目录
-const DIST = path.resolve('./website/dist')
+const DIST = path.resolve('../dist')
 // 页面目录
 const PAGES = `${SRC}/pages`
 // 脚本路径

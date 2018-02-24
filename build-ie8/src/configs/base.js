@@ -18,7 +18,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
+        loader: ExtractTextPlugin.extract('style', 'css?minimize!sass?includePaths[]=' + consts.SRC + '/styles!postcss')
       },
       {
         test: /\.json$/,
