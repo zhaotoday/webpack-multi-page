@@ -18,6 +18,7 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    new es3ifyPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new UglifyJsPlugin({
@@ -26,7 +27,6 @@ module.exports = {
       }
     }),
     new webpack.NoErrorsPlugin(),
-    new es3ifyPlugin(),
     ...config.plugins
   ],
   resolve: config.resolve
