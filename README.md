@@ -53,7 +53,7 @@ $ npm run build
 $ npm run build
 
 # 预览
-$ open http://localhost:8083/webpack-dev-server/index.html
+$ open http://localhost:8083/webpack-dev-server/my-view.html
 
 # fix JS 代码
 $ npm run eslintfix
@@ -71,12 +71,12 @@ $ npm run stylelint
 # 安装 core-js
 $ npm install --save core-js
 ```
-polyfill 在 `/src/projects/{your-project}/scripts/utils/polyfill.js` 文件中引入：
+polyfill 在 src/static/commons/scripts/utils/polyfills.js 中引入：
 ```js
 import 'core-js/es6/promise'
 ```
 
-## 样式编写规范
+## CSS 规范
 请参照 BEM 规范，详情见：[https://github.com/zhaotoday/bem](https://github.com/zhaotoday/bem)，下面是一个例子：
 HTML 代码：
 ```html
