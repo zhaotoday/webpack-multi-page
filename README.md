@@ -162,8 +162,8 @@ const config = {
 <script src="//cdn.liruan.cn/selectivizr/1.0.2/selectivizr-min.js"></script>
 <![endif]-->
 ```
-尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
-> 请用 build 的构建方案来开发调试，构建时，将 src 复制到 build-ie8/website 下，并在 build-ie8 下执行 npm run build。
+- 尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性；
+- 请用 build 的构建方案来开发调试，构建时，将 src 复制到 build-ie8/website 下，并在 build-ie8 下执行 npm run build；
 
 ## 组件化
 将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在文件夹 `/src/commons/components` 下。
