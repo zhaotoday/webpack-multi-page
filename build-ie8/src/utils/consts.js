@@ -7,7 +7,7 @@ const SRC = path.resolve('./website/src')
 // 构建目录
 const DIST = path.resolve('../dist')
 // 页面目录
-const PAGES = `${SRC}/pages`
+const VIEWS = `${SRC}/views`
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
 // 样式路径
@@ -23,7 +23,7 @@ module.exports = {
   DEV_PORT,
   SRC,
   DIST,
-  PAGES,
+  VIEWS,
   SCRIPTS,
   STYLES,
   IMAGES,
