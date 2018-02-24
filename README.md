@@ -1,6 +1,5 @@
 ## 简介
 基于 Webpack 开发、调试和构建多页面站点（普通 Web 站点）的前端工程化方案，同时适用于 PC 端和移动端。
-> 如果需要兼容 IE8，请尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
 
 ## 特性
 - 前端工程化
@@ -163,7 +162,8 @@ const config = {
 <script src="//cdn.liruan.cn/selectivizr/1.0.2/selectivizr-min.js"></script>
 <![endif]-->
 ```
-> 请用 build 的构建方案来开发调试代码，需要构建时，将 src 复制到 build-ie8/website 下，并在 build-ie8 下执行 npm run build。
+尽量减少使用 CSS3，并且不使用 IE8 不能模拟的 ECMAScript 5 特性。
+> 请用 build 的构建方案来开发调试，构建时，将 src 复制到 build-ie8/website 下，并在 build-ie8 下执行 npm run build。
 
 ## 组件化
 将通用模块（如：面板、列表和 tab 菜单等）写成组件，提高代码复用率。组件放置在文件夹 `/src/commons/components` 下。
