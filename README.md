@@ -132,7 +132,8 @@ $breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
 ```
 
 ## IE8 兼容
-添加 es3ify-webpack-plugin，解决 es3 语法兼容问题：
+- 请用 build 的构建方案来开发调试代码，需要构建时，将 src 复制到 `build-ie8/website`，并在 `build-ie8` 下执行 `npm run build`；
+- 添加 es3ify-webpack-plugin，解决 es3 语法兼容问题：
 ```bash
 $ npm install --save-dev es3ify-webpack-plugin
 ```
@@ -146,14 +147,14 @@ const config = {
   ]
 }
 ```
-添加 es5-shim 和 es5-sham，解决 es3 环境下 es5 API 缺失问题：
+- 添加 es5-shim 和 es5-sham，解决 es3 环境下 es5 API 缺失问题：
 ```html
 <!--[if lt IE 9]>
 <script src="//cdn.liruan.cn/es5-shim/4.5.9/es5-shim.min.js"></script>
 <script src="//cdn.liruan.cn/es5-shim/4.5.9/es5-sham.min.js"></script>
 <![endif]-->
 ```
-引入 selectivizr.js，使 IE8 支持 CSS3 伪类以及属性选择器：
+- 引入 selectivizr.js，使 IE8 支持 CSS3 伪类以及属性选择器：
 ```html
 <!--[if lt IE 9]>
 <script src="//cdn.liruan.cn/nwmatcher/1.3.6/nwmatcher.min.js"></script>
