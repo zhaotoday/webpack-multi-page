@@ -40,13 +40,16 @@ https://github.com/zhaotoday/webpack-multi-page
 
 ## 命令
 ```bash
-# 安装依赖（根目录和 build 目录下执行）
+# 安装依赖（在根目录、build、build-ie8 目录下执行）
 $ npm install
 
 # 开发、调试（在 build 目录下执行）
 $ npm run dev
 
 # 构建（在 build 目录下执行）
+$ npm run build
+
+# 如果需要兼容 IE8，将 src 复制到 build-ie8/website 下，并构建（在 build-ie8 目录下执行）
 $ npm run build
 
 # 预览
