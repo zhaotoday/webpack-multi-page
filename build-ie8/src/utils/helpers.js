@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs')
-const consts = require('../../../build/src/utils/consts')
+const consts = require('./consts')
 
 const getEntry = () => {
   const entry = {}

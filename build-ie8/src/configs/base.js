@@ -1,6 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const helpers = require('../utils/helpers')
-const consts = require('../../../build/src/utils/consts')
+const consts = require('../utils/consts')
 
 const config = {
   entry: helpers.getEntry(),
