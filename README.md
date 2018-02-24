@@ -29,6 +29,7 @@ https://github.com/zhaotoday/webpack-multi-page
 - [react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
 - [PostCSS](https://github.com/postcss/postcss/blob/master/README.cn.md)
 - [EJS 模板引擎](https://ejs.bootcss.com)
+- [EJS 模板语言使用](https://www.w3cschool.cn/weflow/weflow-ejs.html)
 - [Handlebars 模板引擎](http://handlebarsjs.cn)
 
 ## Webpack
