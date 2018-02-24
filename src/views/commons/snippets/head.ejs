@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<%
+const $ = require('../mock/$')(view)
+const $h = require('../mock/$h')
+%><!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="<%= $.head.keywords %>">
   <meta name="description" content="<%= $.head.description %>">
   <title><%= $.head.title %></title>
-  {{{getStyles 'commons'}}}
-  {{{getStyles styles}}}
+  <%- $h.getStyles('commons') %>
+  <%- $h.getScripts('commons') %>
+  <%- $h.getStyles($.styles) %>
+  <%- $h.getScripts($.scripts) %>
 </head>
 <body>

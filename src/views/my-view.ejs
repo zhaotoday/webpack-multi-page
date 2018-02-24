@@ -1,5 +1,4 @@
-<% const $ = require('../mock')('my-view') %>
+<% var view = 'my-view' %>
 <%- include ./commons/snippets/head.ejs %>
-<%- include ./commons/components/my-component.ejs %>
+<%- require('./commons/components/my-component.ejs')({title: 'this is my component'}) %>
 <%- include ./commons/snippets/foot.ejs %>
-
