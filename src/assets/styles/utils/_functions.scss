@@ -1,0 +1,21 @@
+/**
+ * 获取颜色
+ * @param {number} $index 颜色列表索引
+ * @return {string}
+ */
+@function color($index) {
+  @return _color($colors, $index);
+}
+
+/**
+ * 像素转 rem
+ * @param {string} $px 像素值
+ * @return {string}
+ */
+@function px2rem($px) {
+  @if ($debug) {
+    @return _px2rem-for-debug($px);
+  } @else {
+    @return _px2rem($px);
+  }
+}
