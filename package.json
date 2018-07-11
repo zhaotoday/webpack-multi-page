@@ -25,8 +25,7 @@
     "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
-    "compass-mixins": "^0.12.10",
     "include-media": "^1.4.9",
-    "sass-utils": "^1.0.10"
+    "sass-utils": "^1.0.15"
   }
 }
