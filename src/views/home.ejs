@@ -1,18 +1,9 @@
 <% const view = 'home' %>
 <%- include ./commons/snippets/head.ejs %>
 <%- include ./commons/snippets/header.ejs %>
-<div class="p-home main">
+<div class="p-home">
   <%- include ./commons/components/carousel.ejs %>
-  <div class="n-contact-us container">
-    <div class="n-scan-oa c-qrcode fs2 c5">
-      <img src="http://localhost:88/views/home/qrcode.png">
-      扫描关注公众号
-    </div>
-    <div class="n-scan-app c-qrcode fs2 c5">
-      <img src="http://localhost:88/views/home/qrcode.png">
-      扫描下载 App
-    </div>
-  </div>
+  <%- include ./commons/components/contact-us.ejs %>
   <div class="bg" style="margin-top: 22px;">
     <%- include ./commons/components/news-panel.ejs %>
   </div>

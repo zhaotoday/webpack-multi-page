@@ -5,4 +5,6 @@ body {
   font-family: $font-family;
   font-size: nth($font-sizes, 2);
   background-color: nth($colors, 1);
+  min-width: $wrap-width;
+  overflow-x: hidden;
 }

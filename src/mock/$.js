@@ -5,6 +5,6 @@ module.exports = page => {
   return Object.assign({
     styles: [page],
     scripts: [page],
-    cdn: process.env.NODE_ENV === 'development' ? '/' : '//lrcdn.cn/project/'
+    cdn: process.env.NODE_ENV === 'development' ? '/' : '/'
   }, globalData, pageData)
 }

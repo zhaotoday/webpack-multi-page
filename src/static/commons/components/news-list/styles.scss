@@ -1,0 +1,15 @@
+@import "../../styles/utils/index";
+
+@include c(news-list) {
+  @include e(heading) {
+  }
+
+  @include e(title) {
+  }
+
+  @include cc(list) {
+    @include e(item) {
+      
+    }
+  }
+}
