@@ -1,0 +1,22 @@
+@import "../../styles/utils/index";
+
+@include c(nav-bar) {
+  @include e(item) {
+    @include text--middle(45px);
+    @include padding(null, 10px, null, 10px);
+
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: nth($font-sizes, 4);
+    margin-right: 43px;
+    text-align: center;
+    cursor: pointer;
+
+    @include m(is-active) {
+      border-bottom: 2px solid nth($colors, 8);
+      color: nth($colors, 8);
+      font-weight: bold;
+      cursor: text;
+    }
+  }
+}

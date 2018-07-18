@@ -1,0 +1,9 @@
+@import "../../styles/utils/index";
+
+@include c(logo) {
+  @include size(74px, 92px);
+
+  background-image: url("./images/logo.png");
+  display: block;
+  text-decoration: none;
+}

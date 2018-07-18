@@ -1,3 +1,23 @@
-.my-view {
-  font-size: 14px;
+@import "../commons/styles/utils/index";
+
+@include p(home) {
+  @include n(contact-us) {
+    @include size(1152px, 185px);
+
+    background-image: url("./images/contact-us.jpg");
+    margin-top: 27px;
+    position: relative;
+  }
+
+  @include n(scan-oa, scan-app) {
+    @include position--absolute(18px);
+  }
+
+  @include n(scan-oa) {
+    right: 320px;
+  }
+
+  @include n(scan-app) {
+    right: 105px;
+  }
 }

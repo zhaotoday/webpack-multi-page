@@ -1,0 +1,42 @@
+@import "../../styles/utils/index";
+
+@include c(news-panel) {
+  @include e(header) {
+    @include padding(46px, null, 29px);
+
+    line-height: 100%;
+    position: relative;
+  }
+
+  @include e(title) {
+    @include text--middle(28px);
+    @include block--center;
+
+    text-align: center;
+    width: 169px;
+    background-image: url("./images/title.png");
+  }
+
+  @include e(more) {
+    @include size(40px + 10px, 10px + 10px);
+    @include position--absolute(45px, 40px);
+
+    cursor: pointer;
+    background: {
+      image: url("./images/more.png");
+      repeat: no-repeat;
+      position: center center;
+    }
+  }
+
+  @include e(body) {
+    @include padding(null, null, 46px, 16px);
+    @include clearfix;
+
+    width: 120%;
+
+    .c-news-card {
+      float: left;
+    }
+  }
+}

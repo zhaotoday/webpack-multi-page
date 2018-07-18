@@ -1,0 +1,27 @@
+.container {
+  @include block--center;
+
+  position: relative;
+  width: $wrap-width;
+}
+
+.bg {
+  background-color: nth($colors, 10);
+  width: 100%;
+}
+
+@for $i from 1 through length($font-sizes) {
+  $item: nth($font-sizes, $i);
+
+  .fs#{$i} {
+    font-size: $item;
+  }
+}
+
+@for $i from 1 through length($colors) {
+  $item: nth($colors, $i);
+
+  .c#{$i} {
+    color: $item;
+  }
+}
