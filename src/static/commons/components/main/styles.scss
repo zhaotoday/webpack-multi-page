@@ -12,7 +12,7 @@
   }
 
   @include e(body) {
-    @include margin(null, 25px, null, 210px + 30px);
+    @include margin(null, null, null, 210px + 30px);
 
     border-left: 1px solid #ededed;
     padding-left: 30px;

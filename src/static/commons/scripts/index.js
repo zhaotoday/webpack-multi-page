@@ -12,6 +12,8 @@ import '../components/news-card/styles.scss'
 import '../components/contact-us/styles.scss'
 import '../components/side-bar/styles.scss'
 import '../components/main/styles.scss'
+import '../components/news-list/styles.scss'
+import '../components/pagination/styles.scss'
 
 import '../snippets/header/styles.scss'
 import '../snippets/footer/styles.scss'

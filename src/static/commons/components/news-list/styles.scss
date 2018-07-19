@@ -2,14 +2,65 @@
 
 @include c(news-list) {
   @include e(heading) {
+    @include padding(34px, null, 20px);
+
+    line-height: 100%;
+    position: relative;
+    border-bottom: 1px solid nth($colors, 16);
   }
 
   @include e(title) {
+    @include text--middle(28px);
+
+    border-left: 2px solid nth($colors, 8);
+    padding-left: 12px;
   }
 
-  @include cc(list) {
-    @include e(item) {
-      
+  @include e(nav) {
+    @include position--absolute(53px, 0);
+
+    a:hover {
+      color: nth($colors, 15);
+      text-decoration: underline;
+    }
+  }
+
+  @include cc(item) {
+    @include padding(30px, null, 30px);
+
+    box-sizing: content-box;
+    height: 112px;
+    position: relative;
+    border-bottom: 1px dotted nth($colors, 6);
+
+    @include e(img) {
+      @include size(200px, 112px);
+
+      display: block;
+    }
+
+    @include e(body) {
+      @include position--absolute(30px, 0, 30px, 220px);
+    }
+
+    @include e(title) {
+      line-height: 100%;
+
+      &:hover {
+        text-decoration: underline;
+        color: nth($colors, 2);
+      }
+    }
+
+    @include e(desc) {
+      padding-top: 12px;
+      line-height: 140%;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    @include e(time) {
+      margin-top: 24px;
     }
   }
 }

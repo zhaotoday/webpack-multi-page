@@ -8,3 +8,11 @@ body {
   min-width: $wrap-width;
   overflow-x: hidden;
 }
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
