@@ -14,6 +14,7 @@ import '../components/side-bar/styles.scss'
 import '../components/main/styles.scss'
 import '../components/news-list/styles.scss'
 import '../components/pagination/styles.scss'
+import '../components/news-details/styles.scss'
 
 import '../snippets/header/styles.scss'
 import '../snippets/footer/styles.scss'

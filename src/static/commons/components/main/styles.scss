@@ -13,9 +13,9 @@
 
   @include e(body) {
     @include margin(null, null, null, 210px + 30px);
+    @include padding(null, null, 50px, 30px);
 
     border-left: 1px solid #ededed;
-    padding-left: 30px;
     min-height: 500px;
   }
 }

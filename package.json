@@ -28,6 +28,6 @@
     "include-media": "^1.4.9",
     "jquery": "^1.12.4",
     "minireset.css": "0.0.3",
-    "sass-utils": "^1.0.15"
+    "sass-utils": "^1.0.16"
   }
 }

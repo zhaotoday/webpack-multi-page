@@ -1,8 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(pagination) {
-  @include padding(80px, null, 50px);
-
+  padding-top: 80px;
   font-size: 0;
   text-align: center;
 

@@ -1,0 +1,10 @@
+{
+  "head": {
+    "title": "title for my view",
+    "keywords": "keywords for my view",
+    "description": "description for my view"
+  },
+  "pageEJS": {
+    "name": "name for my view"
+  }
+}
