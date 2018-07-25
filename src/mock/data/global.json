@@ -4,6 +4,15 @@
     "keywords": "keyword1,keyword2",
     "description": "description for website"
   },
+  "settings": {
+    "cellphone": "400-918-9833",
+    "telephone": "13899875765",
+    "address": "福建省福州市闽侯县荆溪镇荔园度假村内东艺楼",
+    "copyright": "Copyright © 2018 闽侯重阳养老院",
+    "icp": "京ICP备17002856号",
+    "oa_qrcode": "",
+    "app_qrcode": ""
+  },
   "global": {
     "company": "some company",
     "domain": "company.cn"

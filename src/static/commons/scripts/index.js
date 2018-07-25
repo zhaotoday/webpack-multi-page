@@ -1,7 +1,6 @@
 // 引入公用样式
 import '../styles/index.scss'
 
-import '../components/my-component/styles/index.scss'
 import '../components/logo/styles.scss'
 import '../components/hotline/styles.scss'
 import '../components/nav-bar/styles.scss'
