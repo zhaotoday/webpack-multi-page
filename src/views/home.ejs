@@ -5,10 +5,10 @@ const $ = require('../mock/$')(view)
 <%- include ./commons/snippets/head.ejs %>
 <%- include ./commons/snippets/header.ejs %>
 <div class="p-home">
-  <%- require('./commons/components/carousel.ejs')() %>
+  <%- include ./commons/components/carousel.ejs %>
   <%- include ./commons/components/contact-us.ejs %>
   <div class="bg" style="margin-top: 22px;">
-    <%- require('./commons/components/news-panel.ejs')() %>
+    <%- include ./commons/components/news-panel.ejs %>
   </div>
 </div>
 <%- include ./commons/snippets/footer.ejs %>

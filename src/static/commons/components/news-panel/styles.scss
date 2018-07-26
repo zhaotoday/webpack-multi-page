@@ -30,7 +30,7 @@
   }
 
   @include e(body) {
-    @include padding(null, null, 46px, 16px);
+    @include padding(null, null, 46px, -16px);
     @include clearfix;
 
     width: 120%;
