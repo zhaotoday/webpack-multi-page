@@ -1,19 +1,14 @@
-<%
-const $ = require('../mock/$')(view)
-const $h = require('../mock/$h')
-const head = $.head
-const styles = $.styles
-const scripts = $.scripts
-%><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="<%= head.keywords %>">
-  <meta name="description" content="<%= head.description %>">
-  <title><%= head.title %></title>
-  <%- $h.getStyles('commons') %>
-  <%- $h.getScripts('commons') %>
-  <%- $h.getStyles(styles) %>
-  <%- $h.getScripts(scripts) %>
+  <meta name="keywords" content="<%= $.head.keywords %>">
+  <meta name="description" content="<%= $.head.description %>">
+  <title><%= $.head.title %></title>
+  <link href="<%= $.consts.CDN %>/static/styles/commons.css" rel="stylesheet">
+  <link href="<%= $.consts.CDN %>/static/styles/<%= view %>.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+  <script src="<%= $.consts.CDN %>/static/scripts/commons.js"></script>
+  <script src="<%= $.consts.CDN %>/static/scripts/<%= view %>.js"></script>
 </head>
 <body>

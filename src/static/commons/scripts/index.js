@@ -19,10 +19,10 @@ import '../snippets/header/styles.scss'
 import '../snippets/footer/styles.scss'
 
 // 引入全局脚本
-import './utils/jquery'
 import './utils/polyfills'
 import './utils/render'
 import './utils/bind'
 import './utils/init'
 
 import '../components/carousel/scripts'
+import '../components/nav-bar/scripts'

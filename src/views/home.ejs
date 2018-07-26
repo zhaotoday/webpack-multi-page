@@ -1,11 +1,14 @@
-<% const view = 'home' %>
+<%
+const view = 'home'
+const $ = require('../mock/$')(view)
+%>
 <%- include ./commons/snippets/head.ejs %>
 <%- include ./commons/snippets/header.ejs %>
 <div class="p-home">
-  <%- include ./commons/components/carousel.ejs %>
+  <%- require('./commons/components/carousel.ejs')() %>
   <%- include ./commons/components/contact-us.ejs %>
   <div class="bg" style="margin-top: 22px;">
-    <%- include ./commons/components/news-panel.ejs %>
+    <%- require('./commons/components/news-panel.ejs')() %>
   </div>
 </div>
 <%- include ./commons/snippets/footer.ejs %>
