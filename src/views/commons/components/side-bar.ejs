@@ -1,8 +1,10 @@
 <div class="c-side-bar">
   <div class="c-side-bar__title c1 fs6">企业信息</div>
   <ul class="cc-menu">
-    <li class="cc-menu__item"><a href="#">对方水电费</a></li>
-    <li class="cc-menu__item"><a href="#">对方水电费</a></li>
-    <li class="cc-menu__item"><a href="#">对方水电费</a></li>
+    <% for (var i = 0; i < $.categories.length; i++) { %>
+    <li class="cc-menu__item">
+      <a href="/news?cid=<%= $.categories[i].id %>"><%= $.categories[i].title %></a>
+    </li>
+    <% } %>
   </ul>
 </div>
