@@ -2,7 +2,7 @@
   <ul class="c-carousel__images" id="carousel-images">
     <% $.homeAds.forEach(function (item, index) { %>
     <div class="c-carousel__images-item image-<%= index %>">
-      <img src="<%= $.consts.FILE_URL + '/' + item.picture %>">
+      <img src="<%= $.helpers.getFileURL(item.picture) %>">
       <div class="overlay"></div>
     </div>
     <% }) %>

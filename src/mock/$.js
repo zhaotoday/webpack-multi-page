@@ -3,7 +3,16 @@ module.exports = page => {
   const pageData = require(`./data/${page}.json`)
   const isDev = process.env.NODE_ENV === 'development'
 
+  const BASE_URL = 'http://localhost:3002'
+  const PAGE_SIZE = 2
+  const CDN = isDev ? 'http://localhost:8083' : 'https://cdn.liruan.cn'
+
   return Object.assign({
+    helpers: {
+      getFileURL (id) {
+        return `${BASE_URL}/apis/v1/files/${id}`
+      }
+    },
     utils: {
       time: {
         getDate () {
@@ -15,9 +24,9 @@ module.exports = page => {
       }
     },
     consts: {
-      PAGE_SIZE: 2,
-      CDN: isDev ? `http://localhost:8083` : 'https://cdn.liruan.cn',
-      FILE_URL: isDev ? 'http://localhost:3002/apis/v1/files' : ''
+      BASE_URL,
+      PAGE_SIZE,
+      CDN
     },
     styles: [page],
     scripts: [page]

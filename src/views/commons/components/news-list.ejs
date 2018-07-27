@@ -1,11 +1,11 @@
 <div class="c-news-list">
   <div class="c-news-list__heading">
-    <div class="c-news-list__title c14 fs8"><%= $.category.title || '企业信息' %></div>
+    <div class="c-news-list__title c14 fs8"><%= $.category ? $.category.title : '企业信息' %></div>
     <div class="c-news-list__nav fs1">
       <a class="c15" href="/">首页</a>
       &gt;
       <a class="c15" href="/news">企业信息</a>
-      <% if ($.category.title) { %>
+      <% if ($.category) { %>
       &gt; <span class="c8"><%= $.category.title %></span>
       <% } %>
     </div>
@@ -13,7 +13,7 @@
   <ul class="c-news-list__body">
     <% $.items.forEach(function (item) { %>
     <li class="cc-item">
-      <img class="cc-item__img" src="<%= $.consts.FILE_URL + '/' + item.picture %>">
+      <img class="cc-item__img" src="<%= $.helpers.getFileURL(item.picture) %>">
       <div class="cc-item__body">
         <a class="cc-item__title c2 fs4" href="/news/<%= item.id %>"><%= item.title %></a>
         <p class="cc-item__desc c6 fs2"><%= item.content %></p>

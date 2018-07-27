@@ -1,5 +1,5 @@
 <div class="c-news-card">
-  <img class="c-news-card__img" src="<%= $.consts.FILE_URL + '/' + item.picture %>">
+  <img class="c-news-card__img" src="<%= $.helpers.getFileURL(item.picture) %>">
   <h2 class="c-news-card__title"><%= item.title %></h2>
   <p class="c-news-card__desc"><%= item.content %></p>
   <p class="c-news-card__time"><%= $.utils.time.getDate(item.created_at) %></p>
