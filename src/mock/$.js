@@ -4,9 +4,14 @@ module.exports = page => {
   const isDev = process.env.NODE_ENV === 'development'
 
   return Object.assign({
-    helpers: {
-      formatTime () {
-        return 2222
+    utils: {
+      time: {
+        getDate () {
+          return '2018-01-01'
+        },
+        getTime () {
+          return '2018-01-01 01:01:01'
+        }
       }
     },
     consts: {

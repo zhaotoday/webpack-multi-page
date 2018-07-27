@@ -17,7 +17,7 @@
       <div class="cc-item__body">
         <a class="cc-item__title c2 fs4" href="/news/<%= item.id %>"><%= item.title %></a>
         <p class="cc-item__desc c6 fs2"><%= item.content %></p>
-        <p class="cc-item__time c7 fs2"><%= $.helpers.formatTime(item.created_at) %></p>
+        <p class="cc-item__time c7 fs2"><%= $.utils.time.getDate(item.created_at) %></p>
       </div>
     </li>
     <% }) %>
