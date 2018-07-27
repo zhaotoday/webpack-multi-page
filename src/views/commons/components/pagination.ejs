@@ -1,9 +1,10 @@
 <% const pages = Math.ceil($.count / $.consts.PAGE_SIZE) %>
+<% if (pages > 1) { %>
 <div class="c-pagination" id="pagination">
   <% if (1 !== $.page) { %>
-  <a class="c-pagination__item" href="/news?c=<%= $.category_id %>p=<%= $.page - 1 %>">上一页</a>
+  <a class="c-pagination__item" href="/news?c=<%= $.category_id %>&p=<%= $.page - 1 %>">上一页</a>
   <% } %>
-  <% for (var i = 0; i < pages; i++) { %>
+  <% for (var i = 1; i <= pages; i++) { %>
   <% if (i === $.page) { %>
   <span class="c-pagination__item is-active"><%= i %></span>
   <% } else { %>
@@ -14,3 +15,4 @@
   <a class="c-pagination__item" href="/news?c=<%= $.category_id %>&p=<%= $.page + 1 %>">下一页</a>
   <% } %>
 </div>
+<% } %>

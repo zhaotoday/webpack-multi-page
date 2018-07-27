@@ -9,9 +9,11 @@
     <% if ($.prev) { %>
     上一篇：<a href="/news/<%= $.prev.id %>"><%= $.prev.title %></a>
     <% } %>
-    <% if ($.next) { %>
+    <% if ($.prev && $.next) { %>
     <br>
-    <a href="#">下一篇：香港环保署雷国强博士来我院作精彩报告</a>
+    <% } %>
+    <% if ($.next) { %>
+    下一篇：<a href="/news/<%= $.next.id %>"><%= $.next.title %></a>
     <% } %>
     <div class="c-news-details__nav-more">
       <a href="/news">&lt; 更多</a>
