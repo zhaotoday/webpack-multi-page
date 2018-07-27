@@ -10,6 +10,7 @@ module.exports = page => {
       }
     },
     consts: {
+      PAGE_SIZE: 2,
       CDN: isDev ? `http://localhost:8083` : 'https://cdn.liruan.cn',
       FILE_URL: isDev ? 'http://localhost:3002/apis/v1/files' : ''
     },

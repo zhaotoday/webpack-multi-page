@@ -10,13 +10,12 @@
     font-size: nth($font-sizes, 4);
     margin-right: 52px;
     text-align: center;
-    cursor: pointer;
+    color: nth($colors, 2);
 
     @include m(is-active) {
       border-bottom: 2px solid nth($colors, 8);
       color: nth($colors, 8);
       font-weight: bold;
-      cursor: text;
     }
   }
 }

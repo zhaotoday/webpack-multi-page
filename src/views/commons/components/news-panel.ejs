@@ -4,8 +4,8 @@
     <div class="c-news-panel__more"></div>
   </div>
   <div class="c-news-panel__body">
-    <% for (var i = 0; i < $.categoryTops.length; i++) { %>
-    <%- require('./commons/components/news-card.ejs')({ $: $, item: $.categoryTops[i] }) %>
-    <% } %>
+    <% $.categoryTops.forEach(function (item) { %>
+    <%- require('./commons/components/news-card.ejs')({ $: $, item: item }) %>
+    <% }) %>
   </div>
 </div>

@@ -1,9 +1,16 @@
-<div class="c-pagination">
-  <span class="c-pagination__item">上一页</span>
-  <span class="c-pagination__item is-active">1</span>
-  <span class="c-pagination__item">2</span>
-  <span class="c-pagination__item">3</span>
-  <span class="c-pagination__item m-ellipsis">...</span>
-  <span class="c-pagination__item">5</span>
-  <span class="c-pagination__item">下一页</span>
+<% const pages = Math.ceil($.count / $.consts.PAGE_SIZE) %>
+<div class="c-pagination" id="pagination">
+  <% if (1 !== $.page) { %>
+  <a class="c-pagination__item" href="/news?c=<%= $.category_id %>p=<%= $.page - 1 %>">上一页</a>
+  <% } %>
+  <% for (var i = 0; i < pages; i++) { %>
+  <% if (i === $.page) { %>
+  <span class="c-pagination__item is-active"><%= i %></span>
+  <% } else { %>
+  <a class="c-pagination__item" href="/news?c=<%= $.category_id %>&p=<%= i %>"><%= i %></a>
+  <% } %>
+  <% } %>
+  <% if (pages !== $.page) { %>
+  <a class="c-pagination__item" href="/news?c=<%= $.category_id %>&p=<%= $.page + 1 %>">下一页</a>
+  <% } %>
 </div>

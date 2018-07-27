@@ -1,10 +1,10 @@
 <div class="c-side-bar">
   <div class="c-side-bar__title c1 fs6">企业信息</div>
   <ul class="cc-menu">
-    <% for (var i = 0; i < $.categories.length; i++) { %>
+    <% $.categories.forEach(function (item) { %>
     <li class="cc-menu__item">
-      <a href="/news?cid=<%= $.categories[i].id %>"><%= $.categories[i].title %></a>
+      <a href="/news?c=<%= item.id %>"><%= item.title %></a>
     </li>
-    <% } %>
+    <% }) %>
   </ul>
 </div>
