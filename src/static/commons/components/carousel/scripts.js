@@ -1,9 +1,22 @@
 $(() => {
-  let images = [0, 1, 2]
+  const $carouseImages = $('#carousel-images')
+  const imagesTotal = $carouseImages.find('.js-carousel-image-item').length
+  const images = Array.from({ length: imagesTotal }, (v, k) => k)
 
   const renderImages = () => {
-    $('#carousel-images > div').each(function (index) {
-      $(this).removeClass('image-0 image-1 image-2').addClass(`image-${images[index]}`)
+    const $carouseImageItems = $carouseImages.find('.js-carousel-image-item')
+
+    $carouseImageItems.removeClass('image-left image-middle image-right')
+
+    images.forEach((item, index) => {
+      $carouseImageItems.eq(item).addClass(
+        'image-' +
+        (index === 0
+          ? 'left'
+          : index === 1
+            ? 'middle'
+            : 'right')
+      )
     })
   }
 

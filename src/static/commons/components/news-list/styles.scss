@@ -37,6 +37,7 @@
       @include size(200px, 112px);
 
       display: block;
+      cursor: pointer;
     }
 
     @include e(body) {

@@ -30,7 +30,7 @@
       background-color: nth($colors, 7);
     }
 
-    @include m(image-0) {
+    @include m(image-left) {
       transform: translate3d(-383px, 0, 0) scale(0.83);
       transform-origin: 50% 50%;
       z-index: 0;
@@ -41,7 +41,7 @@
       }
     }
 
-    @include m(image-1) {
+    @include m(image-middle) {
       transform: translate3d(0, 0, 0) scale(1);
       transform-origin: 50% 50%;
       z-index: 1;
@@ -51,7 +51,7 @@
       }
     }
 
-    @include m(image-2) {
+    @include m(image-right) {
       transform: translate3d(383px, 0, 0) scale(0.83);
       transform-origin: 50% 50%;
       z-index: 0;

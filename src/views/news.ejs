@@ -3,10 +3,10 @@ const view = 'news'
 const $ = require('../mock/$')(view)
 %>
 <%- include ./commons/snippets/head.ejs %>
+<%- include ./commons/snippets/header.ejs %>
 <div style="margin-top: 5px;">
-  <%- include ./commons/snippets/header.ejs %>
+  <%- include ./commons/components/contact-us.ejs %>
 </div>
-<%- include ./commons/components/contact-us.ejs %>
 <div class="c-main">
   <div class="c-main__side">
     <%- include ./commons/components/side-bar.ejs %>

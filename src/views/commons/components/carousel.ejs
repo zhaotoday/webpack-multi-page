@@ -1,7 +1,14 @@
 <div class="c-carousel container">
   <ul class="c-carousel__images" id="carousel-images">
     <% $.homeAds.forEach(function (item, index) { %>
-    <div class="c-carousel__images-item image-<%= index %>">
+    <%
+      const className = index === 0
+        ? 'left'
+        : index === 1
+          ? 'middle'
+          : 'right'
+    %>
+    <div class="c-carousel__images-item image-<%= className %> js-carousel-image-item">
       <img src="<%= $.helpers.getFileURL(item.picture) %>">
       <div class="overlay"></div>
     </div>
@@ -9,7 +16,7 @@
   </ul>
   <ul class="c-carousel__nav" id="carousel-nav">
     <% $.homeAds.forEach(function (item, index) { %>
-    <li class="c-carousel__nav-item<% index === 1 ? ' is-active' : '' %>"></li>
+    <li class="c-carousel__nav-item<%= index === 1 ? ' is-active' : '' %>"></li>
     <% }) %>
   </ul>
   <div class="c-carousel__prev" id="carousel-prev"></div>

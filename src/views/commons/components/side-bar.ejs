@@ -1,9 +1,22 @@
 <div class="c-side-bar">
-  <div class="c-side-bar__title c1 fs6">企业信息</div>
+  <a class="c-side-bar__title c1 fs6" href="/news">企业信息</a>
   <ul class="cc-menu">
     <% $.categories.forEach(function (item) { %>
     <li class="cc-menu__item">
-      <a href="/news?c=<%= item.id %>"><%= item.title %></a>
+      <%
+        var className = ''
+
+        if ($.details) {
+          if ($.details.category_id === item.id) {
+            className = ' class="is-active"'
+          }
+        } else if ($.category) {
+          if ($.category.id === item.id) {
+            className = ' class="is-active"'
+          }
+        }
+      %>
+      <a<%- className %> href="/news?c=<%= item.id %>"><%= item.title %></a>
     </li>
     <% }) %>
   </ul>

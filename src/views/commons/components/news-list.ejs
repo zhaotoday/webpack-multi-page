@@ -13,10 +13,11 @@
   <ul class="c-news-list__body">
     <% $.items.forEach(function (item) { %>
     <li class="cc-item">
-      <img class="cc-item__img" src="<%= $.helpers.getFileURL(item.picture) %>">
+      <img class="cc-item__img" src="<%= $.helpers.getFileURL(item.picture) %>"
+           onclick="window.location.href = '/news/<%= item.id %>';">
       <div class="cc-item__body">
         <a class="cc-item__title c2 fs4" href="/news/<%= item.id %>"><%= item.title %></a>
-        <p class="cc-item__desc c6 fs2"><%= item.content %></p>
+        <p class="cc-item__desc c6 fs2"><%- $.utils.cut({ text: item.content, max: 180 }) %></p>
         <p class="cc-item__time c7 fs2"><%= $.utils.time.getDate(item.created_at) %></p>
       </div>
     </li>

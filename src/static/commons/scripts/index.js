@@ -26,3 +26,4 @@ import './utils/init'
 
 import '../components/carousel/scripts'
 import '../components/nav-bar/scripts'
+import '../components/news-details/scripts'

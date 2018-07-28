@@ -4,7 +4,7 @@
   @include margin(null, 60px, 17px);
   @include size(350px, 338px);
 
-  cursor: pointer;
+  display: block;
   box-sizing: border-box;
   border: 1px solid nth($colors, 10);
 
@@ -28,6 +28,7 @@
 
   @include e(title) {
     @include text--middle(20px);
+    @include text--overflow;
 
     font-size: nth($font-sizes, 3);
     color: nth($colors, 2);

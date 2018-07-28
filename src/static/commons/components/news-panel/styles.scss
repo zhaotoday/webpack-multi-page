@@ -21,7 +21,7 @@
     @include size(40px + 10px, 10px + 10px);
     @include position--absolute(45px, 40px);
 
-    cursor: pointer;
+    display: block;
     background: {
       image: url("./images/more.png");
       repeat: no-repeat;

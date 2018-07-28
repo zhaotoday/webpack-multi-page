@@ -5,7 +5,7 @@ module.exports = page => {
 
   const BASE_URL = 'http://localhost:3002'
   const PAGE_SIZE = 2
-  const CDN = isDev ? 'http://localhost:8083' : 'https://cdn.liruan.cn'
+  const CDN = isDev ? 'http://localhost:8083' : 'https://yly-cdn.liruan.cn'
 
   return Object.assign({
     helpers: {
@@ -21,7 +21,8 @@ module.exports = page => {
         getTime () {
           return '2018-01-01 01:01:01'
         }
-      }
+      },
+      cut () {}
     },
     consts: {
       BASE_URL,

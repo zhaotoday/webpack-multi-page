@@ -6,12 +6,19 @@
   @include e(title) {
     @include size(210px, 81px);
 
+    display: block;
     text-align: center;
     line-height: 81px;
 
     background: {
       image: url("./images/title.png");
       size: 100% 100%;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: nth($colors, 1);
     }
   }
 
@@ -31,7 +38,7 @@
           position: 56px center;
         }
 
-        &:hover {
+        &.is-active {
           color: #f6793c;
           background: {
             color: #fbfbfb;

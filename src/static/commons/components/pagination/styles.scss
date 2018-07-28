@@ -24,7 +24,7 @@
     }
 
     @include m(is-active) {
-      border: 0;
+      border: 1px solid nth($colors, 18);
       cursor: text;
       color: nth($colors, 1);
       background-color: nth($colors, 18);
