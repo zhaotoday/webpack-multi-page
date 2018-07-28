@@ -1,18 +1,28 @@
 @import "../../styles/utils/index";
 
 @include c(hotline) {
-  height: 48px;
-  padding-left: 64px;
-  background: {
-    image: url("./images/hotline.png");
-    repeat: no-repeat;
+  @include position--absolute(px2rem(82px * 2), null, null, 0);
+
+  width: 100%;
+  text-align: center;
+
+  @include e(icon, tel) {
+    vertical-align: middle;
+    display: inline-block;
   }
 
-  @include e(tel, tip) {
-    line-height: 100%;
+  @include e(icon) {
+    @include size(px2rem(44px), px2rem(44px));
+
+    background: {
+      image: url("./images/hotline.png");
+      size: 100% 100%;
+    }
   }
 
   @include e(tel) {
-    @include padding(2px, null, 5px);
+    @include text--middle(px2rem(44px));
+
+    padding-left: px2rem(7px * 2);
   }
 }

@@ -1,0 +1,9 @@
+@import "../../styles/utils/index";
+
+@include c(swiper) {
+  @include size(px2rem(375px * 2), px2rem(211px * 2));
+
+  img {
+    @include size(100%, 100%);
+  }
+}

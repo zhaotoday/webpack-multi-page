@@ -2,63 +2,32 @@
 
 @include c(news-details) {
   @include e(title) {
-    line-height: 100%;
-    padding-top: 5px;
-    font-weight: bold;
-  }
+    @include block--center;
+    @include padding(px2rem(20px * 2), null, px2rem(10px * 2));
+    @include text--overflow(2);
 
-  @include e(img) {
-    @include size(800px, 450px);
-    @include margin(null, auto, 40px, auto);
-
-    display: block;
+    width: px2rem(260px * 2);
+    text-align: center;
+    line-height: 150%;
   }
 
   @include e(extra) {
-    @include padding(15px, null, 26px);
+    @include padding(px2rem(9px * 2), null, px2rem(24px * 2));
 
-    border-bottom: 2px solid nth($colors, 8);
-
-    span {
-      padding-right: 15px;
-    }
+    line-height: 100%;
+    text-align: center;
   }
 
   @include e(body) {
-    padding-top: 32px;
-  }
+    @include padding(null, px2rem(20px * 2), px2rem(20px * 2), px2rem(20px * 2));
 
-  .s-cms-content {
-    font-size: nth($font-sizes, 2);
-    line-height: 200%;
-    color: nth($colors, 20);
+    line-height: 150%;
 
-    p {
-      padding-bottom: 30px;
+    img {
+      @include size(px2rem(335px * 2), px2rem(188px * 2));
+
+      display: block;
+      margin-bottom: px2rem(15px);
     }
-  }
-
-  @include e(nav) {
-    @include padding(12px, null, 12px);
-
-    margin-top: 50px;
-    position: relative;
-    line-height: 200%;
-    border-top: 1px dotted nth($colors, 19);
-    border-bottom: 1px dotted nth($colors, 19);
-
-    a {
-      color: nth($colors, 8);
-
-      &:hover {
-        color: nth($colors, 8);
-      }
-    }
-  }
-
-  @include e(nav-more) {
-    @include position--absolute(50%, 0);
-
-    transform: translateY(-50%);
   }
 }

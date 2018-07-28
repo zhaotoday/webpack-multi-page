@@ -1,27 +1,55 @@
-.container {
-  @include block--center;
-
-  position: relative;
-  width: $wrap-width;
-}
-
-.bg {
-  background-color: nth($colors, 10);
-  width: 100%;
-}
-
-@for $i from 1 through length($font-sizes) {
-  $item: nth($font-sizes, $i);
-
+@for $i from 1 to length($font-sizes) {
   .fs#{$i} {
-    font-size: $item;
+    font-size: nth($font-sizes, $i);
+  }
+}
+
+[data-dpr="2"] {
+  @for $i from 1 to length($font-sizes) {
+    .fs#{$i} {
+      font-size: nth($font-sizes, $i) * 2;
+    }
+  }
+}
+
+[data-dpr="3"] {
+  @for $i from 1 to length($font-sizes) {
+    .fs#{$i} {
+      font-size: nth($font-sizes, $i) * 3;
+    }
   }
 }
 
 @for $i from 1 through length($colors) {
-  $item: nth($colors, $i);
-
   .c#{$i} {
-    color: $item;
+    color: nth($colors, $i);
   }
+}
+
+@for $i from 1 through length($colors) {
+  .bd#{$i} {
+    border: 1px solid nth($colors, $i);
+  }
+}
+
+@for $i from 1 through length($colors) {
+  .bg#{$i} {
+    background-color: nth($colors, $i);
+  }
+}
+
+.mt-16 {
+  margin-top: px2rem(8px * 2);
+}
+
+.mb {
+  border-bottom: 1px solid nth($colors, 6);
+}
+
+.box {
+  @include position--absolute(px2rem(50px * 2), 0, 0, 0);
+
+  background-color: nth($colors, 9);
+  overflow-x: hidden;
+  overflow-y: auto;
 }

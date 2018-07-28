@@ -1,17 +1,24 @@
 @import "../../styles/utils/index";
 
 @include c(qrcode) {
-  width: 138px;
+  width: px2rem(102px * 2);
+  box-sizing: border-box;
   line-height: 100%;
   text-align: center;
 
-  img {
-    @include size(122px, 122px);
+  @include e(wrap) {
+    @include size(px2rem(102px * 2), px2rem(102px * 2));
 
-    box-sizing: content-box;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: px2rem(5px * 2);
+  }
+
+  img {
+    @include position--absolute(50%, null, null, 50%);
+    @include size(px2rem(92px * 2), px2rem(92px * 2));
+
+    transform: translate(-50%, -50%);
     display: block;
-    border: 8px solid nth($colors, 1);
-    box-shadow: 0 0 20px rgba(nth($colors, 7), 0.4);
-    margin-bottom: 7px;
   }
 }

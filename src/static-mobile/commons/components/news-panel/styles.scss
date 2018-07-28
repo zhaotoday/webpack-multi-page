@@ -1,42 +1,44 @@
 @import "../../styles/utils/index";
 
 @include c(news-panel) {
+  @include padding(null, px2rem(20px * 2), null, px2rem(20px * 2));
+
   @include e(header) {
-    @include padding(46px, null, 29px);
+    @include text--middle(px2rem(40px * 2));
 
-    line-height: 100%;
+    width: 100%;
     position: relative;
-  }
-
-  @include e(title) {
-    @include text--middle(28px);
-    @include block--center;
-
-    text-align: center;
-    width: 169px;
-    background-image: url("./images/title.png");
-  }
-
-  @include e(more) {
-    @include size(40px + 10px, 10px + 10px);
-    @include position--absolute(45px, 40px);
-
-    display: block;
     background: {
-      image: url("./images/more.png");
+      image: url("./images/title.png");
+      size: px2rem(240px), px2rem(30px);
       repeat: no-repeat;
       position: center center;
     }
   }
 
+  @include e(title) {
+    text-align: center;
+  }
+
+  @include e(more) {
+    @include position--absolute(50%, 0);
+    @include size(px2rem(58px), px2rem(18px));
+
+    padding: px2rem(10px);
+    margin-right: px2rem(-10px);
+    box-sizing: content-box;
+    transform: translateY(-50%);
+    background: {
+      image: url("./images/more.png");
+      size: px2rem(58px) px2rem(18px);
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+
   @include e(body) {
-    @include padding(null, null, 46px, -16px);
-    @include clearfix;
-
-    width: 120%;
-
-    .c-news-card {
-      float: left;
+    @include m(padding-top-30) {
+      padding-top: px2rem(30px);
     }
   }
 }

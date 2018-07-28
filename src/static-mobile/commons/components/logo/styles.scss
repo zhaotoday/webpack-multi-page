@@ -1,8 +1,11 @@
 @import "../../styles/utils/index";
 
 @include c(logo) {
-  @include size(74px, 92px);
+  @include size(px2rem(100px), px2rem(128px));
 
-  background-image: url("./images/logo.png");
   display: block;
+  background: {
+    image: url("./images/logo.png");
+    size: 100% 100%;
+  }
 }

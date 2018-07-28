@@ -1,21 +1,22 @@
 @import "../../styles/utils/index";
 
 @include c(nav-bar) {
-  @include e(item) {
-    @include text--middle(45px);
-    @include padding(null, 10px, null, 10px);
+  @include padding(null, px2rem(13px * 2), null, px2rem(13px * 2));
 
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: nth($font-sizes, 4);
-    margin-right: 52px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  @include e(item) {
+    @include text--middle(px2rem(40px * 2));
+
+    flex: 1;
     text-align: center;
-    color: nth($colors, 2);
+    box-sizing: border-box;
 
     @include m(is-active) {
-      border-bottom: 2px solid nth($colors, 8);
-      color: nth($colors, 8);
-      font-weight: bold;
+      color: nth($colors, 3);
+      border-bottom: 0.05333rem solid nth($colors, 4);
     }
   }
 }

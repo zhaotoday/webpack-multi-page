@@ -1,7 +1,27 @@
 @import "../commons/styles/utils/index";
 
 @include p(home) {
-  @include c(contact-us) {
-    margin-top: 27px;
+  @include pb(middle-wrap) {
+    @include size(100%, px2rem(263px * 2));
+
+    position: relative;
+  }
+
+  @include c(logo) {
+    @include position--absolute(px2rem(18px * 2), null, null, 50%);
+
+    transform: translateX(-50%);
+  }
+
+  @include pb(oa-qrcode, app-qrcode) {
+    @include position--absolute(px2rem(120px * 2));
+  }
+
+  @include pb(oa-qrcode) {
+    left: px2rem(65px * 2);
+  }
+
+  @include pb(app-qrcode) {
+    right: px2rem(65px * 2);
   }
 }
