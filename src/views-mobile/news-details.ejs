@@ -1,0 +1,19 @@
+<%
+const view = 'news-details'
+const $ = require('../mock/$')(view)
+%>
+<%- include ./commons/snippets/head.ejs %>
+<%- include ./commons/snippets/header.ejs %>
+<div style="margin-top: 5px;">
+  <%- include ./commons/components/contact-us.ejs %>
+</div>
+<div class="c-main">
+  <div class="c-main__side">
+    <%- include ./commons/components/side-bar.ejs %>
+  </div>
+  <div class="c-main__body">
+    <%- include ./commons/components/news-details.ejs %>
+  </div>
+</div>
+<%- include ./commons/snippets/footer.ejs %>
+<%- include ./commons/snippets/foot.ejs %>

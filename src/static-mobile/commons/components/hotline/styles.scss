@@ -1,0 +1,18 @@
+@import "../../styles/utils/index";
+
+@include c(hotline) {
+  height: 48px;
+  padding-left: 64px;
+  background: {
+    image: url("./images/hotline.png");
+    repeat: no-repeat;
+  }
+
+  @include e(tel, tip) {
+    line-height: 100%;
+  }
+
+  @include e(tel) {
+    @include padding(2px, null, 5px);
+  }
+}

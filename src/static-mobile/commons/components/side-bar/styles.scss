@@ -1,0 +1,53 @@
+@import "../../styles/utils/index";
+
+@include c(side-bar) {
+  width: 210px;
+
+  @include e(title) {
+    @include size(210px, 81px);
+
+    display: block;
+    text-align: center;
+    line-height: 81px;
+
+    background: {
+      image: url("./images/title.png");
+      size: 100% 100%;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: nth($colors, 1);
+    }
+  }
+
+  @include cc(menu) {
+    @include e(item) {
+      a {
+        @include text--middle(48px);
+
+        width: 100%;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid #e8e8e8;
+        color: #5b5b5b;
+        background: {
+          image: url("./images/dot.png");
+          repeat: no-repeat;
+          position: 56px center;
+        }
+
+        &.is-active {
+          color: #f6793c;
+          background: {
+            color: #fbfbfb;
+            image: url("./images/dot-active.png");
+            repeat: no-repeat;
+            position: 56px center;
+          }
+        }
+      }
+    }
+  }
+}

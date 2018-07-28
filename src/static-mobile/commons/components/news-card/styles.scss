@@ -1,0 +1,56 @@
+@import "../../styles/utils/index";
+
+@include c(news-card) {
+  @include margin(null, 60px, 17px);
+  @include size(350px, 338px);
+
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid nth($colors, 10);
+
+  img {
+    @include size(330px, 185px);
+
+    display: block;
+    border-radius: 4px;
+    margin: 9px;
+  }
+
+  &:hover {
+    background-color: nth($colors, 1);
+    border: 1px solid nth($colors, 11);
+    box-shadow: 0 0 10px rgba(nth($colors, 7), 0.2);
+  }
+
+  @include e(title, desc, time) {
+    @include margin(null, 9px, null, 9px);
+  }
+
+  @include e(title) {
+    @include text--middle(20px);
+    @include text--overflow;
+
+    font-size: nth($font-sizes, 3);
+    color: nth($colors, 2);
+    margin-top: 23px;
+
+    &:hover {
+      color: nth($colors, 8);
+    }
+  }
+
+  @include e(desc) {
+    height: 50px;
+    font-size: nth($font-sizes, 2);
+    color: nth($colors, 6);
+    margin-top: 10px;
+  }
+
+  @include e(time) {
+    @include text--middle(18px);
+
+    font-size: nth($font-sizes, 2);
+    color: nth($colors, 7);
+    margin-top: 13px;
+  }
+}

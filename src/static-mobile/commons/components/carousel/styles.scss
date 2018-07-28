@@ -1,0 +1,104 @@
+@import "../../styles/utils/index";
+
+@include c(carousel) {
+  height: 648px + 10px;
+
+  @include e(images) {
+    @include position--absolute(10px, null, null, (1200px - 1152px) / 2);
+    @include size(1152px, 648px);
+
+    img {
+      @include size(100%, 100%);
+
+      display: block;
+    }
+  }
+
+  @include e(images-item) {
+    @include size(1152px, 648px);
+    @include position--absolute(0);
+
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(nth($colors, 7), 0.4);
+    transition: all 0.3s ease;
+
+    .overlay {
+      @include position--absolute(0, null, null, 0);
+      @include size(100%, 100%);
+
+      background-color: nth($colors, 7);
+    }
+
+    @include m(image-left) {
+      transform: translate3d(-383px, 0, 0) scale(0.83);
+      transform-origin: 50% 50%;
+      z-index: 0;
+
+      .overlay {
+        background-color: nth($colors, 2);
+        opacity: 0.2;
+      }
+    }
+
+    @include m(image-middle) {
+      transform: translate3d(0, 0, 0) scale(1);
+      transform-origin: 50% 50%;
+      z-index: 1;
+
+      .overlay {
+        display: none;
+      }
+    }
+
+    @include m(image-right) {
+      transform: translate3d(383px, 0, 0) scale(0.83);
+      transform-origin: 50% 50%;
+      z-index: 0;
+
+      .overlay {
+        background-color: nth($colors, 2);
+        opacity: 0.2;
+      }
+    }
+  }
+
+  @include e(prev, next) {
+    @include position--absolute(305px);
+    @include size(67px, 100px);
+
+    cursor: pointer;
+  }
+
+  @include e(prev) {
+    left: -234px;
+    background-image: url("./images/prev.png");
+  }
+
+  @include e(next) {
+    right: -234px;
+    background-image: url("./images/next.png");
+  }
+
+  @include e(nav) {
+    @include position--absolute(null, null, 38px, 0);
+
+    text-align: center;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+  }
+
+  @include e(nav-item) {
+    @include size(25px, 5px);
+    @include margin(null, 3px, null, 3px);
+
+    display: inline-block;
+    background-color: nth($colors, 1);
+    opacity: 0.8;
+
+    @include m(is-active) {
+      background-color: nth($colors, 9);
+    }
+  }
+}

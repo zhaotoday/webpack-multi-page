@@ -1,0 +1,23 @@
+@import "../../styles/utils/index";
+
+@include c(contact-us) {
+  @include size(1150px, 200px);
+
+  position: relative;
+  background: {
+    image: url("./images/bg.jpg");
+    size: 100% 100%;
+  }
+
+  @include e(scan-oa, scan-app) {
+    @include position--absolute(22px);
+  }
+
+  @include e(scan-oa) {
+    right: 320px;
+  }
+
+  @include e(scan-app) {
+    right: 105px;
+  }
+}

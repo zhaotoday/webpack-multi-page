@@ -1,0 +1,10 @@
+@import "../../styles/utils/index";
+
+.footer {
+  @include padding(20px, null, 20px, null);
+
+  background-color: nth($colors, 12);
+  color: nth($colors, 13);
+  line-height: 180%;
+  text-align: center;
+}

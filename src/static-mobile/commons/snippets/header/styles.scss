@@ -1,0 +1,18 @@
+@import "../../styles/utils/index";
+
+.header {
+  background-color: nth($colors, 1);
+  height: 92px;
+
+  @include c(logo) {
+    @include position--absolute(2px, null, null, 71px);
+  }
+
+  @include c(nav-bar) {
+    @include position--absolute(24px, null, null, 194px);
+  }
+
+  @include c(hotline) {
+    @include position--absolute(28px, null, null, 931px);
+  }
+}

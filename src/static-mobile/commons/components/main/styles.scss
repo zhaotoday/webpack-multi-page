@@ -1,0 +1,21 @@
+@import "../../styles/utils/index";
+
+@include c(main) {
+  @include block--center;
+  @include margin(25px, null, 60px);
+
+  width: 1150px;
+  position: relative;
+
+  @include e(side) {
+    @include position--absolute(0);
+  }
+
+  @include e(body) {
+    @include margin(null, null, null, 210px + 30px);
+    @include padding(null, null, 50px, 30px);
+
+    border-left: 1px solid #ededed;
+    min-height: 700px;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/utils/index";
+
+@include c(qrcode) {
+  width: 138px;
+  line-height: 100%;
+  text-align: center;
+
+  img {
+    @include size(122px, 122px);
+
+    box-sizing: content-box;
+    display: block;
+    border: 8px solid nth($colors, 1);
+    box-shadow: 0 0 20px rgba(nth($colors, 7), 0.4);
+    margin-bottom: 7px;
+  }
+}
