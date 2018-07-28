@@ -19,7 +19,7 @@ const IMAGES = 'static/images/'
 // CDN
 // 1. 开发时为：/；
 // 2. 构建时为：//lrcdn.cn/${PROJECT}/；
-const CDN = process.env.NODE_ENV === 'development' ? '/' : '//lrcdn.cn/project/'
+const CDN = process.env.NODE_ENV === 'development' ? '/' : '//yly-cdn.liruan.cn/'
 
 module.exports = {
   DEV_PORT,
