@@ -1,0 +1,11 @@
+<%
+const view = 'news-details'
+const $ = require('../mock/$')(view)
+%>
+<%- include ./commons/snippets/head.ejs %>
+<%- include ./commons/components/status-bar.ejs %>
+<div class="p-news-details box">
+  <%- include ./commons/components/news-details.ejs %>
+  <%- include ./commons/snippets/footer.ejs %>
+</div>
+<%- include ./commons/snippets/foot.ejs %>

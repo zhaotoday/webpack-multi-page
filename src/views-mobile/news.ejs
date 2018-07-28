@@ -1,0 +1,17 @@
+<%
+const view = 'news'
+const $ = require('../mock/$')(view)
+%>
+<%- include ./commons/snippets/head.ejs %>
+<%- include ./commons/components/status-bar.ejs %>
+<div class="p-news box">
+  <div class="c-news-panel bg1 mb">
+    <div class="c-news-panel__body m-padding-top-30">
+      <% $.items.forEach(function (item) { %>
+      <%- require('./commons/components/news-card.ejs')({ $: $, item: item }) %>
+      <% }) %>
+    </div>
+  </div>
+  <%- include ./commons/snippets/footer.ejs %>
+</div>
+<%- include ./commons/snippets/foot.ejs %>
