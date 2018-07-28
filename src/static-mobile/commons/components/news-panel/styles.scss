@@ -4,7 +4,7 @@
   @include padding(null, px2rem(20px * 2), null, px2rem(20px * 2));
 
   @include e(header) {
-    @include text--middle(px2rem(40px * 2));
+    @include text--middle(px2rem(48px * 2));
 
     width: 100%;
     position: relative;
