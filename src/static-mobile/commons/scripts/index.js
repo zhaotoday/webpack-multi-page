@@ -23,3 +23,4 @@ import './utils/init'
 
 import '../components/swiper/scripts'
 import '../components/nav-bar/scripts'
+import '../components/status-bar/scripts'
