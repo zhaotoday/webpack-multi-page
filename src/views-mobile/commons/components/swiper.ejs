@@ -1,7 +1,7 @@
 <div class="c-swiper" id="swiper">
   <ul class="swiper-wrapper">
     <% $.homeAds.forEach(function (item, index) { %>
-    <li class="c-swiper__item swiper-slide">
+    <li class="c-swiper__item swiper-slide js-link" data-url="/m/news/<%= item.id %>">
       <img src="<%= $.helpers.getFileURL(item.picture) %>">
     </li>
     <% }) %>
