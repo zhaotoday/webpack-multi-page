@@ -22,7 +22,9 @@ module.exports = page => {
           return '2018-01-01 01:01:01'
         }
       },
-      cut () {}
+      cut () {
+        return '引进美国先进的养老经验，结合国内养老特点，为长者提供一站式的退休生活解决方案'
+      }
     },
     consts: {
       BASE_URL,
