@@ -5,6 +5,7 @@
   @include size(px2rem(375px * 2), px2rem(211px * 2));
 
   position: relative;
+  overflow: hidden;
 
   @include e(item) {
     @include size(px2rem(375px * 2), px2rem(211px * 2));

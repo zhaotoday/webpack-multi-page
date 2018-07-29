@@ -6,6 +6,7 @@ module.exports = page => {
   const BASE_URL = 'http://localhost:3002'
   const PAGE_SIZE = 2
   const CDN = isDev ? 'http://localhost:8083' : 'https://yly-cdn.liruan.cn'
+  const STATIC_VERSION = '0.1'
 
   return Object.assign({
     helpers: {
@@ -29,7 +30,8 @@ module.exports = page => {
     consts: {
       BASE_URL,
       PAGE_SIZE,
-      CDN
+      CDN,
+      STATIC_VERSION
     },
     styles: [page],
     scripts: [page]

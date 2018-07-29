@@ -2,7 +2,7 @@
 
 @include p(home) {
   @include pb(middle-wrap) {
-    @include size(100%, px2rem(263px * 2));
+    @include size(100%, px2rem(263px * 2 + 28px));
 
     position: relative;
   }
@@ -14,7 +14,7 @@
   }
 
   @include pb(oa-qrcode, app-qrcode) {
-    @include position--absolute(px2rem(120px * 2));
+    @include position--absolute(px2rem(120px * 2 + 28px));
   }
 
   @include pb(oa-qrcode) {
