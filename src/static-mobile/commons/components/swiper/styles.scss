@@ -1,9 +1,39 @@
 @import "../../styles/utils/index";
+@import "~swiper/dist/css/swiper.min.css";
 
 @include c(swiper) {
   @include size(px2rem(375px * 2), px2rem(211px * 2));
 
+  position: relative;
+
+  @include e(item) {
+    @include size(px2rem(375px * 2), px2rem(211px * 2));
+  }
+
   img {
     @include size(100%, 100%);
+  }
+
+  @include e(nav) {
+    position: absolute;
+    left: 0;
+    bottom: px2rem(20px) !important;
+    text-align: center;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+  }
+
+  @include e(nav-item) {
+    @include size(px2rem(36px), px2rem(6px));
+    @include margin(null, px2rem(6px), null, px2rem(6px));
+
+    display: inline-block;
+    background-color: nth($colors, 1);
+    opacity: 0.8;
+
+    @include m(is-active) {
+      background-color: nth($colors, 4);
+    }
   }
 }
