@@ -1,18 +1,9 @@
 <div class="c-categories">
-  <div class="c-categories__item">
-    <img src="">
-    <div class="c-categories__title c1 fs5">走进重阳</div>
-  </div>
-  <div class="c-categories__item">
-    <img src="">
-    <div class="c-categories__title c1 fs5">走进重阳</div>
-  </div>
-  <div class="c-categories__item">
-    <img src="">
-    <div class="c-categories__title c1 fs5">走进重阳</div>
-  </div>
-  <div class="c-categories__item">
-    <img src="">
-    <div class="c-categories__title c1 fs5">走进重阳</div>
-  </div>
+  <% $.categoryTops.forEach(function (item) { %>
+  <% const category = $.categories.find(function (category) { return category.id === item.category_id })%>
+  <a class="c-categories__item" href="/news?c=<%= item.category_id %>">
+    <img src="<%= $.helpers.getFileURL(item.picture) %>">
+    <div class="c-categories__title c1 fs5"><%= category.title %></div>
+  </a>
+  <% }) %>
 </div>

@@ -3,7 +3,10 @@ const view = 'news'
 const $ = require('../mock/$')(view)
 %>
 <%- include ./commons/snippets/head.ejs %>
-<%- include ./commons/components/status-bar.ejs %>
+<div class="c-status-bar bg1 mb">
+  <div class="c-status-bar__back" id="back"></div>
+  <div class="c-status-bar__title c3 fs9"><%= $.category.title %></div>
+</div>
 <div class="p-news box">
   <div class="c-news-panel bg1 mb">
     <div class="c-news-panel__body m-padding-top-30">
