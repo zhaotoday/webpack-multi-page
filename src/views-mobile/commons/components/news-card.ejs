@@ -1,6 +1,6 @@
-<a class="c-news-card" href="/news/<%= item.id %>">
+<div class="c-news-card js-link" data-url="/news/<%= item.id %>">
   <img class="c-news-card__img" src="<%= $.helpers.getFileURL(item.picture) %>">
   <h2 class="c-news-card__title c3 fs7"><%= item.title %></h2>
   <p class="c-news-card__desc c2 fs3"><%- $.utils.cut({ text: item.content, max: 86 }) %></p>
   <p class="c-news-card__time c12 fs3"><%= $.utils.time.getDate(item.created_at) %></p>
-</a>
+</div>

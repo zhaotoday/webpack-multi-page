@@ -9,8 +9,4 @@ $(() => {
       $this.addClass('is-active')
     }
   })
-
-  $navBar.on('click', 'li', function () {
-    window.location.href = $(this).data('url')
-  })
 })

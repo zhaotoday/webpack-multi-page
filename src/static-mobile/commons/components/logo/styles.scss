@@ -3,7 +3,6 @@
 @include c(logo) {
   @include size(px2rem(100px), px2rem(128px));
 
-  display: block;
   background: {
     image: url("./images/logo.png");
     size: 100% 100%;
