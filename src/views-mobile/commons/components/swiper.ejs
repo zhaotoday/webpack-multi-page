@@ -1,3 +1,10 @@
-<ul class="c-swiper">
-  <img src="<%= $.helpers.getFileURL(2) %>">
-</ul>
+<div class="c-swiper" id="swiper">
+  <ul class="swiper-wrapper">
+    <% $.homeAds.forEach(function (item, index) { %>
+    <li class="c-swiper__item swiper-slide">
+      <img src="<%= $.helpers.getFileURL(item.picture) %>">
+    </li>
+    <% }) %>
+  </ul>
+  <ul class="c-swiper__nav" id="swiper-nav"></ul>
+</div>
