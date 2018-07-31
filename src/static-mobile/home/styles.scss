@@ -2,19 +2,19 @@
 
 @include p(home) {
   @include pb(middle-wrap) {
-    @include size(100%, px2rem(263px * 2 + 28px));
+    @include size(100%, px2rem(263px * 2 + 78px));
 
     position: relative;
   }
 
   @include c(logo) {
-    @include position--absolute(px2rem(18px * 2), null, null, 50%);
+    @include position--absolute(px2rem(20px * 2), null, null, 50%);
 
     transform: translateX(-50%);
   }
 
   @include pb(oa-qrcode, app-qrcode) {
-    @include position--absolute(px2rem(120px * 2 + 28px));
+    @include position--absolute(px2rem(120px * 2 + 78px));
   }
 
   @include pb(oa-qrcode) {

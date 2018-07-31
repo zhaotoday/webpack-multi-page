@@ -1,7 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(hotline) {
-  @include position--absolute(px2rem(82px * 2 + 28px), null, null, 0);
+  @include position--absolute(px2rem(82px * 2 + 70px), null, null, 0);
 
   width: 100%;
   text-align: center;
