@@ -1,7 +1,7 @@
 <div class="c-categories">
   <% $.categoryTops.forEach(function (item) { %>
   <% const category = $.categories.find(function (category) { return category.id === item.category_id }) %>
-  <div class="c-categories__item js-link" data-url="/m/news?c=<%= item.category_id %>">
+  <div class="c-categories__item js-link" data-url="/m/article?c=<%= item.category_id %>">
     <img src="<%= $.helpers.getFileURL(item.picture) %>">
     <div class="c-categories__title c1 fs5"><%= category.title %></div>
   </div>

@@ -1,0 +1,24 @@
+<div class="c-article-details">
+  <h1 class="c-article-details__title c13 fs6"><%= $.details.title %></h1>
+  <div class="c-article-details__extra c14 fs1">
+    发布日期：<span class="c15"><%= $.utils.time.getDate($.details.created_at) %></span>
+    阅读：<span class="c15" id="article-views" data-resourceid="<%= $.details.id %>">-</span>
+  </div>
+  <div class="c-article-details__body s-cms-content">
+    <img class="c-article-details__img" src="<%= $.helpers.getFileURL($.details.picture) %>">
+    <%- $.details.content %></div>
+  <div class="c-article-details__nav fs1">
+    <% if ($.prev) { %>
+    <a href="/article/<%= $.prev.id %>">上一篇：<%= $.prev.title %></a>
+    <% } %>
+    <% if ($.prev && $.next) { %>
+    <br>
+    <% } %>
+    <% if ($.next) { %>
+    <a href="/article/<%= $.next.id %>">下一篇：<%= $.next.title %></a>
+    <% } %>
+    <div class="c-article-details__nav-more">
+      <a href="/article">&lt; 更多</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<%
+const view = 'article'
+const $ = require('../mock/$')(view)
+%>
+<%- include ./commons/snippets/head.ejs %>
+<div class="c-status-bar bg1 mb">
+  <div class="c-status-bar__back" id="back"></div>
+  <div class="c-status-bar__title c3 fs9"><%= $.category.title %></div>
+</div>
+<div class="p-article box">
+  <div class="c-article-panel bg1 mb">
+    <div class="c-article-panel__body m-padding-top-30">
+      <% $.items.forEach(function (item) { %>
+      <%- require('./commons/components/article-card.ejs')({ $: $, item: item }) %>
+      <% }) %>
+    </div>
+  </div>
+  <%- include ./commons/snippets/footer.ejs %>
+</div>
+<%- include ./commons/snippets/foot.ejs %>

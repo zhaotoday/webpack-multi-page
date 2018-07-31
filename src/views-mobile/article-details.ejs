@@ -1,0 +1,14 @@
+<%
+const view = 'article-details'
+const $ = require('../mock/$')(view)
+%>
+<%- include ./commons/snippets/head.ejs %>
+<div class="c-status-bar bg1 mb">
+  <div class="c-status-bar__back" id="back"></div>
+  <div class="c-status-bar__title c3 fs9"><%= $.details.title %></div>
+</div>
+<div class="p-article-details box">
+  <%- include ./commons/components/article-details.ejs %>
+  <%- include ./commons/snippets/footer.ejs %>
+</div>
+<%- include ./commons/snippets/foot.ejs %>

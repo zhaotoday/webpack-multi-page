@@ -1,0 +1,11 @@
+<div class="c-article-panel container">
+  <div class="c-article-panel__header">
+    <div class="c-article-panel__title fs7 c2">最新资讯</div>
+    <a class="c-article-panel__more" href="/article"></a>
+  </div>
+  <div class="c-article-panel__body">
+    <% $.categoryTops.forEach(function (item) { %>
+    <%- require('./commons/components/article-card.ejs')({ $: $, item: item }) %>
+    <% }) %>
+  </div>
+</div>

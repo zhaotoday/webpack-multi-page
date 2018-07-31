@@ -1,0 +1,11 @@
+<div class="c-article-panel bg1 mb">
+  <div class="c-article-panel__header">
+    <div class="c-article-panel__title c3 fs7">最新资讯</div>
+    <div class="c-article-panel__more js-link" data-url="/m/categories"></div>
+  </div>
+  <div class="c-article-panel__body">
+    <% $.categoryTops.forEach(function (item) { %>
+    <%- require('./commons/components/article-card.ejs')({ $: $, item: item }) %>
+    <% }) %>
+  </div>
+</div>
