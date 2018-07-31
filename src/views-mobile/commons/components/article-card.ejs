@@ -1,4 +1,4 @@
-<div class="c-article-card js-link" data-url="/m/article/<%= item.id %>">
+<div class="c-article-card js-link" data-url="/m/articles/<%= item.id %>">
   <img class="c-article-card__img" src="<%= $.helpers.getFileURL(item.picture) %>">
   <h2 class="c-article-card__title c3 fs7"><%= item.title %></h2>
   <p class="c-article-card__desc c2 fs3"><%- $.utils.cut({ text: item.content, max: 86 }) %></p>
