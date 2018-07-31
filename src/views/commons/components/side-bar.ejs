@@ -1,5 +1,7 @@
 <div class="c-side-bar">
-  <a class="c-side-bar__title c1 fs6" href="/article">企业信息</a>
+  <a class="c-side-bar__title c1 fs6" href="/articles?a=<%= $.alias %>">
+    <%= $.alias === 'news' ? '企业信息' : '联系我们' %>
+  </a>
   <ul class="cc-menu">
     <% $.categories.forEach(function (item) { %>
     <li class="cc-menu__item">
@@ -16,7 +18,7 @@
           }
         }
       %>
-      <a<%- className %> href="/article?c=<%= item.id %>"><%= item.title %></a>
+      <a<%- className %> href="/articles?a=<%= $.alias %>&c=<%= item.id %>"><%= item.title %></a>
     </li>
     <% }) %>
   </ul>

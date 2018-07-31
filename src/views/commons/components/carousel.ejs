@@ -9,7 +9,7 @@
           : 'right'
     %>
     <div class="c-carousel__images-item image-<%= className %> js-carousel-image-item">
-      <img src="<%= $.helpers.getFileURL(item.picture) %>">
+      <img class="js-link" src="<%= $.helpers.getFileURL(item.picture) %>" data-url="/articles/<%= item.id %>">
       <div class="overlay"></div>
     </div>
     <% }) %>

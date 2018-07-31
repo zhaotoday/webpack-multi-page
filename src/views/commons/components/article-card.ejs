@@ -1,4 +1,4 @@
-<a class="c-article-card" href="/article?c=<%= item.category_id %>">
+<a class="c-article-card" href="/articles?a=<%= item.alias %>&c=<%= item.category_id %>">
   <img class="c-article-card__img" src="<%= $.helpers.getFileURL(item.picture) %>">
   <h2 class="c-article-card__title"><%= item.title %></h2>
   <p class="c-article-card__desc"><%- $.utils.cut({ text: item.content, max: 86 }) %></p>

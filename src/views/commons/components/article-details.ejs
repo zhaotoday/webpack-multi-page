@@ -9,16 +9,16 @@
     <%- $.details.content %></div>
   <div class="c-article-details__nav fs1">
     <% if ($.prev) { %>
-    <a href="/article/<%= $.prev.id %>">上一篇：<%= $.prev.title %></a>
+    <a href="/articles/<%= $.prev.id %>">上一篇：<%= $.prev.title %></a>
     <% } %>
     <% if ($.prev && $.next) { %>
     <br>
     <% } %>
     <% if ($.next) { %>
-    <a href="/article/<%= $.next.id %>">下一篇：<%= $.next.title %></a>
+    <a href="/articles/<%= $.next.id %>">下一篇：<%= $.next.title %></a>
     <% } %>
     <div class="c-article-details__nav-more">
-      <a href="/article">&lt; 更多</a>
+      <a href="/articles?a=<%= $.alias %>">&lt; 更多</a>
     </div>
   </div>
 </div>
