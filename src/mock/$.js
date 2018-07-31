@@ -9,6 +9,7 @@ module.exports = page => {
   const STATIC_VERSION = '0.1'
 
   return Object.assign({
+    route: '',
     helpers: {
       getFileURL (id) {
         return `${BASE_URL}/apis/v1/files/${id}`
