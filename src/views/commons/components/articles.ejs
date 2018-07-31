@@ -1,7 +1,7 @@
-<div class="c-article-list">
-  <div class="c-article-list__heading">
-    <div class="c-article-list__title c14 fs8"><%= $.category ? $.category.title : '企业信息' %></div>
-    <div class="c-article-list__nav fs1">
+<div class="c-articles">
+  <div class="c-articles__heading">
+    <div class="c-articles__title c14 fs8"><%= $.category ? $.category.title : '企业信息' %></div>
+    <div class="c-articles__nav fs1">
       <a class="c15" href="/">首页</a>
       &gt;
       <a class="c15" href="/article">企业信息</a>
@@ -10,7 +10,7 @@
       <% } %>
     </div>
   </div>
-  <ul class="c-article-list__body">
+  <ul class="c-articles__body">
     <% $.items.forEach(function (item) { %>
     <li class="cc-item">
       <img class="cc-item__img" src="<%= $.helpers.getFileURL(item.picture) %>"

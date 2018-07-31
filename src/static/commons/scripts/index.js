@@ -11,7 +11,7 @@ import '../components/article-card/styles.scss'
 import '../components/contact-us/styles.scss'
 import '../components/side-bar/styles.scss'
 import '../components/main/styles.scss'
-import '../components/article-list/styles.scss'
+import '../components/articles/styles.scss'
 import '../components/pagination/styles.scss'
 import '../components/article-details/styles.scss'
 

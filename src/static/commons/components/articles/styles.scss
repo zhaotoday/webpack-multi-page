@@ -1,6 +1,6 @@
 @import "../../styles/utils/index";
 
-@include c(article-list) {
+@include c(articles) {
   @include e(heading) {
     @include padding(34px, null, 20px);
 
