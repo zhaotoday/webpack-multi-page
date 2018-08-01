@@ -78,11 +78,7 @@
 }
 
 .mb {
-  @extend .border-1px;
-
-  &::after {
-    border-bottom: 1px solid nth($colors, 6);
-  }
+  border-bottom: 1px solid nth($colors, 13);
 }
 
 .box {
