@@ -1,7 +1,7 @@
 const config = require('./base')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const es3ifyPlugin = require('es3ify-webpack-plugin')
+const ES3ifyPlugin = require('es3ify-webpack-plugin')
 
 module.exports = {
   entry: config.entry,
@@ -14,11 +14,11 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env':{
+      'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new es3ifyPlugin(),
+    new ES3ifyPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new UglifyJsPlugin({
