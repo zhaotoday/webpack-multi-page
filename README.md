@@ -17,9 +17,6 @@
 ## 项目地址
 https://github.com/zhaotoday/webpack-multi-page
 
-## 线上例子
-- [www.liruan.cn](https://www.liruan.cn/)
-
 ## 参考
 - [JavaScript 代码规范](https://github.com/feross/standard/blob/master/docs/README-zhcn.md)
 - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
@@ -30,7 +27,6 @@ https://github.com/zhaotoday/webpack-multi-page
 - [PostCSS](https://github.com/postcss/postcss/blob/master/README.cn.md)
 - [EJS 模板引擎](https://ejs.bootcss.com)
 - [EJS 模板语言使用](https://www.w3cschool.cn/weflow/weflow-ejs.html)
-- [Handlebars 模板引擎](http://handlebarsjs.cn)
 
 ## Webpack
 - [Webpack 中文文档](https://www.webpackjs.com/concepts/)
@@ -53,7 +49,7 @@ $ npm run build
 $ npm run build
 
 # 预览
-$ open http://localhost:8083/webpack-dev-server/my-view.html
+$ open http://localhost:8083/webpack-dev-server/{my-view}.html
 
 # fix JS 代码
 $ npm run eslintfix
