@@ -7,13 +7,6 @@
     font-weight: bold;
   }
 
-  @include e(img) {
-    @include size(800px, 450px);
-    @include margin(null, auto, 40px, auto);
-
-    display: block;
-  }
-
   @include e(extra) {
     @include padding(15px, null, 26px);
 
@@ -34,7 +27,14 @@
     color: nth($colors, 20);
 
     p {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    img {
+      @include block--center;
+
+      max-width: 800px;
+      display: block;
     }
   }
 

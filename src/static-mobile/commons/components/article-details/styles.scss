@@ -21,14 +21,19 @@
 
   @include e(body) {
     @include padding(null, px2rem(20px * 2), px2rem(20px * 2), px2rem(20px * 2));
+  }
 
-    line-height: 150%;
+  .s-cms-content {
+    line-height: 180%;
+
+    p {
+      padding-bottom: px2rem(24px);
+    }
 
     img {
-      @include size(px2rem(335px * 2), px2rem(188px * 2));
-
+      max-width: px2rem(335px * 2);
       display: block;
-      margin-bottom: px2rem(15px);
+      margin-bottom: px2rem(20px);
     }
   }
 }
