@@ -15,6 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "eslint": "^4.17.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
@@ -25,9 +28,12 @@
     "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "include-media": "^1.4.9",
     "jquery": "^1.12.4",
     "minireset.css": "0.0.3",
-    "sass-utils": "^1.0.16"
+    "sass-utils": "^1.0.16",
+    "swiper": "^4.3.3",
+    "zepto": "^1.2.0"
   }
 }
