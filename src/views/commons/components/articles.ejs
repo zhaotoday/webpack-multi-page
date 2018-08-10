@@ -1,9 +1,9 @@
-<% const topCategoryTitle = $.alias === 'news' ? '企业信息' : '联系我们' %>
+<% const topCategoryTitle = $.alias === 'news' ? '走进重阳' : '联系我们' %>
 <div class="c-articles">
   <div class="c-articles__heading">
     <div class="c-articles__title c14 fs8"><%= $.category ? $.category.title : topCategoryTitle %></div>
     <div class="c-articles__nav fs1">
-      <a class="c15" href="/">首页</a>
+      <a class="c15" href="/">遇见重阳</a>
       &gt;
       <a class="c15" href="/articles?a=<%= $.alias %>"><%= topCategoryTitle %></a>
       <% if ($.category) { %>
