@@ -1,2 +1,8 @@
 @import "../commons/styles/utils/index";
 
+body {
+  background: {
+    image: url("./images/bg.png");
+    size: 100% 100%;
+  }
+}
