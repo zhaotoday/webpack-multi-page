@@ -65,19 +65,19 @@
   }
 
   @include e(prev, next) {
-    @include position--absolute(305px);
+    @include position--absolute(285px);
     @include size(67px, 100px);
 
     cursor: pointer;
   }
 
   @include e(prev) {
-    left: -234px;
+    left: -60px;
     background-image: url("./images/prev.png");
   }
 
   @include e(next) {
-    right: -234px;
+    right: -60px;
     background-image: url("./images/next.png");
   }
 

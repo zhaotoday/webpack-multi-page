@@ -5,8 +5,8 @@
   @include padding(px2rem(20px * 2), null, null, px2rem(25px));
 
   @include e(item) {
-    @include size(px2rem(170px * 2), px2rem(96px * 2));
-    @include margin(null, px2rem(5px), px2rem(15px * 2), px2rem(5px));
+    @include size(px2rem(170px * 2), px2rem(260px));
+    @include margin(null, px2rem(5px), px2rem(10px), px2rem(5px));
 
     float: left;
     position: relative;
@@ -17,10 +17,7 @@
   }
 
   @include e(title) {
-    @include position--absolute(null, null, px2rem(20px), px2rem(20px));
+    @include position--absolute(null, null, px2rem(20px));
     @include text--middle(px2rem(34px));
-
-    padding-left: px2rem(10px);
-    border-left: 0.05333rem solid nth($colors, 4);
   }
 }
