@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>孝道乐龄</title>
+  <%
+  const view = 'article-details'
+  const $ = require('../mock/$')(view)
+  %>
   <link href="<%= $.consts.CDN %>/static/styles/download.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
   <script>
     window.onload = function () {
