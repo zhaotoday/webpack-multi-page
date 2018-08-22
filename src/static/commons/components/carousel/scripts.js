@@ -26,17 +26,31 @@ $(() => {
     $('#carousel-nav > li').removeClass('is-active').eq(currentIndex).addClass('is-active')
   }
 
-  $('#carousel-prev').on('click', () => {
+  function playPrev () {
     images.unshift(images[images.length - 1])
     images.pop()
     renderImages()
     renderNavIndexes()
-  })
+  }
 
-  $('#carousel-next').on('click', () => {
+  function playNext () {
     images.push(images[0])
     images.shift()
     renderImages()
     renderNavIndexes()
+  }
+
+  let timer = setInterval(playNext, 3000)
+
+  $('#carousel-prev').on('click', () => {
+    clearInterval(timer)
+    playPrev()
+    timer = setInterval(playNext, 3000)
+  })
+
+  $('#carousel-next').on('click', () => {
+    clearInterval(timer)
+    playNext()
+    timer = setInterval(playNext, 3000)
   })
 })
