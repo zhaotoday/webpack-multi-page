@@ -31,9 +31,16 @@
     }
 
     img {
+      @include block--center;
+
       max-width: px2rem(335px * 2);
       display: block;
       margin-bottom: px2rem(20px);
+    }
+
+    .video-js {
+      @include size(px2rem(335px * 2), px2rem(335px * 2 * 9 / 16));
+      @include block--center;
     }
   }
 }

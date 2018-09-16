@@ -36,6 +36,11 @@
       max-width: 800px;
       display: block;
     }
+
+    .video-js {
+      @include size(800px, 450px);
+      @include block--center;
+    }
   }
 
   @include e(nav) {

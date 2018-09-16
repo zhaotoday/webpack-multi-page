@@ -1,6 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(carousel) {
+  zoom: 0.8;
   height: 648px + 10px;
 
   @include e(images) {

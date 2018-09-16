@@ -12,16 +12,16 @@ $(() => {
       $carouseImageItems.eq(item).addClass(
         'image-' +
         (index === 0
-          ? 'left'
+          ? 'middle'
           : index === 1
-            ? 'middle'
+            ? 'left'
             : 'right')
       )
     })
   }
 
   const renderNavIndexes = () => {
-    const currentIndex = images.findIndex(index => index === 1)
+    const currentIndex = images.findIndex(index => index === 0)
 
     $('#carousel-nav > li').removeClass('is-active').eq(currentIndex).addClass('is-active')
   }
