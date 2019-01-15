@@ -34,6 +34,7 @@
     "minireset.css": "0.0.3",
     "sass-utils": "^1.0.16",
     "swiper": "^4.3.3",
+    "video.js": "^7.1.0",
     "zepto": "^1.2.0"
   }
 }

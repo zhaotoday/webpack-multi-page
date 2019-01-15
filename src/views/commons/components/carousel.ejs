@@ -3,13 +3,14 @@
     <% $.homeAds.forEach(function (item, index) { %>
     <%
       const className = index === 0
-        ? 'left'
+        ? 'middle'
         : index === 1
-          ? 'middle'
+          ? 'left'
           : 'right'
     %>
     <div class="c-carousel__images-item image-<%= className %> js-carousel-image-item">
       <img class="js-link" src="<%= $.helpers.getFileURL(item.picture) %>" data-url="/articles/<%= item.id %>">
+      <div class="c-carousel__title c1 fs6"><%= item.title %></div>
       <div class="overlay"></div>
     </div>
     <% }) %>

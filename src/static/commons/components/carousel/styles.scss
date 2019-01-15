@@ -1,7 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(carousel) {
-  zoom: 0.8;
+  zoom: 0.72;
   height: 648px + 10px;
 
   @include e(images) {
@@ -63,6 +63,15 @@
         opacity: 0.2;
       }
     }
+  }
+
+  @include e(title) {
+    @include position--absolute(null, null, 80px, 0);
+    @include text--overflow;
+
+    width: 100%;
+    line-height: 100%;
+    text-indent: 80px;
   }
 
   @include e(prev, next) {

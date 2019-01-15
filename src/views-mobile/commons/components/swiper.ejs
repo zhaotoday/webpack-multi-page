@@ -3,6 +3,7 @@
     <% $.homeAds.forEach(function (item, index) { %>
     <li class="c-swiper__item swiper-slide js-link" data-url="/m/articles/<%= item.id %>">
       <img src="<%= $.helpers.getFileURL(item.picture) %>">
+      <div class="c-swiper__item-title c1 fs6"><%= item.title %></div>
     </li>
     <% }) %>
   </ul>
