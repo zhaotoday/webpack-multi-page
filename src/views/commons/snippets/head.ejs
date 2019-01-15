@@ -5,15 +5,15 @@
   <meta name="keywords" content="<%= $.head.keywords %>">
   <meta name="description" content="<%= $.head.description %>">
   <title><%= $.head.title %></title>
-  <link href="<%= $.consts.CDN %>/static/styles/commons.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
-  <link href="<%= $.consts.CDN %>/static/styles/<%= view %>.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
+  <link href="<%= $.consts.STATIC_CDN %>/static/styles/commons.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
+  <link href="<%= $.consts.STATIC_CDN %>/static/styles/<%= view %>.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
   <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
   <script>
     var VIEW = '<%= view %>'
     var ROUTE = '<%= $.route %>'
     var BASE_URL = '<%= $.consts.BASE_URL %>'
   </script>
-  <script src="<%= $.consts.CDN %>/static/scripts/commons.js?v=<%= $.consts.STATIC_VERSION %>"></script>
-  <script src="<%= $.consts.CDN %>/static/scripts/<%= view %>.js?v=<%= $.consts.STATIC_VERSION %>"></script>
+  <script src="<%= $.consts.STATIC_CDN %>/static/scripts/commons.js?v=<%= $.consts.STATIC_VERSION %>"></script>
+  <script src="<%= $.consts.STATIC_CDN %>/static/scripts/<%= view %>.js?v=<%= $.consts.STATIC_VERSION %>"></script>
 </head>
 <body>
