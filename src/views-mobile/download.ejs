@@ -7,7 +7,7 @@
   const view = 'article-details'
   const $ = require('../mock/$')(view)
   %>
-  <link href="<%= $.consts.CDN %>/static/styles/download.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
+  <link href="<%= $.consts.STATIC_CDN %>/static/styles/download.css?v=<%= $.consts.STATIC_VERSION %>" rel="stylesheet">
   <script>
     window.onload = function () {
       var userAgent = navigator.userAgent
