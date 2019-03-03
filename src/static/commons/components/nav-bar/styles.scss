@@ -13,8 +13,7 @@
     color: nth($colors, 2);
 
     @include m(is-active) {
-      border-bottom: 2px solid nth($colors, 8);
-      color: nth($colors, 8);
+      color: nth($colors, 21);
       font-weight: bold;
     }
   }

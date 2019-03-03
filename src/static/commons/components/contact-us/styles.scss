@@ -1,7 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(contact-us) {
-  @include size(1150px, 200px);
+  @include size(1150px, 187px);
 
   position: relative;
   background: {
@@ -11,6 +11,8 @@
 
   @include e(scan-oa, scan-app) {
     @include position--absolute(22px);
+
+    display: none;
   }
 
   @include e(scan-oa) {

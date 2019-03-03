@@ -109,7 +109,7 @@
     opacity: 0.8;
 
     @include m(is-active) {
-      background-color: nth($colors, 9);
+      background-color: nth($colors, 21);
     }
   }
 }
