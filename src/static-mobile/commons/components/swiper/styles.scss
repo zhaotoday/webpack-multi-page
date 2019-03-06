@@ -38,12 +38,13 @@
     @include size(px2rem(36px), px2rem(6px));
     @include margin(null, px2rem(6px), null, px2rem(6px));
 
+    border-radius: px2rem(6px);
     display: inline-block;
     background-color: nth($colors, 1);
     opacity: 0.8;
 
     @include m(is-active) {
-      background-color: nth($colors, 4);
+      background-color: nth($colors, 14);
     }
   }
 }

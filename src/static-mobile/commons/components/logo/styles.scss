@@ -1,7 +1,7 @@
 @import "../../styles/utils/index";
 
 @include c(logo) {
-  @include size(px2rem(200px), px2rem(156px));
+  @include size(px2rem(478px / 1.44), px2rem(111px / 1.44));
 
   background: {
     image: url("./images/logo.png");

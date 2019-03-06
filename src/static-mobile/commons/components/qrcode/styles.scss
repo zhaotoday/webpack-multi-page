@@ -1,13 +1,13 @@
 @import "../../styles/utils/index";
 
 @include c(qrcode) {
-  width: px2rem(102px * 2);
+  width: px2rem(224px / 1.44);
   box-sizing: border-box;
   line-height: 100%;
   text-align: center;
 
   @include e(wrap) {
-    @include size(px2rem(102px * 2), px2rem(102px * 2));
+    @include size(px2rem(224px / 1.44), px2rem(224px / 1.44));
 
     position: relative;
     overflow: hidden;
@@ -15,10 +15,8 @@
   }
 
   img {
-    @include position--absolute(50%, null, null, 50%);
-    @include size(px2rem(92px * 2), px2rem(92px * 2));
+    @include size(px2rem(224px / 1.44), px2rem(224px / 1.44));
 
-    transform: translate(-50%, -50%);
     display: block;
   }
 }

@@ -16,7 +16,7 @@
 
     @include m(is-active) {
       color: nth($colors, 3);
-      border-bottom: 0.05333rem solid nth($colors, 4);
+      border-bottom: 0.05333rem solid nth($colors, 14);
     }
   }
 }

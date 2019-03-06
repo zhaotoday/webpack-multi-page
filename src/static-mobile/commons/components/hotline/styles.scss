@@ -1,10 +1,13 @@
 @import "../../styles/utils/index";
 
 @include c(hotline) {
-  @include position--absolute(px2rem(82px * 2 + 70px), null, null, 0);
+  @include text--middle(px2rem(132px / 1.44));
 
+  position: relative;
   width: 100%;
   text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 px2rem(16px) rgba(#bababa, 0.4);
 
   @include e(icon, tel) {
     vertical-align: middle;
@@ -12,7 +15,7 @@
   }
 
   @include e(icon) {
-    @include size(px2rem(44px), px2rem(44px));
+    @include size(px2rem(66px / 1.44), px2rem(66px / 1.44));
 
     background: {
       image: url("./images/hotline.png");

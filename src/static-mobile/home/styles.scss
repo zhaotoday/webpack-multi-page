@@ -2,26 +2,26 @@
 
 @include p(home) {
   @include pb(middle-wrap) {
-    @include size(100%, px2rem(263px * 2 + 78px));
+    @include size(100%, px2rem(562px / 1.44));
 
     position: relative;
   }
 
   @include c(logo) {
-    @include position--absolute(px2rem(20px * 2), null, null, 50%);
+    @include position--absolute(px2rem(44px / 1.44), null, null, 50%);
 
     transform: translateX(-50%);
   }
 
   @include pb(oa-qrcode, app-qrcode) {
-    @include position--absolute(px2rem(120px * 2 + 78px));
+    @include position--absolute(null, null, px2rem(45px / 1.44));
   }
 
   @include pb(oa-qrcode) {
-    left: px2rem(65px * 2);
+    left: px2rem(206px / 1.44);
   }
 
   @include pb(app-qrcode) {
-    right: px2rem(65px * 2);
+    right: px2rem(206px / 1.44);
   }
 }
