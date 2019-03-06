@@ -1,6 +1,48 @@
 @import "../../styles/utils/index";
 
 @include c(nav-bar) {
+  @include size(100%, px2rem(140px / 1.44));
+
+  position: relative;
+  z-index: 1;
+  margin-bottom: -1px;
+  display: flex;
+  background: {
+    image: url("./images/bg.png");
+    size: 100% 100%;
+  }
+
+  @include m(reverse) {
+    background-image: url("./images/bg-reverse.png");
+  }
+
+  @include e(item) {
+    @include text--middle(px2rem(140px / 1.44));
+
+    padding-top: px2rem(6px);
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    box-sizing: border-box;
+
+    @include m(is-active) {
+      color: nth($colors, 14);
+      position: relative;
+
+      &::after {
+        @include position--absolute(null, null, -1px, 50%);
+        @include size(px2rem(140px), px2rem(4px));
+
+        transform: translateX(-50%);
+        content: "";
+        display: block;
+        background-color: nth($colors, 14);
+      }
+    }
+  }
+}
+
+@include c(nav-bar1) {
   @include padding(null, px2rem(13px * 2), null, px2rem(13px * 2));
 
   display: flex;

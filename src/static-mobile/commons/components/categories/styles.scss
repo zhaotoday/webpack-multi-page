@@ -4,6 +4,8 @@
   @include clearfix;
   @include padding(px2rem(20px * 2), null, null, px2rem(25px));
 
+  background-color: nth($colors, 1);
+
   @include e(item) {
     @include size(px2rem(170px * 2), px2rem(260px));
     @include margin(null, px2rem(5px), px2rem(10px), px2rem(5px));
