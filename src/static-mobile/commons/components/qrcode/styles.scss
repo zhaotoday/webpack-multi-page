@@ -1,13 +1,14 @@
 @import "../../styles/utils/index";
 
 @include c(qrcode) {
-  width: px2rem(224px / 1.44);
+  width: px2rem(224px / 1.44 + 40px);
   box-sizing: border-box;
   line-height: 100%;
   text-align: center;
 
   @include e(wrap) {
     @include size(px2rem(224px / 1.44), px2rem(224px / 1.44));
+    @include block--center;
 
     position: relative;
     overflow: hidden;

@@ -21,5 +21,8 @@
   @include e(title) {
     @include position--absolute(null, null, px2rem(20px));
     @include text--middle(px2rem(34px));
+
+    width: 100%;
+    text-align: center;
   }
 }

@@ -24,21 +24,21 @@
     list-style: none;
     text-align: center;
     box-sizing: border-box;
+  }
+}
 
-    @include m(is-active) {
-      color: nth($colors, 14);
-      position: relative;
+.nav-is-active {
+  color: nth($colors, 14);
+  position: relative;
 
-      &::after {
-        @include position--absolute(null, null, -1px, 50%);
-        @include size(px2rem(140px), px2rem(4px));
+  &::after {
+    @include position--absolute(null, null, -1px, 50%);
+    @include size(px2rem(140px), px2rem(4px));
 
-        transform: translateX(-50%);
-        content: "";
-        display: block;
-        background-color: nth($colors, 14);
-      }
-    }
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    background-color: nth($colors, 14);
   }
 }
 
