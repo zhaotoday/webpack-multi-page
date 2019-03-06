@@ -5,6 +5,18 @@
     @include size(100%, px2rem(562px / 1.44));
 
     position: relative;
+    background: {
+      image: url("./images/bg.png");
+      repeat: no-repeat;
+      size: px2rem(347px / 1.44) px2rem(639px / 1.44);
+    }
+
+    @include m(reverse) {
+      background: {
+        image: url("./images/bg-reverse.png");
+        position: right 0;
+      }
+    }
   }
 
   @include c(logo) {
