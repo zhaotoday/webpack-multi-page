@@ -39,10 +39,10 @@
         }
 
         &.is-active {
-          color: #f6793c;
+          color: nth($colors, 21);
           background: {
             color: #fbfbfb;
-            image: url("./images/dot-active.png");
+            image: url("./images/dot.png");
             repeat: no-repeat;
             position: 56px center;
           }

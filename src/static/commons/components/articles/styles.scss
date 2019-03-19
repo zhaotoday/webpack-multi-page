@@ -12,7 +12,7 @@
   @include e(title) {
     @include text--middle(28px);
 
-    border-left: 2px solid nth($colors, 8);
+    border-left: 2px solid nth($colors, 21);
     padding-left: 12px;
   }
 
