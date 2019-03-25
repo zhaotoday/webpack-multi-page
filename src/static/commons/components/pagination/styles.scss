@@ -24,10 +24,10 @@
     }
 
     @include m(is-active) {
-      border: 1px solid nth($colors, 18);
+      border: 1px solid nth($colors, 21);
       cursor: text;
       color: nth($colors, 1);
-      background-color: nth($colors, 18);
+      background-color: nth($colors, 21);
     }
   }
 }

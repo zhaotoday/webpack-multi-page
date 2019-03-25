@@ -1,19 +1,30 @@
 @import "../../styles/utils/index";
 
 @include c(article-card) {
-  @include margin(null, 60px, 17px);
-  @include size(350px, 338px);
+  @include clearfix;
 
+  width: 330px * 1.5 + 10px * 2;
+  padding-bottom: 10px;
   display: block;
   box-sizing: border-box;
   border: 1px solid nth($colors, 10);
 
+  &:first-child {
+    float: left;
+    margin-left: 30px;
+  }
+
+  &:last-child {
+    float: right;
+    margin-right: 30px;
+  }
+
   img {
-    @include size(330px, 185px);
+    @include size(330px * 1.5, 185px * 1.5);
+    @include margin(10px, 10px, null, 10px);
 
     display: block;
     border-radius: 4px;
-    margin: 9px;
   }
 
   &:hover {
@@ -30,9 +41,10 @@
     @include text--middle(20px);
     @include text--overflow;
 
+    text-align: center;
     font-size: nth($font-sizes, 3);
     color: nth($colors, 2);
-    margin-top: 23px;
+    margin-top: 10px;
 
     &:hover {
       color: nth($colors, 8);

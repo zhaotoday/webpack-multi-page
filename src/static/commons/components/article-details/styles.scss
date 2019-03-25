@@ -10,7 +10,7 @@
   @include e(extra) {
     @include padding(15px, null, 26px);
 
-    border-bottom: 2px solid nth($colors, 8);
+    border-bottom: 2px solid nth($colors, 21);
 
     span {
       padding-right: 15px;
@@ -53,10 +53,10 @@
     border-bottom: 1px dotted nth($colors, 19);
 
     a {
-      color: nth($colors, 8);
+      color: nth($colors, 21);
 
       &:hover {
-        color: nth($colors, 8);
+        color: nth($colors, 21);
       }
     }
   }

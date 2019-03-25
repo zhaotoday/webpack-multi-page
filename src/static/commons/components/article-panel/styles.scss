@@ -30,10 +30,10 @@
   }
 
   @include e(body) {
-    @include padding(null, null, 46px, -16px);
+    @include padding(10px, null, 46px, -16px);
     @include clearfix;
 
-    width: 120%;
+    width: 100%;
 
     .c-article-card {
       float: left;
