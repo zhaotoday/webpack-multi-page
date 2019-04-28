@@ -30,10 +30,12 @@
   }
 
   @include pb(oa-qrcode) {
-    left: px2rem(206px / 1.44 - 20px);
+    left: 50%;
+    margin-left: px2rem(-224px / 1.44 / 2 - 40px / 2);
   }
 
   @include pb(app-qrcode) {
+    display: none;
     right: px2rem(206px / 1.44 - 20px);
   }
 }
